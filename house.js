@@ -1657,10 +1657,15 @@ export function createHouse(canvas, opts = {}) {
   let fogFrom = 0.04, fogTo = 0.04;
   let trans = 1, transDur = 2.2, locChanged = false, lightsSwapped = true, lightFade = false, nodeTime = 0;
   let camFrom = null;
+  // Lens shift for phones: the reader pane covers the lower part of the screen, so the shot is composed into the free strip
+  // above it. focusY is where the room's focal point lands, as a fraction of the height from the top; 0.5 is dead centre and
+  // leaves the projection untouched (every desktop frame). The page sets it; the shift eases so screens change without a jump.
+  let focusY = 0.5, focusCur = 0.5; const shiftM = new THREE.Matrix4();
   let pendingSpots = [];
   let flashes = []; let flashVal = 0;
   let fadeV = 0, fadeFrom = 0, fadeTo = 1, fadeDur = 0.001, fadeT = 1;
   const api = { onFlash: null, scene, camera, renderer };
+  api.setFocus = (f) => { focusY = Math.min(0.9, Math.max(0.1, +f || 0.5)); };
 
   function paletteColors(name) {
     const p = PALETTES[name] || PALETTES.bone;
@@ -1790,6 +1795,10 @@ export function createHouse(canvas, opts = {}) {
     // portrait screens: the room presets are vertical fovs tuned for landscape; keep the horizontal coverage of a 1.2 aspect
     if (camera.aspect < 1.2) { const half = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2) * 1.2 / camera.aspect; camera.fov = Math.min(110, 2 * THREE.MathUtils.radToDeg(Math.atan(half))); }
     camera.updateProjectionMatrix();
+    if (focusCur !== focusY) focusCur = focusY > focusCur ? Math.min(focusY, focusCur + dt / 1.2) : Math.max(focusY, focusCur - dt / 1.2);
+    if (Math.abs(focusCur - 0.5) > 1e-4) { // off-axis frustum: a translation in clip space, which the mirrors' oblique clipping already understands
+      shiftM.makeTranslation(0, (0.5 - focusCur) * 2, 0); camera.projectionMatrix.premultiply(shiftM); camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();
+    }
 
     // fades
     const rate = dt / 1.6;
