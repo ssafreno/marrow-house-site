@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "start": "a1_porch",
+  "flags": { "stance": null, "candy": 0, "fear": 0, "candle": false },
+  "nodes": {
+    "a1_porch": {
+      "id": "a1_porch", "act": 1, "title": "The Porch",
+      "text": "{{#if visits>0}}The door remembers you. It says nothing, which is worse.\n\n{{/if}}Marrow Street ends here, at a house that should have been torn down before you were born. Three pumpkins grin on the steps. Somebody has carved them very carefully.\n\nThe door opens a hand's width before you knock. A voice inside, warm as a kettle, asks the old question.",
+      "scene": { "location": "porch", "palette": "ember", "fog": 0.35, "lightning": 0.0, "camera": "approach", "props": ["jackolantern", "door", "moon"], "music": "drone", "heartbeat": 0.0, "flicker": 0.3 },
+      "choices": [
+        { "label": "Trick", "to": "a1_threshold", "set": { "stance": "trick", "fear": "+1" } },
+        { "label": "Treat", "to": "a1_threshold", "set": { "stance": "treat", "candy": "+2", "candle": true } }
+      ],
+      "ending": null
+    },
+    "a1_threshold": {
+      "id": "a1_threshold", "act": 1, "title": "The Long Hall",
+      "text": "{{#if stance=trick}}The voice laughs, delighted, and the hall lengthens to make room for the joke.{{else}}A bowl of candy waits on a side table. You take two. A stub of candle is pressed into your palm by nobody.{{/if}}\n\nDoors line both walls. Each is shut. Each has a brass number that does not match its neighbours.",
+      "scene": { "location": "hall", "palette": "bone", "fog": 0.45, "lightning": 0.0, "camera": "push", "props": ["candles", "door", "window", "rain"], "music": "silence", "heartbeat": 0.0, "flicker": 0.5 },
+      "choices": [
+        { "label": "Walk to the end", "to": "a2_foyer", "set": { "fear": "+1" } },
+        { "label": "Light the candle", "to": "a2_foyer", "require": { "candle": true }, "hideIfLocked": false, "set": { "fear": "-1" } }
+      ],
+      "ending": null
+    },
+    "a2_foyer": {
+      "id": "a2_foyer", "act": 2, "title": "The Foyer",
+      "text": "The hall gives up and becomes a foyer, tall and chequered. A chandelier turns very slowly, the way a head turns when it hears its name.\n\n{{#unless candle}}Without a light, the corners have the run of the place.{{/unless}}{{#if fear>=2}} Your heart is making itself known.{{/if}}",
+      "scene": { "location": "foyer", "palette": "bone", "fog": 0.3, "lightning": 0.0, "camera": "drift", "props": ["chandelier", "clock", "portrait", "candles"], "music": "waltz", "heartbeat": 0.0, "flicker": 0.2 },
+      "choices": [
+        { "label": "Enter the parlor", "to": "a2_parlor", "set": {} },
+        { "label": "Take the cellar stair", "to": "a3_cellar", "set": { "fear": "+2" } },
+        { "label": "Offer up your candy", "to": "a2_nursery", "require": { "candy": ">=2" }, "set": { "candy": "-2" } }
+      ],
+      "ending": null
+    },
+    "a2_parlor": {
+      "id": "a2_parlor", "act": 2, "title": "The Parlor",
+      "text": "A fire is burning for someone who is not here yet. The portrait over the mantel has been painted recently; the paint is still wet at the eyes.\n\nThe clock in the corner is eleven minutes from midnight and has been for some time.",
+      "scene": { "location": "parlor", "palette": "ember", "fog": 0.2, "lightning": 0.0, "camera": "still", "props": ["fireplace", "portrait", "clock", "candles"], "music": "waltz", "heartbeat": 0.0, "flicker": 0.4 },
+      "choices": [
+        { "label": "Look in the glass", "to": "a3_mirror", "set": { "fear": "+1" } },
+        { "label": "Follow the warmth down", "to": "a3_cellar", "set": {} }
+      ],
+      "ending": null
+    },
+    "a2_nursery": {
+      "id": "a2_nursery", "act": 2, "title": "The Nursery",
+      "text": "The candy is accepted. A small door you had not noticed lets you into a nursery where a mobile turns without wind.\n\nThe rocking horse rocks. The doll has been waiting with excellent manners.",
+      "scene": { "location": "nursery", "palette": "verdigris", "fog": 0.25, "lightning": 0.0, "camera": "tilt", "props": ["crib", "window", "moon", "rain"], "music": "lullaby", "heartbeat": 0.0, "flicker": 0.1 },
+      "choices": [
+        { "label": "Sing back", "to": "a3_mirror", "set": {} },
+        { "label": "Climb toward the heartbeat", "to": "a4_marrow", "set": { "fear": "+1" } }
+      ],
+      "ending": null
+    },
+    "a3_mirror": {
+      "id": "a3_mirror", "act": 3, "title": "The Glass",
+      "text": "In the mirror you are standing in the same room, holding the same breath. Someone stands behind you in the glass, and not behind you in the room.\n\nThey are polite enough not to speak first.",
+      "scene": { "location": "mirror", "palette": "void", "fog": 0.4, "lightning": 0.0, "camera": "push", "props": ["mirror", "candles"], "music": "choir", "heartbeat": 0.0, "flicker": 0.6 },
+      "choices": [
+        { "label": "Step through", "to": "end_escape", "set": {} },
+        { "label": "Turn around", "to": "a4_marrow", "set": { "fear": "+2" } }
+      ],
+      "ending": null
+    },
+    "a3_cellar": {
+      "id": "a3_cellar", "act": 3, "title": "The Cellar",
+      "text": "The cellar is older than the house above it. Roots have come down through the vault to listen. Bones lie in tidy arrangements, as if someone tried very hard to be a good host.\n\nBelow the floor, something beats.",
+      "scene": { "location": "cellar", "palette": "bruise", "fog": 0.6, "lightning": 0.0, "camera": "fall", "props": ["roots", "bones", "candles"], "music": "heartbeat", "heartbeat": 0.4, "flicker": 0.7 },
+      "choices": [
+        { "label": "Go toward the beating", "to": "a4_marrow", "set": { "fear": "+1" } },
+        { "label": "Sit with the bones", "to": "a4_marrow", "set": { "fear": "+2" } }
+      ],
+      "ending": null
+    },
+    "a4_marrow": {
+      "id": "a4_marrow", "act": 4, "title": "The Marrow",
+      "text": "Here is the heart of the house, and it is a heart. It hangs in a cathedral of ribs and beats for you specifically.\n\n{{#if candle}}Your candle gutters but holds.{{else}}You have nothing to hold up against it.{{/if}}",
+      "scene": { "location": "marrow", "palette": "bruise", "fog": 0.55, "lightning": 0.2, "camera": "fall", "props": ["roots", "bones", "candles"], "music": "heartbeat", "heartbeat": 0.85, "flicker": 0.8 },
+      "choices": [
+        { "label": "Give it your name", "to": "end_consumed", "set": {} },
+        { "label": "Blow out the candle and run", "to": "end_escape", "require": { "candle": true }, "hideIfLocked": false, "set": {} }
+      ],
+      "ending": null
+    },
+    "end_escape": {
+      "id": "end_escape", "act": 4, "title": "Marrow Street",
+      "text": "You are on the lawn, and the rain is ordinary rain. Behind you the house settles its shoulders.\n\nIn an upstairs window, somebody waves goodbye with your hand.",
+      "scene": { "location": "outside", "palette": "bone", "fog": 0.5, "lightning": 0.6, "camera": "drift", "props": ["moon", "rain", "jackolantern"], "music": "silence", "heartbeat": 0.0, "flicker": 0.0 },
+      "choices": [],
+      "ending": { "kind": "escape", "title": "The Lawn", "epitaph": "Left on time, mostly." }
+    },
+    "end_consumed": {
+      "id": "end_consumed", "act": 4, "title": "The Marrow",
+      "text": "It takes your name kindly, the way a host takes a coat.\n\nYou will be hung somewhere warm and brought out for guests.",
+      "scene": { "location": "marrow", "palette": "void", "fog": 0.8, "lightning": 0.0, "camera": "push", "props": ["roots", "bones"], "music": "choir", "heartbeat": 1.0, "flicker": 0.2 },
+      "choices": [],
+      "ending": { "kind": "consumed", "title": "Kept", "epitaph": "Hung somewhere warm." }
+    }
+  }
+}

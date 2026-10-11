@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marrow House</title>
+<meta name="description" content="The last house on Marrow Street has its porch light on. Trick or treat.">
+<meta name="theme-color" content="#070504">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Link previews. Every other URL in this page is relative (it is served from a GitHub Pages sub-path), but
+     og:image and twitter:image must be absolute, so they name the deployed copy of site/share.png (1200x630). -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marrow House">
+<meta property="og:description" content="The last house on Marrow Street has its porch light on. Trick or treat.">
+<meta property="og:url" content="https://ssafreno.github.io/marrow-house/">
+<meta property="og:image" content="https://ssafreno.github.io/marrow-house/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A hand-inked haunted house against a full moon, two jack-o'-lanterns on the step.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marrow House">
+<meta name="twitter:description" content="The last house on Marrow Street has its porch light on. Trick or treat.">
+<meta name="twitter:image" content="https://ssafreno.github.io/marrow-house/share.png">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.js" } }
+</script>
+<style>
+  :root {
+    --ink: #ece3d0;
+    --ink-dim: rgba(236, 227, 208, 0.62);
+    --ink-faint: rgba(236, 227, 208, 0.32);
+    --ground: #070504;
+    --ember: #e08a4a;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Hoefler Text", Georgia, serif;
+    --caps: "Iowan Old Style", Palatino, Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--ground); color: var(--ink); overflow: hidden; }
+  body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  #scene { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+  #veil { position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 60% 45%, transparent 40%, rgba(0,0,0,0.55) 100%); }
+
+  /* ---------- corner toggles ---------- */
+  #corner { position: fixed; top: calc(14px + env(safe-area-inset-top, 0px)); right: 18px; z-index: 30; display: flex; gap: 14px;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
+  #corner button { color: var(--ink-faint); padding: 6px 2px; transition: color .4s; }
+  #corner button:hover, #corner button[aria-pressed="true"] { color: var(--ink-dim); }
+  #corner button[aria-pressed="true"]::after { content: ""; display: block; height: 1px; background: currentColor; opacity: .5; margin-top: 3px; }
+
+  /* ---------- title ---------- */
+  .screen { position: fixed; inset: 0; z-index: 10; transition: opacity 1.4s ease; }
+  .screen.hidden, .screen.hidden * { pointer-events: none !important; }
+  .screen.hidden { opacity: 0; }
+  #title { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 12vh 20px 40px; text-align: center; overflow-y: auto; }
+  #title h1 { font-weight: 400; font-size: clamp(38px, 8vw, 92px); letter-spacing: 0.28em; margin: 0 0 0 0.28em; color: var(--ink);
+    text-shadow: 0 0 40px rgba(0,0,0,0.9), 0 0 2px rgba(0,0,0,0.8); opacity: 0; animation: rise 4s 1.2s ease forwards; }
+  #subtitle { font-style: italic; color: var(--ink-dim); font-size: clamp(15px, 2vw, 19px); margin-top: 1.1em; opacity: 0; animation: rise 3s 2.6s ease forwards; text-shadow: 0 0 20px #000; }
+  #tally { margin-top: .6em; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); opacity: 0; animation: rise 3s 3.2s ease forwards; }
+  #approach { margin-top: 9vh; font-size: 15px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--ink-dim); padding: 14px 10px 14px 18px;
+    border-bottom: 1px solid rgba(236,227,208,0.18); opacity: 0; animation: rise 3s 3.8s ease forwards, breathe 5s 7s ease-in-out infinite; transition: color .6s, letter-spacing .8s; }
+  #approach:hover, #approach:focus-visible { color: var(--ink); letter-spacing: 0.62em; outline: none; }
+  #storyError { color: #c97a5a; font-size: 13px; margin-top: 2em; max-width: 30em; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @keyframes breathe { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+
+  #wall { margin-top: 8vh; width: min(640px, 100%); opacity: 0; animation: rise 3s 4.6s ease forwards; }
+  #wall h2 { font-weight: 400; font-size: 11px; letter-spacing: .4em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 18px; }
+  #wall ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+  #wall li.found { text-align: center; }
+  #wall li .et { font-size: 16px; letter-spacing: .08em; color: var(--ink-dim); }
+  #wall li .ep { font-style: italic; font-size: 14px; color: var(--ink-faint); margin-top: 3px; }
+  #wall li .kind { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: rgba(224,138,74,0.45); margin-top: 4px; }
+  #stones { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
+  .stone { width: 16px; height: 22px; border-radius: 8px 8px 1px 1px; background: rgba(236,227,208,0.06); border: 1px solid rgba(236,227,208,0.08); }
+  #forget { position: fixed; left: 14px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); font-size: 11px; color: rgba(236,227,208,0.09); letter-spacing: .1em; z-index: 12; transition: color .6s; }
+  #forget:hover { color: rgba(236,227,208,0.45); }
+
+  /* ---------- reader ---------- */
+  #reader { display: flex; align-items: center; pointer-events: none; }
+  #reader .pane { pointer-events: auto; position: relative; width: min(40em, 100%); max-height: 100vh; overflow-y: auto; scrollbar-width: none;
+    padding: calc(76px + env(safe-area-inset-top, 0px)) clamp(22px, 5vw, 64px) calc(48px + env(safe-area-inset-bottom, 0px)) clamp(22px, 7vw, 110px);
+    background: linear-gradient(90deg, rgba(6,4,3,0.88) 0%, rgba(6,4,3,0.78) 62%, rgba(6,4,3,0) 100%); min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: flex-start; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  /* centred by auto margins, not justify-content: a centred flex column that overflows clips its top out of scroll reach */
+  #reader .pane > #nodeTitle { margin-top: auto; }
+  #reader .pane > #choices { margin-bottom: auto; }
+  #reader .pane::-webkit-scrollbar { display: none; }
+  #nodeTitle { font-size: 11px; letter-spacing: .42em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1.6em; min-height: 1em; }
+  #text { font-size: clamp(17px, 1.35vw + 6px, 21px); line-height: 1.68; color: var(--ink); text-shadow: 0 1px 8px rgba(0,0,0,0.85); transition: opacity .5s; }
+  #text p { margin: 0 0 1.05em; }
+  #text p .ghost { opacity: 0; }
+  #text.out { opacity: 0; }
+  #choices { list-style: none; padding: 0; margin: 1.4em 0 0; display: grid; gap: 4px; }
+  #choices li { opacity: 0; transform: translateY(4px); transition: opacity .7s ease, transform .7s ease; }
+  #choices.show li { opacity: 1; transform: none; }
+  #choices button { text-align: left; width: 100%; padding: 9px 0; font-size: clamp(16px, 1.1vw + 6px, 19px); color: var(--ink-dim); display: flex; gap: 16px; align-items: baseline; transition: color .3s; }
+  #choices button .n { font-size: 11px; color: var(--ink-faint); letter-spacing: .1em; min-width: 1em; }
+  #choices button:hover:not(:disabled), #choices button:focus-visible { color: var(--ink); outline: none; }
+  #choices button:hover:not(:disabled) .lbl { border-bottom: 1px solid rgba(236,227,208,0.3); }
+  #choices button:disabled { color: rgba(236,227,208,0.22); cursor: default; font-style: italic; }
+  #choices form.say { display: flex; gap: 14px; align-items: baseline; padding: 6px 0; }
+  #choices form.say .n { font-size: 11px; color: var(--ink-faint); letter-spacing: .1em; min-width: 1em; }
+  #choices form.say input { flex: 1; min-width: 0; max-width: 16em; font: inherit; font-family: var(--serif); font-size: clamp(16px, 1.1vw + 6px, 19px); color: var(--ink);
+    background: transparent; border: 0; border-bottom: 1px solid rgba(236,227,208,0.22); padding: 4px 0; border-radius: 0; transition: border-color .3s; }
+  #choices form.say input::placeholder { color: var(--ink-faint); font-style: italic; }
+  #choices form.say input:focus { outline: none; border-bottom-color: var(--ember); }
+  #choices form.say button { width: auto; padding: 4px 2px; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-faint); }
+  #choices form.say button:hover, #choices form.say button:focus-visible { color: var(--ember); }
+  #skipHint { position: absolute; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); left: clamp(22px, 7vw, 110px); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: rgba(236,227,208,0.18); transition: opacity .6s; }
+
+  #ribbon { position: fixed; top: calc(18px + env(safe-area-inset-top, 0px)); left: clamp(22px, 7vw, 110px); z-index: 20; display: flex; align-items: center; gap: 18px;
+    font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-faint); transition: opacity 1s; }
+  #ribbon.hidden { opacity: 0; }
+  #fearLine { height: 1px; width: 120px; background: rgba(236,227,208,0.08); position: relative; }
+  #fearLine i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #c8553a; box-shadow: 0 0 6px #c8553a; transition: width 1.5s ease; animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: .25; } 50% { opacity: .85; } }
+
+  /* ---------- ending ---------- */
+  #ending { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px;
+    background: radial-gradient(ellipse at center, rgba(4,3,2,0.55), rgba(4,3,2,0.92)); }
+  #ending .kind { font-size: 11px; letter-spacing: .5em; text-transform: uppercase; color: rgba(224,138,74,0.6); }
+  #ending h2 { font-weight: 400; font-size: clamp(34px, 6vw, 72px); letter-spacing: .12em; margin: .35em 0 .4em; }
+  #ending .ep { font-style: italic; font-size: clamp(16px, 1.8vw, 21px); color: var(--ink-dim); max-width: 30em; }
+  #ending .closes { margin-top: 10vh; font-size: 12px; letter-spacing: .5em; text-transform: uppercase; color: var(--ink-faint); }
+  #ending .fadein { opacity: 0; transition: opacity 2.4s ease; }
+  #ending .fadein.on { opacity: 1; }
+  #returnBtn { margin-top: 3em; font-size: 12px; letter-spacing: .35em; text-transform: uppercase; color: var(--ink-dim); border-bottom: 1px solid rgba(236,227,208,0.18); padding: 8px 4px; }
+  #keepBtn { margin-top: 2.2em; font-size: 12px; letter-spacing: .35em; text-transform: uppercase; color: rgba(224,138,74,0.75); border-bottom: 1px solid rgba(224,138,74,0.3); padding: 8px 4px; transition: opacity 2.4s ease, color .3s; }
+  #keepBtn:hover, #keepBtn:focus-visible { color: var(--ember); outline: none; }
+  #ending { overflow-y: auto; flex-direction: row; gap: 6vw; }
+  #ending .endText { display: flex; flex-direction: column; align-items: center; max-width: 34em; }
+  #endPlan { flex: none; }
+  @media (max-width: 899px) {
+    #ending { flex-direction: column; justify-content: flex-start; gap: 0; padding-top: calc(48px + env(safe-area-inset-top, 0px)); }
+    #ending .endText { display: contents; }
+    #endKind { order: 1; } #endTitle { order: 2; } #endEpitaph { order: 3; } #endPlan { order: 4; width: 100%; margin-top: 3vh; }
+    #keepBtn { order: 5; margin-top: 1.4em; } #ending #endCloses { order: 6; margin-top: 2.5vh; } #returnBtn { order: 7; margin-top: .8em; margin-bottom: 2vh; }
+    /* size the plan by the height left over, so the whole ending fits one phone screen (it scrolls only below ~700px) */
+    #endPlan .mh-plan { width: min(100%, 460px, max(220px, calc((100vh - 400px - env(safe-area-inset-top, 0px)) * 0.709)));
+      width: min(100%, 460px, max(220px, calc((100dvh - 400px - env(safe-area-inset-top, 0px)) * 0.709))); }
+  }
+
+  /* ---------- dev ---------- */
+  #dev { position: fixed; right: 12px; bottom: 12px; z-index: 50; width: 300px; max-height: 70vh; overflow: auto; background: rgba(10,10,12,0.9); border: 1px solid #333;
+    font: 11px/1.4 ui-monospace, Menlo, monospace; color: #cfc; padding: 10px; border-radius: 4px; }
+  #dev h3 { margin: 0 0 6px; font-size: 11px; color: #8f8; }
+  #dev .row { display: flex; gap: 6px; align-items: center; margin: 3px 0; flex-wrap: wrap; }
+  #dev input { background: #111; color: #cfc; border: 1px solid #333; font: inherit; padding: 2px 4px; width: 110px; }
+  #dev button { background: #1c241c; color: #cfc; border: 1px solid #3a4a3a; padding: 2px 6px; font: inherit; }
+  #dev table { width: 100%; border-collapse: collapse; }
+  #dev td { padding: 1px 2px; }
+  #dev pre { white-space: pre-wrap; color: #9a9; margin: 4px 0; }
+
+  @media (max-width: 760px) {
+    #reader { align-items: flex-end; }
+    /* fixed height (not max-height) so the text does not jump up when the choices arrive; dvh tracks the phone's toolbars */
+    #reader .pane { width: 100%; min-height: 0; max-height: none; height: 78vh; height: 78dvh;
+      padding: 36px 22px calc(30px + env(safe-area-inset-bottom, 0px));
+      -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 30px); mask-image: linear-gradient(180deg, transparent 0, #000 30px);
+      background: linear-gradient(0deg, rgba(6,4,3,0.94) 0%, rgba(6,4,3,0.86) 75%, rgba(6,4,3,0) 100%); }
+    #ribbon { left: 22px; }
+    #skipHint { display: none; }
+    #dev { width: auto; left: 8px; right: 8px; max-height: 40vh; }
+  }
+  @media (max-width: 760px) {
+    #reader .pane > #nodeTitle { margin-top: 0; }
+    /* a long wall scrolls under the corner toggles and "forget me": fade it out at the top, leave room at the bottom */
+    #title { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+      -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 64px); mask-image: linear-gradient(180deg, transparent 0, #000 64px); }
+  }
+  /* touch screens: every control gets a 44px hit area; the visible type and rules stay as they are */
+  @media (pointer: coarse) {
+    #corner { top: calc(4px + env(safe-area-inset-top, 0px)); right: 10px; gap: 4px; }
+    #corner button { min-height: 44px; min-width: 44px; padding: 6px 8px; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; }
+    #forget { min-height: 44px; padding: 0 8px; left: 6px; bottom: calc(2px + env(safe-area-inset-bottom, 0px)); }
+    #approach { min-height: 48px; }
+    #choices button { min-height: 44px; align-items: center; }
+    #choices form.say { align-items: center; padding: 0; }
+    #choices form.say input { min-height: 44px; }
+    #choices form.say button { min-height: 44px; min-width: 64px; justify-content: center; }
+    #returnBtn, #keepBtn { min-height: 44px; }
+  }
+  @media (prefers-reduced-motion: reduce) { #approach { animation: rise 1s ease forwards; } }
+</style>
+</head>
+<body>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div id="veil"></div>
+
+<div id="corner">
+  <button id="soundBtn" aria-pressed="true" title="Toggle sound">Sound</button>
+  <button id="voiceBtn" aria-pressed="false" title="Toggle narration">Voice</button>
+</div>
+
+<section id="title" class="screen" aria-label="Title">
+  <h1>MARROW HOUSE</h1>
+  <div id="subtitle">Marrow Street, Halloween night</div>
+  <div id="tally"></div>
+  <button id="approach">Approach</button>
+  <div id="storyError" hidden></div>
+  <div id="wall" hidden>
+    <h2>The wall</h2>
+    <ul id="wallList"></ul>
+    <div id="stones" aria-label="endings not yet found"></div>
+  </div>
+</section>
+<button id="forget">forget me</button>
+
+<section id="reader" class="screen hidden" aria-live="polite">
+  <div class="pane" id="pane">
+    <div id="nodeTitle"></div>
+    <div id="text"></div>
+    <ul id="choices"></ul>
+    <div id="skipHint">click or space to hurry</div>
+  </div>
+</section>
+<div id="ribbon" class="hidden"><span id="candy"></span><span id="fearLine" title="fear"><i></i></span></div>
+
+<section id="ending" class="screen hidden" aria-live="polite">
+  <div class="endText">
+    <div class="kind fadein" id="endKind"></div>
+    <h2 class="fadein" id="endTitle"></h2>
+    <div class="ep fadein" id="endEpitaph"></div>
+    <button id="keepBtn" class="fadein">Keep this</button>
+    <div class="closes fadein" id="endCloses">The door closes</div>
+    <button id="returnBtn" class="fadein">Return</button>
+  </div>
+  <div id="endPlan"></div>
+</section>
+
+<div id="dev" hidden></div>
+
+<script type="module">
+import { createHouse, LOCATIONS, PALETTE_NAMES, CAMERAS, FIGURE_WHO } from './house.js';
+import { createAudio } from './audio.js';
+import { createState, applySet, renderText, visibleChoices, coerce, parseText, pickBranch, evalExpr } from './engine.js';
+import { createNarration } from './narration.js';
+import { bindKeep } from './share.js';
+import { showPlan, roomsVisited, mergeRooms } from './plan.js';
+
+const $ = (id) => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const DEV = params.get('dev') === '1';
+const MUSICS = ['drone', 'waltz', 'lullaby', 'heartbeat', 'silence', 'choir'];
+const NARRATION_VOICE = 'callum'; // folder under site/narration/ baked by scripts/narrate.mjs; Web Speech if absent
+
+// ------------------------------------------------------------------ memory
+const KEY = 'marrowHouse.v1';
+function loadStore() {
+  try { const s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && typeof s === 'object') return { visits: 0, found: {}, lastEnding: null, prefs: {}, ...s }; } catch (e) { /* private mode */ }
+  return { visits: 0, found: {}, lastEnding: null, prefs: {} };
+}
+let store = loadStore();
+function saveStore() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { /* ignore */ } }
+
+// ------------------------------------------------------------------ story
+let story = null, nodes = {}, totalEndings = 0;
+// Endings this browser has found that still exist in the current story. Old builds left ids in localStorage that
+// no longer name an ending; they are ignored (not deleted) so the wall and every "n of N" count agree.
+function foundEndings() {
+  if (!story) return [];
+  return Object.entries(store.found || {}).filter(([id]) => story.nodes[id] && story.nodes[id].ending)
+    .map(([id, f]) => { const e = story.nodes[id].ending; return { ...f, id, title: e.title || f.title, epitaph: e.epitaph || f.epitaph, kind: e.kind || f.kind }; });
+}
+function normalise(raw) {
+  const list = Array.isArray(raw) ? raw : Array.isArray(raw.nodes) ? raw.nodes : Object.entries(raw.nodes || {}).map(([id, n]) => ({ id, ...n }));
+  const map = {}; for (const n of list) map[n.id] = n;
+  let flags = raw.flags;
+  if (!flags) { // infer like the build script does
+    flags = {};
+    for (const n of list) for (const c of n.choices || []) for (const [k, v] of Object.entries(c.set || {})) if (!(k in flags)) flags[k] = typeof v === 'string' && /^[+-]\d+$/.test(v) ? 0 : typeof v === 'number' ? 0 : typeof v === 'string' ? null : false;
+  }
+  return { start: raw.start || 'a1_porch', flags, nodes: map, title: raw.title };
+}
+async function loadStory() {
+  const tries = [params.get('story'), 'story.json', 'story.sample.json'].filter(Boolean);
+  for (const url of [...new Set(tries)]) {
+    try { const r = await fetch(url, { cache: 'no-cache' }); if (!r.ok) continue; const j = await r.json(); console.info('[marrow] story loaded from', url); return normalise(j); }
+    catch (e) { console.warn('[marrow] could not load', url, e.message); }
+  }
+  throw new Error('No story found (tried ' + tries.join(', ') + ').');
+}
+
+// ------------------------------------------------------------------ narration
+const narrator = {
+  enabled: false, voice: null,
+  pick() {
+    if (!('speechSynthesis' in window)) return;
+    const vs = speechSynthesis.getVoices(); if (!vs.length) return;
+    const en = vs.filter((v) => /^en/i.test(v.lang));
+    this.voice = en.find((v) => /Daniel|Serena|Google UK English/i.test(v.name)) || en.find((v) => /en[-_]GB/i.test(v.lang)) || en[0] || vs[0];
+  },
+  speak(text) {
+    if (!this.enabled || !('speechSynthesis' in window) || !text) return;
+    if (!this.voice) this.pick();
+    const u = new SpeechSynthesisUtterance(text); if (this.voice) { u.voice = this.voice; u.lang = this.voice.lang; } u.rate = 0.9; u.pitch = 0.9;
+    speechSynthesis.speak(u);
+  },
+  cancel() { if ('speechSynthesis' in window) speechSynthesis.cancel(); },
+};
+if ('speechSynthesis' in window) { narrator.pick(); speechSynthesis.addEventListener?.('voiceschanged', () => narrator.pick()); }
+// Prebaked clips (site/narration.js). When the manifest loads, they replace Web Speech for every node.
+const narration = createNarration({ voice: NARRATION_VOICE, engine: { parseText, pickBranch }, dev: DEV });
+const clipsOn = () => prefs.voice && narration.available;
+narration.ready.then(() => syncPrefs());
+
+// ------------------------------------------------------------------ engines
+const house = createHouse($('scene'));
+window.house = house;
+const audio = createAudio();
+house.onFlash = (s) => audio.thunder(s);
+
+// first visit: moonlit blue-black (void, thin fog); return visits: bruise. Heavy fog sank the house to black, so keep fog low here.
+const TITLE_SCENE = { location: 'outside', palette: 'void', fog: 0.15, lightning: 0.15, camera: 'drift', props: ['moon', 'jackolantern', 'door', 'window'], music: 'drone', heartbeat: 0, flicker: 0.2 };
+
+let prefs = { sound: store.prefs.sound !== false, voice: !!store.prefs.voice };
+function syncPrefs() {
+  $('soundBtn').setAttribute('aria-pressed', String(prefs.sound)); $('voiceBtn').setAttribute('aria-pressed', String(prefs.voice));
+  audio.setEnabled(prefs.sound); narrator.enabled = prefs.voice && !narration.available; if (!prefs.voice) { narrator.cancel(); narration.cancel(); }
+  store.prefs = prefs; saveStore();
+}
+$('soundBtn').addEventListener('click', (e) => { e.stopPropagation(); audio.unlock(); prefs.sound = !prefs.sound; syncPrefs(); });
+$('voiceBtn').addEventListener('click', (e) => { e.stopPropagation(); prefs.voice = !prefs.voice; if (prefs.voice) narration.unlock(); syncPrefs(); });
+syncPrefs();
+window.addEventListener('pointerdown', () => { if (prefs.sound) audio.unlock(); if (prefs.voice) narration.unlock(); }, { once: false, capture: true });
+window.addEventListener('keydown', () => { if (prefs.sound) audio.unlock(); }, { capture: true });
+
+function setScene(scene) {
+  // figures may carry an "if" expression on the flags (e.g. Pip follows you only when trust>=1)
+  if (scene && Array.isArray(scene.figures)) {
+    const figures = scene.figures.filter((f) => { if (!f || f.if === undefined) return true; try { return evalExpr(f.if, flags); } catch (e) { if (DEV) console.warn('[scene] bad figure condition', f.if, e.message); return false; } });
+    scene = { ...scene, figures };
+  }
+  const resolved = house.apply(scene || {});
+  audio.apply(resolved);
+  return resolved;
+}
+
+// ------------------------------------------------------------------ title
+let mode = 'title';
+function show(id) { for (const s of ['title', 'reader', 'ending']) $(s).classList.toggle('hidden', s !== id); $('forget').hidden = id !== 'title'; }
+function renderTitle() {
+  const found = foundEndings();
+  if (store.visits > 0) {
+    $('subtitle').textContent = 'The door remembers you';
+    $('tally').textContent = totalEndings ? `${found.length} of ${totalEndings} endings found` : '';
+  } else { $('subtitle').textContent = 'Marrow Street, Halloween night'; $('tally').textContent = ''; }
+  const ul = $('wallList'); ul.innerHTML = '';
+  for (const f of found.sort((a, b) => a.at - b.at)) {
+    const li = document.createElement('li'); li.className = 'found';
+    li.innerHTML = `<div class="et"></div><div class="ep"></div><div class="kind"></div>`;
+    li.querySelector('.et').textContent = f.title; li.querySelector('.ep').textContent = f.epitaph || ''; li.querySelector('.kind').textContent = f.kind || '';
+    ul.appendChild(li);
+  }
+  const st = $('stones'); st.innerHTML = '';
+  const missing = Math.max(0, totalEndings - found.length);
+  for (let i = 0; i < missing; i++) { const d = document.createElement('div'); d.className = 'stone'; st.appendChild(d); }
+  st.title = `${missing} not yet found`;
+  $('wall').hidden = !(found.length || (store.visits > 0 && totalEndings));
+}
+function toTitle() {
+  mode = 'title'; narrator.cancel(); narration.cancel(); stopTyping();
+  $('ribbon').classList.add('hidden');
+  renderTitle(); show('title');
+  setScene({ ...TITLE_SCENE, ...(store.visits > 0 ? { palette: 'bruise', fog: 0.2 } : {}) });
+  devRender();
+}
+
+// ------------------------------------------------------------------ run
+let flags = {}, current = null, path = [], lastRun = null; // path: node ids of this run, in order
+function startRun() {
+  if (!story) return;
+  audio.unlock();
+  const meta = { visits: store.visits, last_ending: store.lastEnding ?? null, endings_found: foundEndings().length };
+  store.visits += 1; saveStore();
+  flags = createState(story.flags, meta); path = [];
+  show('reader'); mode = 'play';
+  goTo(story.start);
+}
+$('approach').addEventListener('click', startRun);
+
+let typing = null; // { paras, pi, ci, raf, spoken }
+function stopTyping() { if (typing && typing.raf) cancelAnimationFrame(typing.raf); typing = null; }
+
+// On short screens the node text outgrows the pane. The pane follows the typing cursor (and then the choices)
+// unless the reader has just scrolled it themselves.
+let userScrolledAt = 0;
+for (const ev of ['wheel', 'touchmove']) $('pane').addEventListener(ev, () => { userScrolledAt = performance.now(); }, { passive: true });
+function keepInView(el, pad = 28, smooth = false) {
+  const pane = $('pane');
+  if (!el || pane.scrollHeight <= pane.clientHeight + 1 || performance.now() - userScrolledAt < 2500) return;
+  const over = el.getBoundingClientRect().bottom - (pane.getBoundingClientRect().bottom - pad);
+  if (over > 1) pane.scrollTo({ top: pane.scrollTop + over, behavior: smooth ? 'smooth' : 'auto' });
+}
+
+function goTo(id) {
+  const node = story.nodes[id];
+  if (!node) { console.error('[marrow] missing node', id); return; }
+  current = node; path.push(id);
+  store.seen = Array.isArray(store.seen) ? store.seen : [];
+  if (!store.seen.includes(id)) { store.seen.push(id); saveStore(); }
+  if (DEV) console.log('[scene]', id, JSON.stringify(node.scene));
+  narrator.cancel(); narration.cancel(); stopTyping();
+  const text = $('text'); const ch = $('choices');
+  text.classList.add('out'); ch.classList.remove('show');
+  setScene(node.scene);
+  updateRibbon();
+  setTimeout(() => {
+    if (current !== node) return;
+    $('nodeTitle').textContent = node.title || '';
+    ch.innerHTML = ''; text.innerHTML = '';
+    text.classList.remove('out');
+    $('pane').scrollTop = 0;
+    const body = renderText(node.text || '', flags);
+    const paras = body.split(/\n\s*\n/).map((s) => s.replace(/\s*\n\s*/g, ' ').trim()).filter(Boolean);
+    typeText(paras, (followed) => finishNode(node, followed), clipsOn() ? narrate(node, paras) : null);
+    devRender();
+  }, 550);
+}
+
+// Prebaked narration for a node: start the clips and map each run to a slice of the rendered paragraphs.
+// Runs follow render order and never cross a paragraph; a conditional can split a paragraph into several runs.
+// Both sides tidy whitespace the same way (renderText's tidy, narration-runs' normalizeRun), so each run's display
+// text is found verbatim, in order; the gap before a run (a joining space) belongs to it.
+function narrate(node, paras) {
+  const plan = { st: null, session: null, ranges: null };
+  plan.session = narration.speakNode(node, flags, {
+    onRunStart: (i, secs) => plan.st && plan.st.runStart(i, secs),
+    onRunDuration: (i, secs) => plan.st && plan.st.runDuration(i, secs),
+    onRunEnd: (i) => plan.st && plan.st.runEnd(i),
+  });
+  plan.ranges = mapRuns(paras, plan.session.runs);
+  if (!plan.ranges && DEV) console.warn('[narration] runs do not line up with the rendered text of', node.id, '; typing unpaced', plan.session.runs);
+  return plan;
+}
+function mapRuns(paras, runs) {
+  if (!runs.length) return null;
+  const out = []; let pi = 0, pos = 0;
+  for (const r of runs) {
+    let idx = -1;
+    while (pi < paras.length && (idx = paras[pi].indexOf(r.display, pos)) < 0) { pi++; pos = 0; }
+    if (pi >= paras.length) return null;
+    out.push({ pi, from: pos, to: idx + r.display.length }); pos = idx + r.display.length;
+  }
+  for (let k = 0; k < out.length; k++) if (k === out.length - 1 || out[k + 1].pi !== out[k].pi) out[k].to = paras[out[k].pi].length;
+  return new Set(out.map((r) => r.pi)).size === paras.length ? out : null; // every paragraph must be spoken by some run
+}
+
+function typeText(paras, done, plan) {
+  const text = $('text');
+  const els = paras.map((p) => { const el = document.createElement('p'); const shown = document.createElement('span'); const ghost = document.createElement('span'); ghost.className = 'ghost'; ghost.textContent = p; el.append(shown, ghost); text.appendChild(el); return { el, shown, ghost, p }; });
+  $('skipHint').style.opacity = 1;
+  const CPS = 52;
+  const weight = (c) => (/[.,;:!?—]/.test(c) ? 6 : 1); // linger on punctuation
+  const st = { pi: 0, ci: 0, spoken: -1, raf: 0, acc: 0, last: performance.now(), done, cps: CPS, paced: !!(plan && plan.ranges), lim: [0, 0], t0: 0 };
+  typing = st;
+  // Paced mode (prebaked clips): the cursor may only run to st.lim, the end of the run being spoken, at st.cps.
+  const paint = (i) => { const e = els[i]; e.shown.textContent = e.p.slice(0, st.ci); e.ghost.textContent = e.p.slice(st.ci); keepInView(e.shown); };
+  const reveal = (pi, ci) => { // jump the cursor forward to (pi, ci)
+    if (pi < st.pi || (pi === st.pi && ci <= st.ci)) return;
+    while (st.pi < pi && st.pi < els.length) { st.ci = els[st.pi].p.length; paint(st.pi); st.pi++; st.ci = 0; }
+    if (st.pi < els.length) { st.ci = Math.min(ci, els[st.pi].p.length); paint(st.pi); if (st.ci >= els[st.pi].p.length) { st.pi++; st.ci = 0; } }
+  };
+  const ahead = () => { let w = 0; for (let i = st.pi; i < els.length && i <= st.lim[0]; i++) { const p = els[i].p; for (let c = i === st.pi ? st.ci : 0; c < (i === st.lim[0] ? st.lim[1] : p.length); c++) w += weight(p[c]); } return w; };
+  const pace = (secs) => { st.cps = secs > 0 ? Math.max(4, ahead() / Math.max(0.25, secs - 0.3)) : CPS; };
+  if (plan) plan.st = {
+    runStart(i, secs) { if (typing !== st || !st.paced) return; const r = plan.ranges[i]; reveal(r.pi, r.from); st.lim = [r.pi, r.to]; st.t0 = performance.now(); pace(secs); },
+    runDuration(i, secs) { if (typing !== st || !st.paced) return; const r = plan.ranges[i]; if (st.lim[0] === r.pi && st.lim[1] === r.to) pace(secs - (performance.now() - st.t0) / 1000); },
+    runEnd(i) { if (typing !== st || !st.paced) return; const r = plan.ranges[i]; reveal(r.pi, r.to); },
+  };
+  const step = (now) => {
+    if (typing !== st) return;
+    if (st.paced && plan.session.dead) { st.paced = false; st.cps = CPS; } // voice switched off mid-node
+    st.acc += Math.min(st.paced ? 1 : 0.1, (now - st.last) / 1000) * st.cps; st.last = now; // paced: catch up after dropped frames
+    while (st.acc >= 1 && st.pi < els.length) {
+      if (st.paced && !(st.pi < st.lim[0] || (st.pi === st.lim[0] && st.ci < st.lim[1]))) { st.acc = 0; break; }
+      const e = els[st.pi];
+      if (!plan && st.spoken < st.pi) { st.spoken = st.pi; narrator.speak(e.p); }
+      const c = e.p[st.ci];
+      st.ci++; st.acc -= weight(c);
+      paint(st.pi);
+      if (st.ci >= e.p.length) { st.pi++; st.ci = 0; if (!st.paced) st.acc -= 14; }
+    }
+    if (st.pi >= els.length) { typing = null; $('skipHint').style.opacity = 0; done(true); return; }
+    st.raf = requestAnimationFrame(step);
+  };
+  st.skip = () => {
+    for (let i = st.pi; i < els.length; i++) { if (!plan && st.spoken < i) { st.spoken = i; narrator.speak(els[i].p); } els[i].shown.textContent = els[i].p; els[i].ghost.textContent = ''; }
+    if (plan) plan.session.hurry(); // the clip in progress plays out; the rest of the node's clips are skipped
+    st.pi = els.length; cancelAnimationFrame(st.raf); typing = null; $('skipHint').style.opacity = 0; done(false);
+  };
+  st.raf = requestAnimationFrame(step);
+}
+function skipTyping() { if (typing && typing.skip) typing.skip(); }
+
+function finishNode(node, followed) {
+  if (node.ending) { setTimeout(() => showEnding(node), 1600); return; }
+  const ch = $('choices'); ch.innerHTML = '';
+  const list = visibleChoices(node, flags);
+  list.forEach((c, i) => {
+    if (c.input === 'name' && !c.locked) { ch.appendChild(sayField(c, i)); return; }
+    const li = document.createElement('li'); const b = document.createElement('button');
+    b.innerHTML = `<span class="n">${i + 1}</span><span class="lbl"></span>`; b.querySelector('.lbl').textContent = c.label;
+    if (c.locked) { b.disabled = true; b.title = 'Not yet'; }
+    b.addEventListener('click', (e) => { e.stopPropagation(); choose(c); });
+    li.appendChild(b); li.style.transitionDelay = `${i * 140}ms`; ch.appendChild(li);
+  });
+  requestAnimationFrame(() => ch.classList.add('show'));
+  // The reader followed the cursor to the end, so bring the choices up too. After a hurry, leave the scroll
+  // where it is: the text they skipped to is still unread.
+  if (followed) setTimeout(() => { if (current === node) keepInView(ch, 20, true); }, 250);
+  if (clipsOn()) for (const c of list) if (!c.locked) narration.prefetch([c.to], story.nodes, c.input ? flags : applySet(flags, c.set));
+  if (!list.some((c) => !c.locked)) console.error('[marrow] soft-lock: no available choice at', node.id);
+}
+function choose(c) {
+  if (c.locked || mode !== 'play') return;
+  flags = applySet(flags, c.set);
+  goTo(c.to);
+}
+// A choice with input: "name" asks for a typed string, stored in the string flag `name` (trimmed, max 24, empty allowed).
+function sayField(c, i) {
+  const li = document.createElement('li'); li.style.transitionDelay = `${i * 140}ms`;
+  const f = document.createElement('form'); f.className = 'say'; f.autocomplete = 'off';
+  f.innerHTML = `<span class="n">${i + 1}</span><input type="text" maxlength="24" enterkeyhint="done" autocapitalize="words" spellcheck="false"><button type="submit">Say it</button>`;
+  const inp = f.querySelector('input'); inp.placeholder = c.label; inp.setAttribute('aria-label', c.label);
+  f.addEventListener('click', (e) => e.stopPropagation());
+  // Phone keyboards: keep the field in view inside the pane once the keyboard is up, and undo any page scroll
+  // iOS leaves behind when it closes, so the fixed layout does not stay shifted.
+  inp.addEventListener('focus', () => setTimeout(() => inp.scrollIntoView({ block: 'nearest', behavior: 'smooth' }), 320));
+  inp.addEventListener('blur', () => setTimeout(() => { if (window.scrollY || document.documentElement.scrollTop) window.scrollTo(0, 0); }, 60));
+  f.addEventListener('submit', (e) => {
+    e.preventDefault(); if (mode !== 'play') return;
+    flags = applySet({ ...flags, name: inp.value.trim().slice(0, 24) }, c.set);
+    goTo(c.to);
+  });
+  li.appendChild(f); return li;
+}
+
+function updateRibbon() {
+  const has = 'candy' in flags || 'fear' in flags;
+  $('ribbon').classList.toggle('hidden', !has || mode !== 'play');
+  $('candy').textContent = 'candy' in flags ? `candy ${flags.candy ?? 0}` : '';
+  $('fearLine').hidden = !('fear' in flags);
+  const fear = Math.max(0, Math.min(10, Number(flags.fear) || 0));
+  const i = $('fearLine').querySelector('i');
+  i.style.width = `${fear * 10}%`; i.style.animationDuration = `${Math.max(0.5, 2.6 - fear * 0.2)}s`;
+}
+
+function showEnding(node) {
+  if (current !== node) return;
+  const e = node.ending; mode = 'ending';
+  if (!store.found[node.id]) store.found[node.id] = { title: e.title, epitaph: e.epitaph, kind: e.kind, at: Date.now() };
+  store.lastEnding = e.kind || null;
+  // Everything the ending card and floor plan need about this run.
+  lastRun = { ending: e, endingId: node.id, flags: { ...flags }, path: path.slice(), nodes: story.nodes,
+    found: foundEndings().length, total: totalEndings, prevRooms: Array.isArray(store.rooms) ? store.rooms : [] };
+  window.marrowRun = lastRun;
+  store.lastPath = path.slice();
+  store.rooms = mergeRooms(lastRun.prevRooms, roomsVisited(path, story.nodes));
+  saveStore();
+  showPlan($('endPlan'), lastRun, { delay: 3600 });
+  $('endKind').textContent = e.kind || ''; $('endTitle').textContent = e.title || 'The End'; $('endEpitaph').textContent = e.epitaph || '';
+  const parts = ['endKind', 'endTitle', 'endEpitaph', 'keepBtn', 'endCloses', 'returnBtn'];
+  parts.forEach((p) => $(p).classList.remove('on'));
+  show('ending'); $('ribbon').classList.add('hidden'); $('ending').scrollTop = 0;
+  [400, 1200, 3200, 4800, 6200, 8200].forEach((ms, i) => setTimeout(() => $(parts[i]).classList.add('on'), ms));
+  setTimeout(() => house.fadeTo(0.25, 6), 5800);
+  devRender();
+}
+$('returnBtn').addEventListener('click', () => { house.fadeTo(1, 4); toTitle(); });
+bindKeep($('keepBtn'), () => lastRun);
+
+// ------------------------------------------------------------------ input
+$('reader').addEventListener('click', () => skipTyping());
+window.addEventListener('keydown', (e) => {
+  if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+  if (mode === 'title' && (e.key === 'Enter') && story) { startRun(); return; }
+  if (mode === 'ending' && (e.key === 'Enter' || e.key === ' ')) { if ($('returnBtn').classList.contains('on')) $('returnBtn').click(); return; }
+  if (mode !== 'play') return;
+  if (e.key === ' ' || e.key === 'Enter') { if (typing) { e.preventDefault(); skipTyping(); } return; }
+  const n = parseInt(e.key, 10);
+  if (n >= 1 && n <= 4 && !typing) {
+    const li = $('choices').children[n - 1]; const inp = li && li.querySelector('input');
+    if (inp) { e.preventDefault(); inp.focus(); return; }
+    const b = li && li.querySelector('button'); if (b && !b.disabled) b.click();
+  }
+});
+
+let forgetArmed = false;
+$('forget').addEventListener('click', () => {
+  if (!forgetArmed) { forgetArmed = true; $('forget').textContent = 'truly? click again'; setTimeout(() => { forgetArmed = false; $('forget').textContent = 'forget me'; }, 4000); return; }
+  try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ }
+  store = loadStore(); forgetArmed = false; $('forget').textContent = 'forgotten';
+  setTimeout(() => ($('forget').textContent = 'forget me'), 2500);
+  toTitle();
+});
+
+// ------------------------------------------------------------------ dev
+let devIdx = { loc: 0, pal: 0, cam: 0, mus: 0, fig: -1 };
+function devRender() {
+  if (!DEV) return;
+  const d = $('dev'); d.hidden = false;
+  const dirNow = house.directive || {};
+  const ids = story ? Object.keys(story.nodes) : [];
+  d.innerHTML = `<h3>marrow dev</h3>
+    <div class="row">node: <b>${current ? current.id : '(title)'}</b> mode: ${mode}</div>
+    <div class="row"><input id="devJump" list="devNodes" placeholder="jump to node"><datalist id="devNodes">${ids.map((i) => `<option value="${i}">`).join('')}</datalist><button id="devGo">go</button></div>
+    <div class="row"><button data-c="loc">loc: ${dirNow.location}</button><button data-c="pal">pal: ${dirNow.palette}</button><button data-c="cam">cam: ${dirNow.camera}</button><button data-c="mus">music: ${dirNow.music}</button><button id="devFig">figures: ${(dirNow.figures || []).map((f) => f.who + '@' + f.at).join(' ') || 'none'}</button></div>
+    <div class="row"><button id="devFlash">flash</button><button id="devPrev">preview all</button><button id="devTitle">title</button><button id="devSkip">skip text</button></div>
+    <table id="devFlags">${Object.entries(flags).map(([k, v]) => `<tr><td>${k}</td><td><input data-f="${k}" value='${JSON.stringify(v).replace(/'/g, '&#39;')}'></td></tr>`).join('')}</table>
+    <pre>${JSON.stringify({ props: dirNow.props, fog: dirNow.fog, lightning: dirNow.lightning, flicker: dirNow.flicker, heartbeat: dirNow.heartbeat })}</pre>`;
+  $('devGo').onclick = () => devJump($('devJump').value.trim());
+  $('devJump').onkeydown = (e) => { if (e.key === 'Enter') devJump(e.target.value.trim()); };
+  $('devFlash').onclick = () => house.flash(1);
+  $('devPrev').onclick = () => { console.log(house.preview(5000)); };
+  $('devTitle').onclick = () => toTitle();
+  $('devSkip').onclick = () => skipTyping();
+  $('devFig').onclick = () => { // every figure at every anchor of this location, then none
+    const dn = house.directive, list = [];
+    for (const who of FIGURE_WHO) { if (who === 'reflection' && !(dn.props || []).includes('mirror')) continue; for (const at of house.anchors(dn.location, who)) list.push({ who, at }); }
+    devIdx.fig = (devIdx.fig + 1) % (list.length + 1);
+    const nd = { ...dn, figures: devIdx.fig < list.length ? [list[devIdx.fig]] : [] };
+    console.log('[dev figures]', devIdx.fig, '/', list.length, JSON.stringify(nd.figures)); setScene(nd); devRender();
+  };
+  d.querySelectorAll('[data-c]').forEach((b) => (b.onclick = () => {
+    const c = b.dataset.c; const lists = { loc: LOCATIONS, pal: PALETTE_NAMES, cam: CAMERAS, mus: MUSICS };
+    const field = { loc: 'location', pal: 'palette', cam: 'camera', mus: 'music' }[c];
+    const list = lists[c]; const cur = list.indexOf(house.directive[field]); const next = list[(cur + 1) % list.length];
+    const nd = { ...house.directive, [field]: next }; if (c === 'loc') nd.props = null;
+    console.log('[dev scene]', JSON.stringify(nd)); setScene(nd); devRender();
+  }));
+  d.querySelectorAll('[data-f]').forEach((inp) => (inp.onchange = () => {
+    let v; try { v = JSON.parse(inp.value); } catch (e) { v = coerce(inp.value); }
+    flags = { ...flags, [inp.dataset.f]: v }; updateRibbon(); console.log('[dev flags]', flags);
+  }));
+}
+function devJump(id) {
+  if (!story || !story.nodes[id]) { console.warn('[dev] no node', id); return; }
+  if (mode === 'title' || !Object.keys(flags).length) { path = []; flags = createState(story.flags, { visits: store.visits, last_ending: store.lastEnding ?? null, endings_found: foundEndings().length }); }
+  mode = 'play'; show('reader'); goTo(id);
+}
+
+// ------------------------------------------------------------------ boot
+setScene({ ...TITLE_SCENE, ...(store.visits > 0 ? { palette: 'bruise', fog: 0.2 } : {}) });
+house.fadeTo(1, 5);
+renderTitle(); show('title'); devRender();
+loadStory().then((s) => {
+  story = s;
+  totalEndings = Object.values(s.nodes).filter((n) => n.ending).length;
+  renderTitle(); devRender();
+}).catch((e) => {
+  console.error(e); $('storyError').hidden = false; $('storyError').textContent = 'The house is not ready yet. ' + e.message; $('approach').disabled = true;
+});
+</script>
+</body>
+</html>

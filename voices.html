@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marrow House: voices</title>
+<style>
+  :root {
+    --ink: #ece3d0; --ink-dim: rgba(236, 227, 208, 0.62); --ink-faint: rgba(236, 227, 208, 0.32);
+    --ground: #070504; --ember: #e08a4a;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Hoefler Text", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--ground); color: var(--ink); }
+  body { font-family: var(--serif); -webkit-font-smoothing: antialiased; padding: 8vh 20px 12vh; }
+  main { width: min(40em, 100%); margin: 0 auto; }
+  h1 { font-weight: 400; font-size: 13px; letter-spacing: .42em; text-transform: uppercase; color: var(--ink-dim); margin: 0 0 1.4em; }
+  p.how { color: var(--ink-dim); font-size: 15px; line-height: 1.6; margin: 0 0 2.2em; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--ember); background: rgba(224,138,74,.07); padding: 1px 5px; border-radius: 3px; word-break: break-word; }
+  .mode { display: flex; gap: 18px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 2em; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  .mode button { color: var(--ink-faint); padding: 4px 0; }
+  .mode button[aria-pressed="true"] { color: var(--ink-dim); border-bottom: 1px solid currentColor; }
+  ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; }
+  li { border-top: 1px solid rgba(236,227,208,.08); padding-top: 18px; }
+  .row { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; }
+  .name { font-size: 22px; letter-spacing: .06em; }
+  .desc { font-style: italic; color: var(--ink-faint); font-size: 14px; }
+  .play { margin-left: auto; font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-dim); padding: 6px 0; border-bottom: 1px solid rgba(224,138,74,.35); }
+  .play:hover, .play.on { color: var(--ember); }
+  .meta { font-size: 12px; color: var(--ink-faint); margin-top: 6px; letter-spacing: .04em; }
+  details { margin-top: 8px; font-size: 14px; color: var(--ink-dim); }
+  summary { cursor: pointer; color: var(--ink-faint); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; }
+  details pre { white-space: pre-wrap; font-family: var(--serif); line-height: 1.55; margin: .8em 0 0; }
+  .now { font-style: italic; color: var(--ink-dim); font-size: 15px; line-height: 1.6; margin-top: 10px; min-height: 0; }
+  .empty { color: var(--ink-faint); font-style: italic; }
+  a { color: var(--ink-dim); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Marrow House · voices</h1>
+  <p class="how">Auditions for the narrator, read on the porch. Bake samples with
+    <code>node scripts/narrate.mjs --sample --voice &lt;name|id&gt;[,&lt;name|id&gt;…]</code>
+    (list your voices with <code>--voices</code>, or design one with <code>--design "…"</code>), then reload.
+    Pick one, bake it with <code>--voice</code>, and set <code>NARRATION_VOICE</code> in <code>index.html</code> to its folder.</p>
+  <div class="mode" role="group" aria-label="How much to play">
+    <button id="full" aria-pressed="true">Full read</button>
+    <button id="first" aria-pressed="false">First paragraph</button>
+  </div>
+  <ul id="list"><li class="empty">Listening for voices…</li></ul>
+</main>
+<script type="module">
+import { parseText } from './engine.js';
+import { collectRuns } from './narration-runs.js';
+
+const $ = (id) => document.getElementById(id);
+const ROOT = 'narration/samples';
+const NODE = 'a1_porch';
+let firstOnly = false;
+const player = new Audio();
+let playing = null; // { voice, stop }
+
+function setMode(first) {
+  firstOnly = first;
+  $('full').setAttribute('aria-pressed', String(!first)); $('first').setAttribute('aria-pressed', String(first));
+}
+$('full').onclick = () => setMode(false);
+$('first').onclick = () => setMode(true);
+
+async function json(url) { const r = await fetch(url, { cache: 'no-cache' }); if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`); return r.json(); }
+
+let storyNodes = null;
+async function loadStory() {
+  if (storyNodes) return storyNodes;
+  let story = null;
+  for (const u of ['story.json', 'story.sample.json']) { try { story = await json(u); break; } catch (e) { /* next */ } }
+  if (!story) throw new Error('no story.json');
+  storyNodes = Array.isArray(story.nodes) ? Object.fromEntries(story.nodes.map((n) => [n.id, n])) : story.nodes;
+  return storyNodes;
+}
+// runs for a list of node ids (a sample entry may name its own nodes; the default is the porch)
+async function runsFor(ids) {
+  const nodes = await loadStory();
+  const all = [];
+  for (const id of ids) { const text = (nodes[id] && nodes[id].text) || ''; for (const r of collectRuns(parseText(text))) if (!r.name) all.push(r); }
+  const text0 = (nodes[ids[0]] && nodes[ids[0]].text) || '';
+  let first = all.slice(0, 1);
+  try { first = collectRuns(parseText(text0.split(/\n[ \t]*\n/)[0])).filter((r) => !r.name); } catch (e) { /* a block spans the break */ }
+  return { all, first };
+}
+
+function stop() { if (playing) playing.stop(); playing = null; }
+
+function play(v, runs, btn, now) {
+  const was = playing && playing.voice === v.dir;
+  stop();
+  if (was) return;
+  let list = (firstOnly ? runs.first : runs.all).filter((r) => v.manifest.clips[r.hash]).map((r) => ({ file: `${r.hash}.mp3`, text: r.text }));
+  // a voice-design preview has one clip of the porch and no runs
+  if (!list.length && v.preview) list = [{ file: v.preview, text: 'Design preview (porch).' }];
+  if (!list.length) { now.textContent = 'No clips in this sample.'; return; }
+  let i = 0, dead = false;
+  btn.classList.add('on'); btn.textContent = 'Stop';
+  const end = () => { dead = true; player.onended = player.onerror = null; player.pause(); btn.classList.remove('on'); btn.textContent = 'Play'; now.textContent = ''; };
+  playing = { voice: v.dir, stop: end };
+  const next = () => {
+    if (dead) return;
+    if (i >= list.length) { end(); playing = null; return; }
+    const r = list[i++];
+    now.textContent = r.text;
+    player.src = `${ROOT}/${encodeURIComponent(v.dir)}/${r.file}`;
+    player.onended = next;
+    player.onerror = () => { console.warn('[voices] could not play', player.src); next(); };
+    player.play().catch((e) => { console.warn('[voices]', e.message); next(); });
+  };
+  next();
+}
+
+async function boot() {
+  const ul = $('list');
+  let index;
+  try { index = await json(`${ROOT}/index.json`); }
+  catch (e) { ul.innerHTML = '<li class="empty">No samples yet. Bake some with the command above.</li>'; return; }
+  const voices = [];
+  for (const v of (index && index.voices) || []) {
+    const dir = v.dir || v.name;
+    try { voices.push({ ...v, dir, manifest: await json(`${ROOT}/${encodeURIComponent(dir)}/manifest.json`) }); }
+    catch (e) { console.warn('[voices] skipping', dir, e.message); }
+  }
+  ul.innerHTML = '';
+  if (!voices.length) { ul.innerHTML = '<li class="empty">The index lists no voices with a manifest.</li>'; return; }
+  for (const v of voices) {
+    const runs = await runsFor(Array.isArray(v.nodes) && v.nodes.length ? v.nodes : [NODE]).catch((e) => { console.warn('[voices]', e.message); return { all: [], first: [] }; });
+    const li = document.createElement('li');
+    li.innerHTML = `<div class="row"><span class="name"></span><span class="desc"></span><button class="play">Play</button></div>
+      <div class="meta"></div><div class="now"></div>`;
+    li.querySelector('.name').textContent = v.name || v.dir;
+    li.querySelector('.desc').textContent = v.description || '';
+    const clips = Object.values(v.manifest.clips || {});
+    const have = runs.all.filter((r) => v.manifest.clips[r.hash]).length;
+    li.querySelector('.meta').textContent = [v.preview && !clips.length ? 'design preview' : `${clips.length} clips`, clips.length ? `${have} of ${runs.all.length} runs (${Array.isArray(v.nodes) && v.nodes.length ? v.nodes.join(', ') : NODE})` : '', v.manifest.model, v.manifest.generatedAt && new Date(v.manifest.generatedAt).toLocaleString()].filter(Boolean).join(' · ');
+    const instr = v.manifest.instructions || (v.manifest.settings ? JSON.stringify(v.manifest.settings, null, 1) : '');
+    if (instr) {
+      const d = document.createElement('details');
+      d.innerHTML = '<summary>Direction</summary><pre></pre>'; d.querySelector('pre').textContent = instr;
+      li.insertBefore(d, li.querySelector('.now'));
+    }
+    const btn = li.querySelector('.play'); const now = li.querySelector('.now');
+    btn.onclick = () => play(v, runs, btn, now);
+    ul.appendChild(li);
+  }
+}
+boot();
+</script>
+</body>
+</html>

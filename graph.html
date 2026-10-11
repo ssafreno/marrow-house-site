@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marrow House · The Making Of</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="The whole story graph of Marrow House drawn as a constellation, with the stars you have seen lit.">
+<style>
+  :root {
+    --ink: #ece3d0;
+    --ink-dim: rgba(236, 227, 208, 0.62);
+    --ink-faint: rgba(236, 227, 208, 0.32);
+    --ground: #070504;
+    --panel: rgba(14, 10, 8, 0.86);
+    --rule: rgba(236, 227, 208, 0.12);
+    --ember: #e08a4a;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "Hoefler Text", Georgia, serif;
+    --panel-w: 340px;
+    --sheet-peek: 64px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--ground); color: var(--ink); overflow: hidden; }
+  body { font-family: var(--serif); -webkit-font-smoothing: antialiased; }
+  a { color: var(--ember); text-decoration: none; border-bottom: 1px solid rgba(224, 138, 74, 0.35); }
+  a:hover, a:focus-visible { border-bottom-color: var(--ember); }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  #sky { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; cursor: default; touch-action: manipulation; }
+  #veil { position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at 45% 50%, transparent 45%, rgba(0,0,0,0.6) 100%); }
+
+  #head { position: fixed; left: 22px; top: calc(18px + env(safe-area-inset-top, 0px)); right: calc(var(--panel-w) + 22px);
+    pointer-events: none; }
+  #head h1 { margin: 0; font-weight: normal; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink-dim); }
+  #head p { margin: 6px 0 0; font-style: italic; font-size: 14px; color: var(--ink-faint); }
+  #acts { position: fixed; pointer-events: none; inset: 0; }
+  #acts span { position: absolute; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-faint);
+    transform: translateX(-50%); white-space: nowrap; }
+
+  #tip { position: fixed; z-index: 20; max-width: 280px; padding: 10px 13px 11px; background: rgba(10, 7, 6, 0.94);
+    border: 1px solid var(--rule); border-radius: 3px; pointer-events: none; font-size: 14px; line-height: 1.4;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.6); }
+  #tip.pinned { border-color: rgba(224, 138, 74, 0.55); pointer-events: auto; }
+  #tip .t { font-size: 16px; }
+  #tip .m { margin-top: 3px; font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; }
+  #tip .m code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px; color: var(--ink-dim); }
+  #tip .e { margin-top: 7px; font-style: italic; color: var(--ink-dim); }
+  #tip .k { display: inline-block; margin-bottom: 4px; font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; }
+  #tip .seen { color: var(--ember); }
+
+  #panel { position: fixed; z-index: 10; top: 0; right: 0; bottom: 0; width: var(--panel-w); background: var(--panel);
+    border-left: 1px solid var(--rule); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    overflow-y: auto; padding: calc(22px + env(safe-area-inset-top, 0px)) 24px calc(28px + env(safe-area-inset-bottom, 0px)); }
+  #grip { display: none; }
+  #panel h2 { margin: 0 0 4px; font-weight: normal; font-size: 22px; letter-spacing: 0.02em; }
+  #panel .sub { margin: 0 0 18px; color: var(--ink-faint); font-style: italic; font-size: 14px; }
+  #panel h3 { margin: 22px 0 8px; font-weight: normal; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-faint); }
+  dl.nums { display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; margin: 0; font-size: 15px; }
+  dl.nums dt { color: var(--ink-dim); }
+  dl.nums dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+  dl.nums dd.hi { color: var(--ember); }
+  ul.kinds { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 5px 14px; font-size: 14px; }
+  ul.kinds li { display: flex; align-items: center; gap: 8px; color: var(--ink-dim); }
+  ul.kinds li b { font-weight: normal; color: var(--ink); margin-left: auto; font-variant-numeric: tabular-nums; }
+  ul.kinds i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .flags { font-size: 13px; color: var(--ink-dim); line-height: 1.6; }
+  .flags code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; color: var(--ink); }
+  #panel p.body { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-dim); }
+  .credits { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 15px; line-height: 1.55; }
+  .credits p { margin: 0 0 4px; }
+  .back { display: inline-block; margin-top: 18px; font-size: 16px; }
+  .note { margin-top: 10px; font-size: 12px; color: var(--ink-faint); font-style: italic; }
+  #err { position: fixed; left: 22px; bottom: 22px; color: #c97a5a; font-size: 14px; max-width: 28em; }
+
+  @media (max-width: 720px) {
+    #head { right: 22px; }
+    #head p { display: none; }
+    #head h1 { font-size: 11px; letter-spacing: 0.2em; }
+    #panel { top: auto; left: 0; width: auto; height: min(78vh, 640px); border-left: 0; border-top: 1px solid var(--rule);
+      border-radius: 12px 12px 0 0; transform: translateY(calc(100% - var(--sheet-peek) - env(safe-area-inset-bottom, 0px)));
+      transition: transform 0.35s ease; padding-top: 0; overflow-y: hidden; }
+    #panel.open { transform: none; overflow-y: auto; }
+    #grip { display: flex; position: sticky; top: 0; z-index: 1; width: 100%; height: var(--sheet-peek); align-items: center;
+      justify-content: space-between; gap: 12px; background: linear-gradient(var(--panel) 80%, transparent); font-size: 15px; }
+    #grip::before { content: ""; position: absolute; top: 8px; left: 50%; width: 36px; height: 4px; margin-left: -18px;
+      border-radius: 2px; background: var(--ink-faint); }
+    #grip span { color: var(--ink-faint); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+    #panel h2.wide { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { #panel { transition: none; } }
+</style>
+</head>
+<body>
+<canvas id="sky" aria-label="The story graph of Marrow House drawn as a constellation"></canvas>
+<div id="veil"></div>
+<div id="acts" aria-hidden="true"></div>
+<header id="head">
+  <h1>Marrow House &middot; The Making Of</h1>
+  <p>Every scene is a star. Every choice is a thread between them. The ones you have walked are lit.</p>
+</header>
+<div id="tip" hidden role="status"></div>
+
+<aside id="panel" aria-label="About this story">
+  <button id="grip" type="button" aria-expanded="false" aria-controls="panel">
+    <span id="gripText">The numbers</span><span id="gripSeen"></span>
+  </button>
+  <h2 class="wide">The Constellation</h2>
+  <p class="sub" id="seenLine">Loading the sky&hellip;</p>
+
+  <h3>The numbers</h3>
+  <dl class="nums" id="nums"></dl>
+
+  <h3>Endings</h3>
+  <ul class="kinds" id="kinds"></ul>
+
+  <h3>Flags</h3>
+  <div class="flags" id="flags"></div>
+
+  <h3>How it was made</h3>
+  <p class="body">A story bible fixed the world, the rules of the house and its fourteen endings. An outline turned that into a
+  graph: every scene, choice and flag, no prose yet. Four act writers then drafted their acts in parallel against the
+  outline. A build step merged the acts and validated the graph, and a simulator walked it until every ending was proven
+  reachable. A critic read for cohesion and voice; a playtest pass went through it as a player would. Everything is
+  prebaked: there is no runtime AI and no backend. The house you visit is one static file of words.</p>
+
+  <div class="credits">
+    <p>Written by Claude Opus 5.5 agents.</p>
+    <p>Orchestrated in Claude Code.</p>
+    <p>Every ending proven reachable by simulation.</p>
+    <a class="back" href="./">Back to the house</a>
+    <p class="note" id="memNote"></p>
+  </div>
+</aside>
+<div id="err" hidden></div>
+
+<script>
+'use strict';
+const $ = (id) => document.getElementById(id);
+const KEY = 'marrowHouse.v1';
+const KINDS = {
+  escape:   { color: '#cfdcef', label: 'Escape' },
+  consumed: { color: '#d0503a', label: 'Consumed' },
+  become:   { color: '#a888d8', label: 'Become' },
+  free:     { color: '#74c2a4', label: 'Free' },
+  strange:  { color: '#d9c45e', label: 'Strange' },
+  secret:   { color: '#ffb36b', label: 'Secret' },
+};
+const EMBER = '#e08a4a';
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+// ------------------------------------------------------------------ helpers
+function hash(str) { // FNV-1a, 0..1
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return (h >>> 0) / 4294967296;
+}
+function rng(seed) { let s = seed >>> 0 || 1; return () => { s ^= s << 13; s ^= s >>> 17; s ^= s << 5; return (s >>> 0) / 4294967296; }; }
+function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+function hexA(hex, a) {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`;
+}
+
+// ------------------------------------------------------------------ story
+function normalise(raw) {
+  const list = Array.isArray(raw) ? raw : Array.isArray(raw.nodes) ? raw.nodes : Object.entries(raw.nodes || {}).map(([id, n]) => ({ id, ...n }));
+  const map = {}; for (const n of list) if (n && n.id) map[n.id] = n;
+  let flags = raw.flags;
+  if (!flags) {
+    flags = {};
+    for (const n of list) for (const c of n.choices || []) for (const k of Object.keys(c.set || {})) flags[k] = null;
+  }
+  return { start: raw.start || 'a1_porch', flags, nodes: map, list: Object.values(map) };
+}
+async function loadStory() {
+  for (const url of ['story.json', 'story.sample.json']) {
+    try {
+      const r = await fetch(url, { cache: 'no-cache' });
+      if (!r.ok) continue;
+      return { story: normalise(await r.json()), url };
+    } catch (e) { /* try the next one */ }
+  }
+  throw new Error('No story found (tried story.json, story.sample.json).');
+}
+
+// Word count: strip fragment markup, take the longer of then/else at each conditional.
+function countWords(text) {
+  if (!text) return 0;
+  const src = String(text).replace(/\{\{\s*(?![#\/]|else\b)[\w.]+\s*\}\}/g, 'you'); // {{name}} interpolation
+  const re = /\{\{\s*(#if|#unless)\s+[^}]*\}\}|\{\{\s*else\s*\}\}|\{\{\s*\/(?:if|unless)\s*\}\}/g;
+  const root = { then: [], else: null }; const stack = [root]; let cur = root.then; let last = 0; let m;
+  while ((m = re.exec(src))) {
+    if (m.index > last) cur.push(src.slice(last, m.index));
+    last = re.lastIndex;
+    const top = stack[stack.length - 1];
+    if (m[1]) { const b = { then: [], else: null }; cur.push(b); stack.push(b); cur = b.then; }
+    else if (/else/.test(m[0])) { if (stack.length > 1) { top.else = []; cur = top.else; } }
+    else if (stack.length > 1) { stack.pop(); const p = stack[stack.length - 1]; cur = p === root ? root.then : (p.else ?? p.then); }
+  }
+  if (last < src.length) cur.push(src.slice(last));
+  const words = (s) => (s.match(/[A-Za-z0-9À-ɏ'’]+(?:[-–][A-Za-z0-9'’]+)*/g) || []).length;
+  const walk = (seq) => seq.reduce((n, x) => n + (typeof x === 'string' ? words(x) : Math.max(walk(x.then), x.else ? walk(x.else) : 0)), 0);
+  return walk(root.then);
+}
+
+function computeStats(story) {
+  const s = { nodes: story.list.length, words: 0, choices: 0, gated: 0, inputs: 0, endings: 0, kinds: {}, acts: {} };
+  for (const n of story.list) {
+    s.words += countWords(n.text);
+    const cs = n.choices || [];
+    s.choices += cs.length;
+    for (const c of cs) {
+      if (c.require && Object.keys(c.require).length) s.gated++;
+      if (c.input) s.inputs++;
+    }
+    if (n.ending) { s.endings++; const k = n.ending.kind || 'strange'; s.kinds[k] = (s.kinds[k] || 0) + 1; }
+    else s.acts[n.act || 0] = (s.acts[n.act || 0] || 0) + 1;
+  }
+  s.flags = Object.keys(story.flags || {});
+  return s;
+}
+
+// ------------------------------------------------------------------ memory
+// index.html keeps { visits, found: { endingNodeId: {...} }, lastEnding, prefs } under marrowHouse.v1.
+// We also read seen-node and path fields if the game starts storing them.
+function asIdList(v) {
+  if (!v) return [];
+  if (Array.isArray(v)) return v.map((x) => (typeof x === 'string' ? x : x && x.id)).filter(Boolean);
+  if (typeof v === 'object') return Object.keys(v);
+  return [];
+}
+function readMemory(story) {
+  let store = null;
+  try { store = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { store = null; }
+  const mem = { seen: new Set(), path: [], visits: 0, found: 0, hadSeenList: false, store: !!store };
+  if (!store || typeof store !== 'object') return mem;
+  mem.visits = +store.visits || 0;
+  for (const k of ['seen', 'visited', 'nodesSeen', 'seenNodes']) {
+    const ids = asIdList(store[k]);
+    if (store[k] != null) mem.hadSeenList = true;
+    ids.forEach((id) => mem.seen.add(id));
+  }
+  const found = asIdList(store.found).filter((id) => story.nodes[id] && story.nodes[id].ending); // stale ids from old builds don't count
+  mem.found = found.length;
+  found.forEach((id) => mem.seen.add(id));
+  for (const k of ['lastPath', 'path', 'trail', 'history']) {
+    const ids = asIdList(store[k]);
+    if (ids.length) { mem.path = ids.filter((id) => story.nodes[id]); break; }
+  }
+  mem.path.forEach((id) => mem.seen.add(id));
+  // Anything seen implies the porch was crossed.
+  if (mem.seen.size || mem.visits > 0) mem.seen.add(story.start);
+  for (const id of [...mem.seen]) if (!story.nodes[id]) mem.seen.delete(id);
+  return mem;
+}
+
+// ------------------------------------------------------------------ layout
+// Columns: acts 1-4 left to right (sub-columns by depth inside the act), endings in a final column.
+// Rows: barycentric ordering sweeps, then a short deterministic relaxation.
+function layout(story) {
+  const ids = story.list.map((n) => n.id);
+  const preds = {}, succs = {};
+  for (const id of ids) { preds[id] = []; succs[id] = []; }
+  for (const n of story.list) for (const c of n.choices || []) {
+    if (story.nodes[c.to] && !succs[n.id].includes(c.to)) { succs[n.id].push(c.to); preds[c.to].push(n.id); }
+  }
+  const actOf = (n) => (n.ending ? 5 : Math.max(1, Math.min(4, +n.act || 1)));
+  // topological order (DAG; tolerate stray cycles)
+  const indeg = {}; ids.forEach((id) => (indeg[id] = preds[id].length));
+  const order = []; const q = ids.filter((id) => !indeg[id]).sort();
+  const seenT = new Set();
+  while (q.length) { const id = q.shift(); if (seenT.has(id)) continue; seenT.add(id); order.push(id); for (const s of succs[id]) if (--indeg[s] === 0) q.push(s); }
+  ids.forEach((id) => { if (!seenT.has(id)) order.push(id); });
+  // depth within act
+  const depth = {};
+  for (const id of order) {
+    const a = actOf(story.nodes[id]);
+    let d = 0;
+    if (a !== 5) for (const p of preds[id]) if (actOf(story.nodes[p]) === a && depth[p] != null) d = Math.max(d, depth[p] + 1);
+    depth[id] = d;
+  }
+  const maxDepth = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  ids.forEach((id) => { const a = actOf(story.nodes[id]); maxDepth[a] = Math.max(maxDepth[a], depth[id]); });
+  // Act bands across 0..1; endings get a narrow final band.
+  const bandW = { 1: 1, 2: 1, 3: 1, 4: 1, 5: 0.55 };
+  const total = Object.values(bandW).reduce((a, b) => a + b, 0);
+  const bands = {}; let acc = 0;
+  for (const a of [1, 2, 3, 4, 5]) { bands[a] = { x0: acc / total, x1: (acc + bandW[a]) / total }; acc += bandW[a]; }
+  const pos = {};
+  const cols = {};
+  for (const id of ids) {
+    const a = actOf(story.nodes[id]);
+    const b = bands[a]; const md = maxDepth[a];
+    const t = md ? depth[id] / md : 0.5;
+    const pad = (b.x1 - b.x0) * 0.14;
+    const x = a === 5 ? (b.x0 + b.x1) / 2 : b.x0 + pad + t * (b.x1 - b.x0 - 2 * pad);
+    const key = a + ':' + depth[id];
+    (cols[key] = cols[key] || { x, ids: [] }).ids.push(id);
+    pos[id] = { x, y: 0.5 };
+  }
+  const colList = Object.values(cols).sort((p, q2) => p.x - q2.x);
+  // initial order: by id hash so it's deterministic
+  colList.forEach((c) => c.ids.sort((p, q2) => hash(p) - hash(q2)));
+  const spread = (c) => { const n = c.ids.length; c.ids.forEach((id, i) => (pos[id].y = (i + 0.5) / n)); };
+  colList.forEach(spread);
+  for (let sweep = 0; sweep < 8; sweep++) {
+    const fwd = sweep % 2 === 0;
+    const seq = fwd ? colList : [...colList].reverse();
+    for (const c of seq) {
+      const bary = (id) => {
+        const nb = fwd ? preds[id] : succs[id];
+        if (!nb.length) return pos[id].y;
+        return nb.reduce((s, o) => s + pos[o].y, 0) / nb.length;
+      };
+      const bv = {}; c.ids.forEach((id) => (bv[id] = bary(id)));
+      c.ids.sort((p, q2) => bv[p] - bv[q2] || p.localeCompare(q2));
+      spread(c);
+    }
+  }
+  // Relaxation: pull toward neighbours, keep column order, keep a minimum gap.
+  for (let it = 0; it < 40; it++) {
+    for (const c of colList) {
+      const n = c.ids.length; const gap = Math.min(0.9 / Math.max(n, 1), 0.08);
+      for (const id of c.ids) {
+        const nb = preds[id].concat(succs[id]);
+        if (!nb.length) continue;
+        const m = nb.reduce((s, o) => s + pos[o].y, 0) / nb.length;
+        pos[id].y += (m - pos[id].y) * 0.25;
+      }
+      for (let i = 1; i < n; i++) { const a = pos[c.ids[i - 1]], b = pos[c.ids[i]]; if (b.y - a.y < gap) b.y = a.y + gap; }
+      for (let i = n - 2; i >= 0; i--) { const a = pos[c.ids[i]], b = pos[c.ids[i + 1]]; if (b.y - a.y < gap) a.y = b.y - gap; }
+      const lo = pos[c.ids[0]].y, hi = pos[c.ids[n - 1]].y;
+      const shift = lo < 0.04 ? 0.04 - lo : hi > 0.96 ? 0.96 - hi : 0;
+      if (hi - lo > 0.92) { c.ids.forEach((id, i) => (pos[id].y = 0.04 + (i / Math.max(n - 1, 1)) * 0.92)); }
+      else c.ids.forEach((id) => (pos[id].y += shift));
+    }
+  }
+  // Fill each act band vertically so the sky is not one thin river.
+  for (const a of [1, 2, 3, 4]) {
+    const inBand = ids.filter((id) => actOf(story.nodes[id]) === a);
+    if (inBand.length < 3) continue;
+    const ys = inBand.map((id) => pos[id].y);
+    const lo = Math.min(...ys), hi = Math.max(...ys);
+    if (hi - lo < 1e-6) continue;
+    const span = Math.min(0.9, 0.25 + inBand.length * 0.03);
+    inBand.forEach((id) => (pos[id].y = 0.5 - span / 2 + ((pos[id].y - lo) / (hi - lo)) * span));
+  }
+  // Starfield jitter: small, deterministic.
+  for (const id of ids) {
+    const a = actOf(story.nodes[id]);
+    const bw = bands[a].x1 - bands[a].x0;
+    pos[id].x += (hash(id + 'x') - 0.5) * bw * (a === 5 ? 0.25 : 0.12);
+    pos[id].y += (hash(id + 'y') - 0.5) * 0.012;
+  }
+  return { pos, succs, bands, actOf };
+}
+
+// ------------------------------------------------------------------ render
+const canvas = $('sky');
+const ctx = canvas.getContext('2d');
+let W = 0, H = 0, DPR = 1;
+let story, stats, mem, L, stars = [], dust = [], hover = null, pinned = null, pathSet = new Set();
+let vertical = false;
+let area = { x: 0, y: 0, w: 0, h: 0 };
+
+function isPhone() { return window.matchMedia('(max-width: 720px)').matches; }
+
+function resize() {
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  W = window.innerWidth; H = window.innerHeight;
+  canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  const phone = isPhone();
+  const panelW = phone ? 0 : $('panel').offsetWidth;
+  const bottom = phone ? 64 + 10 : 0;
+  vertical = phone && H > W * 1.15;
+  const top = phone ? 64 : 92;
+  area = { x: phone ? 22 : 56, y: top, w: W - panelW - (phone ? 44 : 112), h: H - top - bottom - (phone ? 16 : 56) };
+  if (!story) return;
+  placeStars();
+  placeActLabels();
+  makeDust();
+  if (pinned) showTip(pinned, true);
+  if (!running) draw(performance.now());
+}
+
+function project(p) {
+  // vertical (portrait phone): acts run top to bottom
+  return vertical
+    ? { x: area.x + p.y * area.w, y: area.y + p.x * area.h }
+    : { x: area.x + p.x * area.w, y: area.y + p.y * area.h };
+}
+
+function placeStars() {
+  const n = story.list.length;
+  const base = Math.max(1.3, Math.min(2.6, Math.sqrt((area.w * area.h) / Math.max(n, 1)) / 22));
+  stars = story.list.map((node) => {
+    const p = project(L.pos[node.id]);
+    const end = !!node.ending;
+    const kind = end ? (KINDS[node.ending.kind] ? node.ending.kind : 'strange') : null;
+    return {
+      id: node.id, node, x: p.x, y: p.y, end, kind,
+      r: end ? base * 2.1 : base * (node.id === story.start ? 1.5 : 1),
+      color: end ? KINDS[kind].color : '#ece3d0',
+      seen: mem.seen.has(node.id),
+      phase: hash(node.id) * Math.PI * 2, speed: 0.6 + hash(node.id + 's') * 1.3,
+    };
+  });
+}
+
+function placeActLabels() {
+  const el = $('acts'); el.innerHTML = '';
+  const names = { 1: 'I · The Door', 2: 'II', 3: 'III', 4: 'IV', 5: 'Endings' };
+  const roman = { 1: 'Act I', 2: 'Act II', 3: 'Act III', 4: 'Act IV', 5: 'Endings' };
+  for (const a of [1, 2, 3, 4, 5]) {
+    const b = L.bands[a];
+    const mid = (b.x0 + b.x1) / 2;
+    const s = document.createElement('span');
+    s.textContent = roman[a] || names[a];
+    if (vertical) { s.style.left = (area.x - 2) + 'px'; s.style.top = (area.y + b.x0 * area.h + 2) + 'px'; s.style.transform = 'none'; s.style.fontSize = '10px'; }
+    else { s.style.left = (area.x + mid * area.w) + 'px'; s.style.top = (H - 34) + 'px'; }
+    el.appendChild(s);
+  }
+}
+
+function makeDust() {
+  const r = rng(90210); dust = [];
+  const n = Math.round((W * H) / 5200);
+  for (let i = 0; i < n; i++) dust.push({ x: r() * W, y: r() * H, a: 0.04 + r() * 0.14, s: r() * 0.9 + 0.2, p: r() * 6.28 });
+}
+
+function draw(t) {
+  const time = reduceMotion.matches ? 0 : t / 1000;
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#070504'; ctx.fillRect(0, 0, W, H);
+  // dust
+  for (const d of dust) {
+    const a = reduceMotion.matches ? d.a : d.a * (0.7 + 0.3 * Math.sin(time * 0.7 + d.p));
+    ctx.fillStyle = `rgba(236,227,208,${a.toFixed(3)})`;
+    ctx.fillRect(d.x, d.y, d.s, d.s);
+  }
+  const byId = {}; stars.forEach((s) => (byId[s.id] = s));
+  const focus = pinned || hover;
+  const focusN = new Set();
+  if (focus) { focusN.add(focus.id); for (const s of stars) if (L.succs[s.id].includes(focus.id)) focusN.add(s.id); (L.succs[focus.id] || []).forEach((x) => focusN.add(x)); }
+  // edges
+  ctx.lineWidth = 0.7;
+  for (const s of stars) {
+    for (const to of L.succs[s.id]) {
+      const o = byId[to]; if (!o) continue;
+      const touch = focus && (s.id === focus.id || to === focus.id);
+      const lit = s.seen && o.seen;
+      ctx.strokeStyle = touch ? 'rgba(224,138,74,0.55)' : lit ? 'rgba(236,227,208,0.16)' : 'rgba(236,227,208,0.055)';
+      ctx.lineWidth = touch ? 1 : 0.7;
+      ctx.beginPath();
+      // gentle curve so parallel threads don't stack
+      const mx = (s.x + o.x) / 2, my = (s.y + o.y) / 2;
+      const bend = (hash(s.id + to) - 0.5) * 18;
+      const dx = o.x - s.x, dy = o.y - s.y, len = Math.hypot(dx, dy) || 1;
+      ctx.moveTo(s.x, s.y);
+      ctx.quadraticCurveTo(mx - (dy / len) * bend, my + (dx / len) * bend, o.x, o.y);
+      ctx.stroke();
+    }
+  }
+  // most recent path
+  if (mem.path.length > 1) {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(224,138,74,0.75)'; ctx.lineWidth = 1.6;
+    ctx.shadowColor = EMBER; ctx.shadowBlur = 8;
+    ctx.beginPath();
+    mem.path.forEach((id, i) => { const s = byId[id]; if (!s) return; i ? ctx.lineTo(s.x, s.y) : ctx.moveTo(s.x, s.y); });
+    ctx.stroke(); ctx.restore();
+  }
+  // stars
+  for (const s of stars) {
+    const tw = reduceMotion.matches ? 1 : 0.78 + 0.22 * Math.sin(time * s.speed + s.phase);
+    const dimmed = focus && !focusN.has(s.id);
+    let alpha = s.seen ? 1 : s.end ? 0.55 : 0.34;
+    if (dimmed) alpha *= 0.55;
+    alpha *= tw;
+    const r = s.r * (s === focus ? 1.5 : 1);
+    const col = s.seen && !s.end ? '#ffe2bf' : s.color;
+    // halo
+    if (s.seen || s.end) {
+      const hr = r * (s.seen ? (s.end ? 7 : 5.5) : 4);
+      const g = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, hr);
+      const hc = s.end ? s.color : EMBER;
+      g.addColorStop(0, hexA(hc, (s.seen ? 0.42 : 0.16) * alpha));
+      g.addColorStop(1, hexA(hc, 0));
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(s.x, s.y, hr, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.fillStyle = hexA(col, Math.min(1, alpha));
+    ctx.beginPath(); ctx.arc(s.x, s.y, r, 0, Math.PI * 2); ctx.fill();
+    if (s.end && s.seen) { // four-point glint
+      ctx.strokeStyle = hexA(s.color, 0.5 * alpha); ctx.lineWidth = 0.8;
+      const g = r * 3.2;
+      ctx.beginPath(); ctx.moveTo(s.x - g, s.y); ctx.lineTo(s.x + g, s.y); ctx.moveTo(s.x, s.y - g); ctx.lineTo(s.x, s.y + g); ctx.stroke();
+    }
+    if (s === focus) {
+      ctx.strokeStyle = 'rgba(224,138,74,0.8)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(s.x, s.y, r + 5, 0, Math.PI * 2); ctx.stroke();
+    }
+  }
+}
+
+let running = false;
+function loop(t) { draw(t); if (running) requestAnimationFrame(loop); }
+function startLoop() {
+  if (reduceMotion.matches) { running = false; draw(0); return; }
+  if (!running) { running = true; requestAnimationFrame(loop); }
+}
+reduceMotion.addEventListener?.('change', () => { running = false; startLoop(); });
+
+// ------------------------------------------------------------------ interaction
+function pick(x, y) {
+  let best = null, bd = Infinity;
+  for (const s of stars) { const d = Math.hypot(s.x - x, s.y - y) - s.r; if (d < bd) { bd = d; best = s; } }
+  return bd < (isPhone() ? 18 : 12) ? best : null;
+}
+function showTip(s, pin) {
+  const tip = $('tip');
+  const n = s.node;
+  const loc = n.scene && n.scene.location;
+  let html = '';
+  if (s.end) {
+    html += `<span class="k" style="color:${KINDS[s.kind].color}">${esc(KINDS[s.kind].label)} ending</span>`;
+    html += `<div class="t">${esc(n.ending.title || n.title)}</div>`;
+    html += `<div class="m"><code>${esc(n.id)}</code>${loc ? ' &middot; ' + esc(loc) : ''}</div>`;
+    html += s.seen ? `<div class="e">&ldquo;${esc(n.ending.epitaph || '')}&rdquo;</div>` : `<div class="e">${esc(n.ending.epitaph || '')}</div>`;
+  } else {
+    html += `<div class="t">${esc(n.title || n.id)}</div>`;
+    html += `<div class="m"><code>${esc(n.id)}</code> &middot; Act ${esc(n.act ?? '?')}${loc ? ' &middot; ' + esc(loc) : ''}</div>`;
+    const cs = n.choices || [];
+    if (cs.length) html += `<div class="m">${cs.length} choice${cs.length === 1 ? '' : 's'}${cs.some((c) => c.require) ? ', some gated' : ''}</div>`;
+  }
+  if (s.seen) html += `<div class="m seen">You have been here.</div>`;
+  if (pin) html += `<div class="m">Pinned. Tap elsewhere to let go.</div>`;
+  tip.innerHTML = html;
+  tip.classList.toggle('pinned', !!pin);
+  tip.hidden = false;
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  const right = W - 8 - (isPhone() ? 0 : $('panel').offsetWidth);
+  const cx = Math.max(8, Math.min(W - tw - 8, s.x - tw / 2));
+  const cands = [
+    [s.x + 16, s.y - th / 2], [s.x - tw - 16, s.y - th / 2],
+    s.y > H / 2 ? [cx, s.y - th - 18] : [cx, s.y + 18],
+    s.y > H / 2 ? [cx, s.y + 18] : [cx, s.y - th - 18],
+  ];
+  let [x, y] = cands.find(([cx2, cy]) => cx2 >= 8 && cx2 + tw <= right && cy >= 8 && cy + th <= H - 8) || cands[2];
+  y = Math.max(8, Math.min(H - th - 8, y));
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+}
+function hideTip() { if (!pinned) $('tip').hidden = true; }
+
+canvas.addEventListener('pointermove', (e) => {
+  if (e.pointerType === 'touch') return;
+  const s = pick(e.clientX, e.clientY);
+  canvas.style.cursor = s ? 'pointer' : 'default';
+  if (s === hover) return;
+  hover = s;
+  if (!pinned) { s ? showTip(s, false) : hideTip(); }
+  if (!running) draw(0);
+});
+canvas.addEventListener('pointerleave', () => { hover = null; hideTip(); if (!running) draw(0); });
+canvas.addEventListener('click', (e) => {
+  const s = pick(e.clientX, e.clientY);
+  if (isPhone()) $('panel').classList.remove('open'), $('grip').setAttribute('aria-expanded', 'false');
+  if (s && s !== pinned) { pinned = s; showTip(s, true); }
+  else { pinned = null; $('tip').hidden = true; if (s) { hover = s; showTip(s, false); } }
+  if (!running) draw(0);
+});
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') { pinned = null; $('tip').hidden = true; if (!running) draw(0); } });
+$('grip').addEventListener('click', () => {
+  const open = $('panel').classList.toggle('open');
+  $('grip').setAttribute('aria-expanded', String(open));
+});
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 80); });
+
+// ------------------------------------------------------------------ panel
+function fillPanel() {
+  const fmt = (n) => n.toLocaleString('en-US');
+  const actCounts = [1, 2, 3, 4].map((a) => stats.acts[a] || 0).join(' / ');
+  $('nums').innerHTML = [
+    ['Scenes', fmt(stats.nodes)],
+    ['Per act', actCounts],
+    ['Words', '~' + fmt(Math.round(stats.words / 10) * 10)],
+    ['Choices', fmt(stats.choices)],
+    ['Gated choices', fmt(stats.gated)],
+    ['Endings', fmt(stats.endings)],
+    ['Flags', fmt(stats.flags.length)],
+    ['Stars you have seen', `${fmt(mem.seen.size)} of ${fmt(stats.nodes)}`, true],
+  ].map(([k, v, hi]) => `<dt>${k}</dt><dd${hi ? ' class="hi"' : ''}>${v}</dd>`).join('');
+  $('kinds').innerHTML = Object.keys(KINDS).map((k) =>
+    `<li><i style="background:${KINDS[k].color};box-shadow:0 0 6px ${KINDS[k].color}"></i>${KINDS[k].label}<b>${stats.kinds[k] || 0}</b></li>`).join('');
+  $('flags').innerHTML = stats.flags.length ? stats.flags.map((f) => `<code>${esc(f)}</code>`).join(', ') : 'None declared.';
+  const endSeen = stars.filter((s) => s.end && s.seen).length;
+  $('seenLine').textContent = mem.seen.size
+    ? `You have lit ${mem.seen.size} of ${stats.nodes} stars and ${endSeen} of ${stats.endings} endings.`
+    : 'You have not entered the house yet. Every star is dark.';
+  $('gripSeen').textContent = `${mem.seen.size}/${stats.nodes} lit`;
+  $('memNote').textContent = mem.store && !mem.hadSeenList && !mem.path.length
+    ? 'This browser only remembers the endings you reached, so only those stars (and the porch) are lit.'
+    : '';
+}
+
+// ------------------------------------------------------------------ boot
+(async function boot() {
+  try {
+    const res = await loadStory();
+    story = res.story;
+    stats = computeStats(story);
+    mem = readMemory(story);
+    L = layout(story);
+    resize();
+    fillPanel();
+    startLoop();
+  } catch (e) {
+    $('err').hidden = false;
+    $('err').textContent = e.message;
+    $('seenLine').textContent = 'The sky would not load.';
+  }
+})();
+</script>
+</body>
+</html>
