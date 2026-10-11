@@ -306,7 +306,8 @@ if ('speechSynthesis' in window) { narrator.pick(); speechSynthesis.addEventList
 // Prebaked clips (site/narration.js). When the manifest loads, they replace Web Speech for every node.
 const narration = createNarration({ voice: NARRATION_VOICE, engine: { parseText, pickBranch }, dev: DEV });
 const clipsOn = () => prefs.voice && narration.available;
-narration.ready.then(() => syncPrefs());
+// Voice defaults on once the baked clips are known to exist; a player's own toggle always wins. Web Speech is never a default.
+narration.ready.then(() => { if (!voiceChosen) prefs.voice = narration.available; syncPrefs(); });
 
 // ------------------------------------------------------------------ engines
 const house = createHouse($('scene'));
@@ -317,14 +318,18 @@ house.onFlash = (s) => audio.thunder(s);
 // first visit: moonlit blue-black (void, thin fog); return visits: bruise. Heavy fog sank the house to black, so keep fog low here.
 const TITLE_SCENE = { location: 'outside', palette: 'void', fog: 0.15, lightning: 0.15, camera: 'drift', props: ['moon', 'jackolantern', 'door', 'window'], music: 'drone', heartbeat: 0, flicker: 0.2 };
 
-let prefs = { sound: store.prefs.sound !== false, voice: !!store.prefs.voice };
+// prefs v2: voice used to be saved on every sync, so every earlier player has voice:false stored whether or not they chose it.
+// Drop that once so the new default can apply; from here on voice is only stored after a real toggle.
+if (store.prefs.v !== 2) { delete store.prefs.voice; store.prefs.v = 2; }
+let voiceChosen = typeof store.prefs.voice === 'boolean'; // the player has pressed the Voice button at some point
+let prefs = { sound: store.prefs.sound !== false, voice: voiceChosen ? store.prefs.voice : false };
 function syncPrefs() {
   $('soundBtn').setAttribute('aria-pressed', String(prefs.sound)); $('voiceBtn').setAttribute('aria-pressed', String(prefs.voice));
   audio.setEnabled(prefs.sound); narrator.enabled = prefs.voice && !narration.available; if (!prefs.voice) { narrator.cancel(); narration.cancel(); }
-  store.prefs = prefs; saveStore();
+  store.prefs = { v: 2, sound: prefs.sound, ...(voiceChosen ? { voice: prefs.voice } : {}) }; saveStore(); // an undecided voice is not persisted, so the default can still apply
 }
 $('soundBtn').addEventListener('click', (e) => { e.stopPropagation(); audio.unlock(); prefs.sound = !prefs.sound; syncPrefs(); });
-$('voiceBtn').addEventListener('click', (e) => { e.stopPropagation(); prefs.voice = !prefs.voice; if (prefs.voice) narration.unlock(); syncPrefs(); });
+$('voiceBtn').addEventListener('click', (e) => { e.stopPropagation(); voiceChosen = true; prefs.voice = !prefs.voice; if (prefs.voice) narration.unlock(); syncPrefs(); });
 syncPrefs();
 window.addEventListener('pointerdown', () => { if (prefs.sound) audio.unlock(); if (prefs.voice) narration.unlock(); }, { once: false, capture: true });
 window.addEventListener('keydown', () => { if (prefs.sound) audio.unlock(); }, { capture: true });
