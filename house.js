@@ -274,14 +274,16 @@ B.candles = (o = {}) => {
     obj: group,
     lights: n ? [{ pos: c.add(new V3(0, 0.15, 0)), kind: 'candle', i: Math.min(1.6, 0.6 + n * 0.08) }] : [],
     update(t, dt, ctx) {
-      const amp = 0.08 + ctx.flicker * 0.5;
+      // flicker 0 is a flame that does not move at all (the mirror room, the hall): the resting jitter ramps in over 0..0.1
+      const live = Math.min(1, ctx.flicker / 0.1);
+      const amp = 0.08 * live + ctx.flicker * 0.5;
       for (let i = 0; i < n; i++) {
         const s = seeds[i], j = Math.sin(t * 13 + s) * 0.5 + Math.sin(t * 23.7 + s * 3) * 0.3 + (R() - 0.5) * 0.4 * ctx.flicker;
         const sc = 1 + j * amp;
-        flames.setMatrixAt(i, M4(tops[i].x + Math.sin(t * 7 + s) * 0.004 * (1 + ctx.flicker * 3), tops[i].y, tops[i].z, 0, 0, 0, sc * 0.9, sc * 2.1, sc * 0.9));
+        flames.setMatrixAt(i, M4(tops[i].x + Math.sin(t * 7 + s) * 0.004 * live * (1 + ctx.flicker * 3), tops[i].y, tops[i].z, 0, 0, 0, sc * 0.9, sc * 2.1, sc * 0.9));
       }
       flames.instanceMatrix.needsUpdate = true;
-      glowPts.material.size = 0.5 + Math.sin(t * 9) * 0.03 * (1 + ctx.flicker * 4);
+      glowPts.material.size = 0.5 + Math.sin(t * 9) * 0.03 * live * (1 + ctx.flicker * 4);
     },
   };
 };
@@ -406,13 +408,22 @@ B.clock = () => {
   const pend = new THREE.Group(); pend.position.set(0, 1.35, 0.15); g.add(pend);
   box(0.012, 0.6, 0.01, mat(0x8a6a2a, { m: 0.9, r: 0.3 }), 0, -0.3, 0, pend);
   mesh(new THREE.CylinderGeometry(0.07, 0.07, 0.015, 20).rotateX(Math.PI / 2), mat(0xb08a3a, { m: 0.9, r: 0.25 }), 0, -0.62, 0, pend);
+  // Every clock in the house says 11:59 (bible rule 8). Unwound, the pendulum hangs dead still. Once the parlor clock
+  // is wound (ctx.clock = 'ticking') the pendulum swings and the face trembles on the second, still at 11:59. Only at
+  // the midnight gate (ctx.clock = 'midnight') do the hands reach twelve.
+  let shown = -1, pendV = 0;
+  const setFace = (mins) => { minute.rotation.z = -(mins / 60) * TAU; hour.rotation.z = -((11 + mins / 60) / 12) * TAU; };
+  setFace(59);
   return {
     obj: g, lights: [],
-    update(t) {
-      const mins = 47 + t / 8; // creeping toward midnight
-      minute.rotation.z = -(mins / 60) * TAU;
-      hour.rotation.z = -((11 + mins / 60) / 12) * TAU;
-      pend.rotation.z = Math.sin(t * Math.PI) * 0.12;
+    update(t, dt, ctx) {
+      const state = (ctx && ctx.clock) || 'stopped';
+      const target = state === 'midnight' ? 60 : 59;
+      if (shown !== target) { shown = target; setFace(target); }
+      const swing = state === 'stopped' ? 0 : 1;
+      pendV += (swing - pendV) * Math.min(1, (dt || 0) * 1.5); // the pendulum gathers (or loses) its swing over a moment
+      pend.rotation.z = Math.sin(t * Math.PI) * 0.12 * pendV;
+      if (pendV > 0.01 && state !== 'midnight') { const ph = (t % 1); minute.rotation.z = -(59 / 60) * TAU - Math.exp(-ph * 18) * 0.012 * pendV; shown = -1; }
     },
   };
 };
@@ -1591,7 +1602,7 @@ export function createHouse(canvas, opts = {}) {
   const dust = new THREE.Points(dg, dustM); dust.frustumCulled = false; scene.add(dust);
 
   // ------------------------------------------------------------ fadables
-  const ctx = { small, flicker: 0, beat: 0, pal: null, t: 0, camera };
+  const ctx = { small, flicker: 0, beat: 0, pal: null, t: 0, camera, clock: 'stopped' }; // clock: 'stopped' | 'ticking' | 'midnight'
   const fadables = new Map(); // key -> { obj, vis, target, mats, lights, update }
   function register(keyName, built) {
     if (!built) return null;
@@ -1810,7 +1821,7 @@ export function createHouse(canvas, opts = {}) {
       const base = kd.i * s.i;
       let fl = 1;
       if (s.kind === 'candle' || s.kind === 'fire' || s.kind === 'lantern') {
-        const amp = 0.06 + ctx.flicker * 0.45;
+        const amp = 0.06 * Math.min(1, ctx.flicker / 0.1) + ctx.flicker * 0.45; // steady at flicker 0, like the flames
         fl = 1 + amp * (Math.sin(t * 11 + p.seed) * 0.5 + Math.sin(t * 23.3 + p.seed * 2) * 0.3) + (Math.random() - 0.5) * amp * 0.6;
         if (ctx.flicker > 0.5 && Math.random() < dt * ctx.flicker * 0.8) fl *= 0.25;
       }
@@ -1856,6 +1867,8 @@ export function createHouse(canvas, opts = {}) {
     apply,
     fadeTo(v, seconds = 1) { fadeFrom = fadeV; fadeTo = v; fadeDur = Math.max(0.001, seconds); fadeT = 0; },
     flash: triggerFlash,
+    /** What the house's clocks are doing: 'stopped' (every face 11:59, pendulums still), 'ticking' (wound, still 11:59), 'midnight'. */
+    setClock(state) { ctx.clock = state === 'ticking' || state === 'midnight' ? state : 'stopped'; },
     preview(ms = 6000) {
       if (previewTimer) { clearInterval(previewTimer); previewTimer = null; return 'preview stopped'; }
       let i = LOCATIONS.indexOf(curLoc);

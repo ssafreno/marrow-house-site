@@ -413,6 +413,8 @@ function goTo(id) {
   const text = $('text'); const ch = $('choices');
   text.classList.add('out'); ch.classList.remove('show');
   setScene(node.scene);
+  // The clocks: stopped at 11:59 until the parlor clock is wound; midnight arrives only at the final gate's midnight beat.
+  house.setClock(flags.clock ? (node.id === 'a4_gate_midnight' ? 'midnight' : 'ticking') : 'stopped');
   updateRibbon();
   setTimeout(() => {
     if (current !== node) return;
