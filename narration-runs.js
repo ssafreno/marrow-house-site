@@ -16,9 +16,10 @@ export function normalizeRun(s) { return s.replace(/\s+/g, ' ').replace(/ ([.,;:
 /**
  * Collect runs from a parsed text AST (see engine parseText).
  * pick(node) -> the branch array to follow (render mode), or pass null to collect runs from EVERY branch (bake mode).
- * Each run: { text, hash, name } where name=true means the run interpolates {{name}} and is never narrated.
+ * vars: optional { name: 'Steven' } to bake a known name into runs that interpolate {{name}}.
+ * Each run: { text, hash, name } where name=true means the run interpolates a name that is not baked and is never narrated.
  */
-export function collectRuns(ast, pick = null, out = []) {
+export function collectRuns(ast, pick = null, out = [], vars = null) {
   let cur = '';
   let hasName = false;
   const flush = () => {
@@ -32,10 +33,14 @@ export function collectRuns(ast, pick = null, out = []) {
       parts.forEach((p, i) => { if (i > 0) flush(); cur += p; });
       continue;
     }
-    if (n.type === 'var') { cur += ' you '; hasName = true; continue; }
+    if (n.type === 'var') {
+      // vars: a known name the house can speak ({ name: 'Steven' }); the run is then narrated with the name baked in.
+      if (vars && vars[n.name]) cur += vars[n.name]; else { cur += ' you '; hasName = true; }
+      continue;
+    }
     flush();
-    if (pick) { const b = pick(n); if (b) collectRuns(b, pick, out); }
-    else { collectRuns(n.then, null, out); if (n.else) collectRuns(n.else, null, out); }
+    if (pick) { const b = pick(n); if (b) collectRuns(b, pick, out, vars); }
+    else { collectRuns(n.then, null, out, vars); if (n.else) collectRuns(n.else, null, out, vars); }
   }
   flush();
   return out;

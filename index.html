@@ -259,7 +259,7 @@
 <script type="module">
 import { createHouse, LOCATIONS, PALETTE_NAMES, CAMERAS, FIGURE_WHO } from './house.js';
 import { createAudio } from './audio.js';
-import { createState, applySet, renderText, visibleChoices, coerce, parseText, pickBranch, evalExpr } from './engine.js';
+import { createState, applySet, renderText, visibleChoices, coerce, parseText, pickBranch, evalExpr, takeName } from './engine.js';
 import { createNarration } from './narration.js';
 import { bindKeep } from './share.js';
 import { showPlan, roomsVisited, mergeRooms } from './plan.js';
@@ -566,6 +566,8 @@ function choose(c) {
   goTo(c.to);
 }
 // A choice with input: "name" asks for a typed string, stored in the string flag `name` (trimmed, max 24, empty allowed).
+// Names the house knows (engine KNOWN_NAMES) are stored in their canonical spelling with `name_key` set, so the
+// foyer can greet them and the narration can speak them from prebaked clips.
 function sayField(c, i) {
   const li = document.createElement('li'); li.style.transitionDelay = `${i * 140}ms`;
   const f = document.createElement('form'); f.className = 'say'; f.autocomplete = 'off';
@@ -578,7 +580,7 @@ function sayField(c, i) {
   inp.addEventListener('blur', () => setTimeout(() => { if (window.scrollY || document.documentElement.scrollTop) window.scrollTo(0, 0); }, 60));
   f.addEventListener('submit', (e) => {
     e.preventDefault(); if (mode !== 'play') return;
-    flags = applySet({ ...flags, name: inp.value.trim().slice(0, 24) }, c.set);
+    flags = applySet({ ...flags, ...takeName(inp.value) }, c.set);
     goTo(c.to);
   });
   li.appendChild(f); return li;

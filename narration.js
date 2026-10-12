@@ -59,12 +59,12 @@ export function createNarration({ voice, engine, dev = false, base = 'narration'
     let ast;
     try { ast = engine.parseText(String(node.text ?? '')); } catch (e) { log('parse failed', node.id, e.message); return []; }
     const pick = (n) => engine.pickBranch(n, flags);
-    const runs = collectRuns(ast, pick);
+    const runs = collectRuns(ast, pick, [], flags && flags.name_key ? { name: flags.name } : null);
     // Same walk with {{name}} replaced by what renderText shows, for the typewriter. A name never contains a blank
     // line, so both walks break at the same places and the arrays line up one to one.
     const v = flags && flags.name;
     const shown = v === null || v === undefined || String(v).trim() === '' ? 'you' : String(v).trim();
-    const sub = (a) => a.map((n) => (typeof n === 'string' ? n : n.type === 'var' ? ` ${shown} `
+    const sub = (a) => a.map((n) => (typeof n === 'string' ? n : n.type === 'var' ? shown
       : { ...n, then: sub(n.then), else: n.else ? sub(n.else) : null }));
     const disp = collectRuns(sub(ast), pick);
     return runs.map((r, i) => ({ ...r, display: disp.length === runs.length ? disp[i].text : r.text,

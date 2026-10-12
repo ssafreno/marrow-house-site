@@ -144,6 +144,19 @@ const TAG = /\{\{\s*(#if|#unless)\s+([^}]*?)\s*\}\}|\{\{\s*else\s*\}\}|\{\{\s*\/
 
 /** Variables allowed as {{var}} interpolations and their fallback when empty. */
 export const VARS = { name: 'you' };
+// ---------- the house's own names ----------
+// Typed at the threshold (input: "name"). When the first word is one of the names the house knows, the engine stores
+// the canonical spelling in `name` (so page and narration agree) and the key in `name_key`; otherwise name_key is "".
+export const KNOWN_NAMES = { douglas: 'Douglas', dina: 'Dina', raissa: 'Raissa', eric: 'Eric', victoria: 'Victoria', steven: 'Steven' };
+const NAME_ALIASES = { doug: 'douglas', steve: 'steven', vicky: 'victoria', vicki: 'victoria' };
+/** { name, name_key } for a typed string: trimmed, max 24 chars; canonical spelling when the house knows the name. */
+export function takeName(typed) {
+  const name = String(typed ?? '').trim().slice(0, 24);
+  const first = name.split(/\s+/)[0].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z]/g, '');
+  const key = KNOWN_NAMES[first] ? first : NAME_ALIASES[first] || '';
+  return key ? { name: KNOWN_NAMES[key], name_key: key } : { name, name_key: '' };
+}
+
 
 /** Parse text into an AST of strings and { type, expr, then, else } blocks. Throws on bad markup. */
 export function parseText(text) {
