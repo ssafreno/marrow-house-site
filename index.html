@@ -50,6 +50,7 @@
   #corner button { color: var(--ink-faint); padding: 6px 2px; transition: color .4s; }
   #corner button:hover, #corner button[aria-pressed="true"] { color: var(--ink-dim); }
   #corner button[aria-pressed="true"]::after { content: ""; display: block; height: 1px; background: currentColor; opacity: .5; margin-top: 3px; }
+  #corner button[hidden] { display: none; } /* iPhone has no Fullscreen API; the mobile rule below would otherwise un-hide it */
 
   /* ---------- title ---------- */
   .screen { position: fixed; inset: 0; z-index: 10; transition: opacity 1.4s ease; }
@@ -215,6 +216,7 @@
 <div id="corner">
   <button id="soundBtn" aria-pressed="true" title="Toggle sound">Sound</button>
   <button id="voiceBtn" aria-pressed="false" title="Toggle narration">Voice</button>
+  <button id="fullBtn" aria-pressed="true" title="Toggle full screen (F)" hidden>Full screen (recommended)</button>
 </div>
 
 <section id="title" class="screen" aria-label="Title">
@@ -268,7 +270,8 @@ const $ = (id) => document.getElementById(id);
 const params = new URLSearchParams(location.search);
 const DEV = params.get('dev') === '1';
 const MUSICS = ['drone', 'waltz', 'lullaby', 'heartbeat', 'silence', 'choir'];
-const NARRATION_VOICE = 'callum'; // folder under site/narration/ baked by scripts/narrate.mjs; Web Speech if absent
+const NARRATION_VOICE = 'callum-v4-directed'; // folder under site/narration/ baked by scripts/narrate.mjs; Web Speech if absent
+const VOICE_FOLDER = params.get('voice') || NARRATION_VOICE; // ?voice=callum | callum-v4 | callum-v4-directed to A/B without editing
 
 // ------------------------------------------------------------------ memory
 const KEY = 'marrowHouse.v1';
@@ -326,7 +329,7 @@ const narrator = {
 };
 if ('speechSynthesis' in window) { narrator.pick(); speechSynthesis.addEventListener?.('voiceschanged', () => narrator.pick()); }
 // Prebaked clips (site/narration.js). When the manifest loads, they replace Web Speech for every node.
-const narration = createNarration({ voice: NARRATION_VOICE, engine: { parseText, pickBranch }, dev: DEV });
+const narration = createNarration({ voice: VOICE_FOLDER, engine: { parseText, pickBranch }, dev: DEV });
 const clipsOn = () => prefs.voice && narration.available;
 // Voice defaults on once the baked clips are known to exist; a player's own toggle always wins. Web Speech is never a default.
 narration.ready.then(() => { if (!voiceChosen) prefs.voice = narration.available; syncPrefs(); });
@@ -344,17 +347,33 @@ const TITLE_SCENE = { location: 'outside', palette: 'void', fog: 0.15, lightning
 // Drop that once so the new default can apply; from here on voice is only stored after a real toggle.
 if (store.prefs.v !== 2) { delete store.prefs.voice; store.prefs.v = 2; }
 let voiceChosen = typeof store.prefs.voice === 'boolean'; // the player has pressed the Voice button at some point
-let prefs = { sound: store.prefs.sound !== false, voice: voiceChosen ? store.prefs.voice : false };
+let prefs = { sound: store.prefs.sound !== false, voice: voiceChosen ? store.prefs.voice : false, full: store.prefs.full !== false };
 function syncPrefs() {
   $('soundBtn').setAttribute('aria-pressed', String(prefs.sound)); $('voiceBtn').setAttribute('aria-pressed', String(prefs.voice));
+  $('fullBtn').setAttribute('aria-pressed', String(prefs.full));
   audio.setEnabled(prefs.sound); narrator.enabled = prefs.voice && !narration.available; if (!prefs.voice) { narrator.cancel(); narration.cancel(); }
-  store.prefs = { v: 2, sound: prefs.sound, ...(voiceChosen ? { voice: prefs.voice } : {}) }; saveStore(); // an undecided voice is not persisted, so the default can still apply
+  store.prefs = { v: 2, sound: prefs.sound, full: prefs.full, ...(voiceChosen ? { voice: prefs.voice } : {}) }; saveStore(); // an undecided voice is not persisted, so the default can still apply
 }
 $('soundBtn').addEventListener('click', (e) => { e.stopPropagation(); audio.unlock(); prefs.sound = !prefs.sound; syncPrefs(); });
 $('voiceBtn').addEventListener('click', (e) => { e.stopPropagation(); voiceChosen = true; prefs.voice = !prefs.voice; if (prefs.voice) narration.unlock(); syncPrefs(); });
 syncPrefs();
 window.addEventListener('pointerdown', () => { if (prefs.sound) audio.unlock(); if (prefs.voice) narration.unlock(); }, { once: false, capture: true });
 window.addEventListener('keydown', () => { if (prefs.sound) audio.unlock(); }, { capture: true });
+
+// Full screen is on by default, but a browser only grants it inside a gesture, so the house asks for it when the player
+// approaches (click or Enter), never on load. Leaving full screen by any route, Esc included, turns the preference off so the
+// house stops insisting; the button or F turns it back on. iPhone Safari has no Fullscreen API for anything but video, so
+// the button stays hidden there and the preference is inert.
+const fullBtn = $('fullBtn');
+const fullAvailable = !!document.fullscreenEnabled;
+if (fullAvailable) fullBtn.hidden = false;
+function enterFullscreen() { if (fullAvailable && !document.fullscreenElement) document.documentElement.requestFullscreen?.().catch(() => {}); }
+function toggleFullscreen() {
+  prefs.full = !prefs.full; syncPrefs();
+  if (prefs.full) enterFullscreen(); else if (document.fullscreenElement) document.exitFullscreen?.();
+}
+fullBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFullscreen(); });
+document.addEventListener('fullscreenchange', () => { const on = !!document.fullscreenElement; if (on !== prefs.full) { prefs.full = on; syncPrefs(); } });
 
 function setScene(scene) {
   // figures may carry an "if" expression on the flags (e.g. Pip follows you only when trust>=1)
@@ -414,7 +433,7 @@ function toTitle() {
 let flags = {}, current = null, path = [], lastRun = null; // path: node ids of this run, in order
 function startRun() {
   if (!story) return;
-  audio.unlock();
+  audio.unlock(); if (prefs.full) enterFullscreen();
   const meta = { visits: store.visits, last_ending: store.lastEnding ?? null, endings_found: foundEndings().length };
   store.visits += 1; saveStore();
   flags = createState(story.flags, meta); path = [];
@@ -624,6 +643,7 @@ bindKeep($('keepBtn'), () => lastRun);
 $('reader').addEventListener('click', () => skipTyping());
 window.addEventListener('keydown', (e) => {
   if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+  if ((e.key === 'f' || e.key === 'F') && !e.metaKey && !e.ctrlKey && !e.altKey && fullAvailable) { e.preventDefault(); toggleFullscreen(); return; }
   if (mode === 'title' && (e.key === 'Enter') && story) { startRun(); return; }
   if (mode === 'ending' && (e.key === 'Enter' || e.key === ' ')) { if ($('returnBtn').classList.contains('on')) $('returnBtn').click(); return; }
   if (mode !== 'play') return;
