@@ -1,1 +1,4200 @@
-{"clips":{"ffd64d00f9afa979":{"chars":41,"bytes":20315,"credits":5,"nodes":["a1_porch"]},"e4948e2a2207591e":{"chars":73,"bytes":38287,"credits":9,"nodes":["a1_porch"]},"313501e47ef3d1b7":{"chars":79,"bytes":46646,"credits":10,"nodes":["a1_porch"]},"90aecd2797d9059e":{"chars":56,"bytes":32644,"credits":7,"nodes":["a1_porch"]},"0dd92ed9e804bf12":{"chars":174,"bytes":94084,"credits":21,"nodes":["a1_porch"]},"156e5b6586e145af":{"chars":215,"bytes":124804,"credits":26,"nodes":["a1_treat_hand"]},"dc74096a44af0d8c":{"chars":293,"bytes":170153,"credits":37,"nodes":["a1_porch"],"sent":"[softly] \"Trick,\" says a polite voice from the dark inside, as if remembering where it had last heard the words. \"Or treat.\" A pause. \"Which would you prefer?\" It has been waiting a long time to be polite to someone. A gloved hand comes to the edge of the light, palm up, patient as a collection plate."},"37fc7c6a8daf2736":{"chars":168,"bytes":108713,"credits":21,"nodes":["a1_treat_hand"],"sent":"[softly] \"Lovely,\" says the voice. Somewhere deeper in, a pen scratches one short line. Then the hand turns over, palm up, patient as a collection plate. \"May I take your coat?\""},"0961f6af7b3a18dd":{"chars":172,"bytes":108086,"credits":22,"nodes":["a1_trick_laugh"],"sent":"For a moment there is no sound from inside. [laughs] Then laughter: a boy's laugh coming out of a gentleman's throat, from someone who has not heard that answer in a very long time."},"414e1dbb65559305":{"chars":199,"bytes":134417,"credits":25,"nodes":["a1_trick_laugh"],"sent":"[softly] \"Trick,\" says the voice, tasting it. \"Oh, well done. Then you'd better come in and play it. Our visitor leads, one to nothing.\" The gloved hand withdraws, empty. Deeper in, a pen is laid down unused."},"7b8c14ecae186907":{"chars":131,"bytes":79874,"credits":16,"nodes":["a1_trick_porch"]},"56e714ad5767be5a":{"chars":319,"bytes":190633,"credits":39,"nodes":["a1_trick_laugh"]},"350d4fad46d9d074":{"chars":82,"bytes":43511,"credits":10,"nodes":["a1_trick_porch"]},"8369d6e7b132cac1":{"chars":204,"bytes":122088,"credits":25,"nodes":["a1_trick_porch"]},"64e839498584cdca":{"chars":52,"bytes":27420,"credits":8,"nodes":["a1_trick_path"],"sent":"[quietly] The candle in your hand leans back toward the house."},"07475869b005501d":{"chars":186,"bytes":119580,"credits":23,"nodes":["a1_trick_porch"]},"4eb89e31dfa60283":{"chars":71,"bytes":40168,"credits":10,"nodes":["a1_trick_path"],"sent":"[quietly] The stolen sweets drag at your pocket, heavier than sweets ought to be."},"fcc8a2968f6a248f":{"chars":202,"bytes":106205,"credits":26,"nodes":["a1_trick_path"],"sent":"[quietly] Halfway down the path you look back once. The door is still open and the porch light still on, warm air pouring out into the cold. The house would sooner heat the whole street than shut its door on you."},"fba2d0db5e288d8f":{"chars":133,"bytes":76112,"credits":17,"nodes":["a1_trick_path"],"sent":"[quietly] A fine rain starts. Your friends are at the corner, arguing about whose turn it is. Nobody calls you back. Nobody calls you anything."},"02aae2ae4429f9f3":{"chars":100,"bytes":49781,"credits":12,"nodes":["a1_name"]},"aea24959cb66674d":{"chars":115,"bytes":75485,"credits":14,"nodes":["a1_name"]},"19943628d7a75a13":{"chars":51,"bytes":28674,"credits":6,"nodes":["a1_name"]},"d1b8c927313d220f":{"chars":60,"bytes":35779,"credits":7,"nodes":["a1_name"]},"165161905405ac7a":{"chars":39,"bytes":23031,"credits":5,"nodes":["a1_name"]},"e76f74d8b1a25179":{"chars":58,"bytes":35779,"credits":7,"nodes":["a1_name"]},"8abc924b47770131":{"chars":70,"bytes":41421,"credits":8,"nodes":["a1_name"]},"7ad2b0b71d860d60":{"chars":30,"bytes":27420,"credits":4,"nodes":["a1_name"]},"c61ecfc885ff1849":{"chars":47,"bytes":26793,"credits":6,"nodes":["a1_name"]},"6e27f4487634eea7":{"chars":35,"bytes":19061,"credits":4,"nodes":["a1_name"]},"73819a68ad6b62e7":{"chars":230,"bytes":141314,"credits":28,"nodes":["a1_name"]},"b855f9934c063670":{"chars":62,"bytes":37660,"credits":8,"nodes":["a1_name"]},"d67b87f3b797110f":{"chars":68,"bytes":39541,"credits":8,"nodes":["a1_foyer"]},"69b3b7628dd8a9fe":{"chars":45,"bytes":26166,"credits":5,"nodes":["a1_foyer"]},"7d7e15e4b88d4da2":{"chars":166,"bytes":110594,"credits":20,"nodes":["a1_foyer"]},"619bb75364938101":{"chars":164,"bytes":98473,"credits":20,"nodes":["a1_foyer"]},"76d5149485767ffb":{"chars":195,"bytes":124804,"credits":24,"nodes":["a1_foyer"]},"85b11775499b257b":{"chars":184,"bytes":126685,"credits":23,"nodes":["a1_foyer"],"sent":"[laughs] Far off, behind glass and leaves, somebody laughs, low and delighted. \"We have one of those as well,\" your host says, less pleased. \"He will tell you he was expecting you. He was not.\""},"61ebd46bf8eb86e0":{"chars":192,"bytes":118953,"credits":23,"nodes":["a1_foyer"]},"bc392042ac708eb8":{"chars":202,"bytes":113937,"credits":24,"nodes":["a1_foyer"]},"9791162b23e70c01":{"chars":67,"bytes":44765,"credits":8,"nodes":["a1_foyer"]},"88acfd4c9486d2a6":{"chars":46,"bytes":31181,"credits":6,"nodes":["a1_foyer"]},"5df4bcd527c28ba7":{"chars":98,"bytes":60648,"credits":12,"nodes":["a1_foyer"]},"036d62e76c21c92f":{"chars":55,"bytes":38287,"credits":7,"nodes":["a1_foyer"]},"0e718b7baeaf6e50":{"chars":188,"bytes":118326,"credits":24,"nodes":["a1_foyer"],"sent":"[one knock] Under the floor, something knocks once and stops, as if it had remembered its manners. Your host waits at the inner arch. \"After you.\" Then, lightly: \"Did anyone see you come up the path?\""},"275670f918711e02":{"chars":52,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"5af096da16c1d01d":{"chars":195,"bytes":161167,"credits":24,"nodes":["a1_foyer"]},"c74ef133b6cefca3":{"chars":54,"bytes":38914,"credits":7,"nodes":["a1_foyer"]},"659cd66346d0b6cd":{"chars":52,"bytes":36406,"credits":6,"nodes":["a1_foyer"]},"bab2b8f2b1163203":{"chars":56,"bytes":38914,"credits":7,"nodes":["a1_foyer"]},"93bea607d35135b9":{"chars":54,"bytes":37033,"credits":7,"nodes":["a1_foyer"]},"603a4da06e43a0d4":{"chars":53,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"dd35b2983ccb86f4":{"chars":51,"bytes":36406,"credits":6,"nodes":["a1_foyer"]},"43e4364149ffcd8d":{"chars":53,"bytes":37660,"credits":6,"nodes":["a1_foyer"]},"bb01d3ebcedab47d":{"chars":52,"bytes":38287,"credits":6,"nodes":["a1_foyer"]},"e1d6d06eb085746d":{"chars":52,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"37bef55ec71a45e7":{"chars":53,"bytes":36406,"credits":6,"nodes":["a1_foyer"]},"43b435c432a71d06":{"chars":53,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"45835acb13de5b85":{"chars":52,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"3e4e2b1ef3bbed89":{"chars":50,"bytes":36406,"credits":6,"nodes":["a1_foyer"]},"94f1b2e3a3535c63":{"chars":54,"bytes":37660,"credits":7,"nodes":["a1_foyer"]},"e91f13b8aabcc960":{"chars":49,"bytes":36406,"credits":6,"nodes":["a1_foyer"]},"3a3ca42031cd20f1":{"chars":52,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"1fe54805e853149d":{"chars":52,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"185f446204aa02a5":{"chars":54,"bytes":37033,"credits":7,"nodes":["a1_foyer"]},"6c819a5be455a19e":{"chars":52,"bytes":37660,"credits":6,"nodes":["a1_foyer"]},"dbbe35e3c3ca9b0a":{"chars":52,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"2bd512014991f0c5":{"chars":53,"bytes":37033,"credits":6,"nodes":["a1_foyer"]},"359a1b1868b2b406":{"chars":55,"bytes":38287,"credits":7,"nodes":["a1_foyer"]},"e131706eae9fcaef":{"chars":53,"bytes":37660,"credits":6,"nodes":["a1_foyer"]},"d02a73eefe311bea":{"chars":53,"bytes":37660,"credits":6,"nodes":["a1_foyer"]},"ecc668648b5e6b53":{"chars":32,"bytes":20941,"credits":4,"nodes":["a1_push"]},"346235e4d0c0c57f":{"chars":93,"bytes":57513,"credits":11,"nodes":["a1_push"]},"09fbc38772f287c0":{"chars":56,"bytes":32017,"credits":7,"nodes":["a1_push"]},"47f73763d07762e2":{"chars":280,"bytes":161167,"credits":35,"nodes":["a1_push"],"sent":"You shoulder past him. He flattens himself against the frame before you can touch him, and the glove you brush weighs almost nothing. [laughs] Then he laughs, delighted. You have gone first, and spared him the asking. He follows you in, which suits him very well. \"A point to our visitor.\""},"cb8f4cd111a91031":{"chars":21,"bytes":18434,"credits":3,"nodes":["a1_riddle"]},"cf370b949b3ef89f":{"chars":176,"bytes":158032,"credits":23,"nodes":["a1_push"],"sent":"Brass hooks along the near wall are tagged 1898, 1931, 1953, 1979. Every clock in the room says 11:59, and none of them moves. [one knock] Under the floor something knocks once, and stops."},"214103f03a64e0b9":{"chars":86,"bytes":44765,"credits":10,"nodes":["a1_riddle"]},"030ff9a49248e918":{"chars":114,"bytes":67753,"credits":14,"nodes":["a1_riddle"]},"68516dece6249168":{"chars":38,"bytes":23031,"credits":5,"nodes":["a1_riddle"]},"e1300c8bf6a9c46c":{"chars":129,"bytes":77366,"credits":16,"nodes":["a1_riddle"]},"a53f3c5d05d39a63":{"chars":82,"bytes":42884,"credits":10,"nodes":["a1_riddle"]},"81fc5be7921124cb":{"chars":102,"bytes":60648,"credits":12,"nodes":["a1_riddle"]},"b6961fad0d374883":{"chars":22,"bytes":22404,"credits":4,"nodes":["end_no_one_home"],"sent":"[slowly] You do not look round."},"fc99b3e2c627de9f":{"chars":72,"bytes":49781,"credits":10,"nodes":["end_no_one_home"],"sent":"[slowly] Behind you, though you never see it, the pumpkin on the step stays dark."},"26b04f8bd3d813c6":{"chars":144,"bytes":93457,"credits":17,"nodes":["a1_riddle"]},"0e6f68d289dd4db8":{"chars":109,"bytes":58140,"credits":14,"nodes":["end_no_one_home"],"sent":"[slowly] At the corner your friends want to know what took so long, and you find you have nothing at all to tell them."},"25bf43a50cce9005":{"chars":101,"bytes":67126,"credits":13,"nodes":["end_no_one_home"],"sent":"[slowly] The stolen sweets sit in a drawer for years. You never eat them, and you never quite throw them away."},"d9490fe0273c7bcd":{"chars":90,"bytes":47900,"credits":11,"nodes":["a2_hub"]},"05038852839dd607":{"chars":115,"bytes":67126,"credits":14,"nodes":["a2_hub"]},"f10a3e27d263b6cd":{"chars":273,"bytes":176004,"credits":34,"nodes":["end_no_one_home"],"sent":"[slowly] You grow up. You have a front door of your own, with a good lock. And every Halloween, at one minute to midnight, it swings open by itself and lets the warm out into the dark, politely, though nobody has knocked. Every year you get up and shut it. Every year it asks again."},"ca504911e2b48366":{"chars":15,"bytes":12164,"credits":2,"nodes":["a2_hub"]},"005fe6667c1c12a1":{"chars":65,"bytes":36406,"credits":8,"nodes":["a2_hub"]},"d4535d79d4cb44ce":{"chars":59,"bytes":37660,"credits":7,"nodes":["a2_hub"]},"93f86f397ffb6463":{"chars":293,"bytes":165764,"credits":35,"nodes":["a2_hub"]},"bd1fe529b64e53c6":{"chars":82,"bytes":47900,"credits":10,"nodes":["a2_hub"]},"e8bf9fd7f92ff15c":{"chars":77,"bytes":41421,"credits":9,"nodes":["a2_hub"]},"646bd3748d52de41":{"chars":104,"bytes":52497,"credits":13,"nodes":["a2_hub_2"]},"be635f3f23d78fb3":{"chars":64,"bytes":35779,"credits":8,"nodes":["a2_hub_2"]},"5c64fec3d84819d9":{"chars":186,"bytes":117699,"credits":23,"nodes":["a2_hub_2"]},"5b1e819cb8b41487":{"chars":53,"bytes":32017,"credits":6,"nodes":["a2_hub_2"]},"8f98c6ac517d1056":{"chars":191,"bytes":103697,"credits":23,"nodes":["a2_hub_2"]},"41b07d22130dcd90":{"chars":77,"bytes":47900,"credits":9,"nodes":["a2_hub_2"]},"d6b895f57c228959":{"chars":112,"bytes":72977,"credits":15,"nodes":["a2_hub_stair"],"sent":"[quietly] Behind you the kitchen floor says one word, in High-ee-sah's voice: \"Welcome.\" A spoon drops, and nobody picks it up."},"c09f89e073cfae2d":{"chars":99,"bytes":50408,"credits":13,"nodes":["a2_hub_stair"],"sent":"[quietly] Behind you the kitchen has gone quiet, and the warm flagstone has settled back level with the rest."},"31c7c6c66f7576b6":{"chars":24,"bytes":15299,"credits":4,"nodes":["a2_hub_stair"],"sent":"[quietly] The green light is gone."},"087f1e7306a4cfbf":{"chars":45,"bytes":25539,"credits":7,"nodes":["a2_hub_stair"],"sent":"[quietly] You come back to a foyer with one door fewer."},"49abbc89221ed978":{"chars":115,"bytes":61275,"credits":15,"nodes":["a2_hub_stair"],"sent":"[quietly] Your host stands at the conservatory sill with his pen uncapped, and writes nothing. You gave him nothing to write."},"03e22eca57b0370c":{"chars":40,"bytes":22404,"credits":6,"nodes":["a2_hub_stair","a2_cons_lie"],"sent":"[quietly] The bread smell has gone out of the air."},"51c3625f8452539e":{"chars":43,"bytes":23031,"credits":6,"nodes":["a2_hub_stair","a2_cons_lie"],"sent":"[quietly] There is no firelight to the left any more."},"f52d283e6868a090":{"chars":61,"bytes":37033,"credits":9,"nodes":["a2_hub_stair"],"sent":"[quietly] Where its door stood there is wallpaper, still a little damp."},"701d817d205f207a":{"chars":44,"bytes":23658,"credits":7,"nodes":["a2_hub_stair","a2_cons_lie"],"sent":"[quietly] By your candle the door still shows through."},"03e4834e09ec3284":{"chars":60,"bytes":33898,"credits":8,"nodes":["a2_hub_stair"],"sent":"[quietly] The velvet rope is down, and the stair climbs into the dark."},"678b79cfdc127650":{"chars":29,"bytes":18434,"credits":5,"nodes":["a2_hub_stair"],"sent":"[quietly] Your host offers you his arm."},"c4239d3dc880e6f7":{"chars":69,"bytes":35152,"credits":10,"nodes":["a2_hub_stair"],"sent":"[quietly] Your host glances at your candle and offers you his arm all the same."},"e6b8f99d560514ed":{"chars":36,"bytes":22404,"credits":6,"nodes":["a2_hub_stair"],"sent":"[quietly] \"It is dark on the stair, my guest.\""},"29d995d74fc6ac20":{"chars":152,"bytes":73604,"credits":20,"nodes":["a2_hub_stair"],"sent":"[quietly] Your host crooks his arm at you with a little bow, a move in the game. \"Our visitor may take it, of course. I think that would be a point to the house.\""},"43c72dbdcd91e06f":{"chars":191,"bytes":115191,"credits":23,"nodes":["a2_parlor_book"]},"f247c901285fd283":{"chars":57,"bytes":36406,"credits":7,"nodes":["a2_parlor_book"]},"5ff33ee51da9c38c":{"chars":50,"bytes":29928,"credits":6,"nodes":["a2_parlor_book"]},"7c38ac1ac6f985d5":{"chars":236,"bytes":176631,"credits":30,"nodes":["a2_parlor_book"]},"00610939c5fe890b":{"chars":50,"bytes":30555,"credits":6,"nodes":["a2_parlor_fire"]},"1480eb99d03ba1a7":{"chars":232,"bytes":154897,"credits":28,"nodes":["a2_parlor_pages"]},"9eb3a22732ec69b7":{"chars":92,"bytes":51661,"credits":11,"nodes":["a2_parlor_fire"]},"d5845a06e5bfd4a2":{"chars":268,"bytes":158659,"credits":32,"nodes":["a2_parlor_fire"]},"66dffff77f839c18":{"chars":45,"bytes":23658,"credits":5,"nodes":["a2_parlor_fire"]},"c2fa18ef26e251ec":{"chars":332,"bytes":239952,"credits":41,"nodes":["a2_parlor_pages"]},"99c66cc10838296c":{"chars":5,"bytes":9448,"credits":1,"nodes":["a2_parlor_false"]},"759151d5b95e7f6a":{"chars":107,"bytes":60648,"credits":13,"nodes":["a2_parlor_false"]},"64b0a689d20e665a":{"chars":103,"bytes":58767,"credits":12,"nodes":["a2_parlor_false"]},"3a1a164513010f44":{"chars":110,"bytes":65245,"credits":13,"nodes":["a2_parlor_false"]},"2f276160916e348c":{"chars":112,"bytes":65245,"credits":14,"nodes":["a2_parlor_clock"]},"11c1f8ad7a7dc8c3":{"chars":128,"bytes":83844,"credits":16,"nodes":["a2_parlor_clock"],"sent":"[sighs] He unhooks the key with a small sigh he does not let himself finish, and closes your fingers over it with both gloves. \"Lovely.\""},"ec9a882f08b46f1d":{"chars":35,"bytes":23031,"credits":4,"nodes":["a2_parlor_clock"]},"d9d54fa8f0412a56":{"chars":270,"bytes":151554,"credits":33,"nodes":["a2_parlor_false"]},"c0be3365218fe7c0":{"chars":30,"bytes":20941,"credits":4,"nodes":["a2_parlor_clock"]},"3e1a1a3797c3d06b":{"chars":52,"bytes":33271,"credits":6,"nodes":["a2_parlor_leave"]},"dc8449b40f5532ff":{"chars":182,"bytes":94711,"credits":22,"nodes":["a2_parlor_clock"]},"e1bf96d79a8e694c":{"chars":66,"bytes":41421,"credits":8,"nodes":["a2_parlor_leave"]},"28dbfc546e6b3366":{"chars":67,"bytes":42257,"credits":8,"nodes":["a2_parlor_leave"]},"ffcb8bd706941a06":{"chars":212,"bytes":116445,"credits":26,"nodes":["a2_parlor_leave"]},"b3a0e2d2820b5a7c":{"chars":68,"bytes":41421,"credits":8,"nodes":["a2_parlor_leave"]},"04ce5e967633f9b4":{"chars":67,"bytes":41421,"credits":8,"nodes":["a2_parlor_leave"]},"bc4935b701350345":{"chars":64,"bytes":40168,"credits":8,"nodes":["a2_parlor_leave"]},"9017ead8928c21b0":{"chars":47,"bytes":30555,"credits":6,"nodes":["a2_parlor_leave"]},"53dce687b933ee36":{"chars":56,"bytes":33271,"credits":7,"nodes":["a2_parlor_leave"]},"b54113b0660cb1e3":{"chars":161,"bytes":96592,"credits":19,"nodes":["a2_parlor_leave"]},"b1f70e984e5a1aa6":{"chars":268,"bytes":150927,"credits":32,"nodes":["a2_parlor_leave"]},"964e20bbd7c1fb95":{"chars":103,"bytes":60021,"credits":12,"nodes":["a2_kitchen_door"]},"d791734fd8d6cbdd":{"chars":261,"bytes":162421,"credits":32,"nodes":["a2_kitchen_door"]},"0d8da355f9122567":{"chars":120,"bytes":69007,"credits":15,"nodes":["a2_kitchen_door"]},"78a9efbf127b9a6c":{"chars":91,"bytes":67126,"credits":12,"nodes":["a2_kitchen_door"]},"9c7ff72d94de69df":{"chars":29,"bytes":21777,"credits":4,"nodes":["a2_kitchen_thanks"]},"db5d046ce6542884":{"chars":94,"bytes":53751,"credits":11,"nodes":["a2_kitchen_door"]},"5dcded2ff8022b83":{"chars":88,"bytes":63364,"credits":11,"nodes":["a2_kitchen_thanks"]},"e90eda576c5e2193":{"chars":109,"bytes":61901,"credits":13,"nodes":["a2_kitchen_thanks"]},"01362e7bb843c70f":{"chars":124,"bytes":65872,"credits":15,"nodes":["a2_kitchen_thanks"]},"2cccca7ac496398d":{"chars":37,"bytes":22404,"credits":4,"nodes":["a2_kitchen_thanks"]},"c83fc7602f5d3352":{"chars":57,"bytes":34525,"credits":7,"nodes":["a2_kitchen_thanks"]},"228c32b7e2993a5a":{"chars":74,"bytes":41421,"credits":9,"nodes":["a2_kitchen_thanks"]},"4c021d8661e48726":{"chars":112,"bytes":55632,"credits":14,"nodes":["a2_kitchen_thanks"]},"ee52c3b6107e76eb":{"chars":40,"bytes":29301,"credits":5,"nodes":["a2_kitchen_feast"]},"f68038f3b23128d2":{"chars":71,"bytes":34525,"credits":9,"nodes":["a2_kitchen_feast"]},"3d6b60753933ff55":{"chars":43,"bytes":25539,"credits":6,"nodes":["a2_kitchen_feast"]},"a935a0a7feab11a1":{"chars":45,"bytes":24285,"credits":5,"nodes":["a2_kitchen_feast"]},"99ae2e42999684be":{"chars":244,"bytes":136298,"credits":30,"nodes":["a2_kitchen_feast"]},"6b6da494a4fb4325":{"chars":94,"bytes":53751,"credits":11,"nodes":["a2_kitchen_bone"]},"48378fc55d1d3c4f":{"chars":130,"bytes":74231,"credits":16,"nodes":["a2_kitchen_bone"]},"3ddd5db6b4088de6":{"chars":194,"bytes":123341,"credits":23,"nodes":["a2_kitchen_feast"]},"3182dfb947eee41e":{"chars":104,"bytes":64618,"credits":13,"nodes":["a2_kitchen_bone"]},"728d198a7de95f48":{"chars":124,"bytes":69634,"credits":15,"nodes":["a2_kitchen_bone"]},"7159ebb46113c49b":{"chars":58,"bytes":39541,"credits":7,"nodes":["a2_kitchen_bone"]},"e1713b244af0e798":{"chars":49,"bytes":26793,"credits":6,"nodes":["a2_kitchen_floor"]},"785f17b3ec81c35c":{"chars":39,"bytes":22404,"credits":5,"nodes":["a2_kitchen_floor"]},"5e82b7d70256dafd":{"chars":56,"bytes":33271,"credits":7,"nodes":["a2_kitchen_floor"]},"e48d9f2aff093251":{"chars":112,"bytes":67126,"credits":14,"nodes":["a2_kitchen_bone"]},"220a495fd7404ec1":{"chars":36,"bytes":24912,"credits":5,"nodes":["a2_kitchen_floor"]},"8c0f971f13030ec5":{"chars":38,"bytes":25539,"credits":5,"nodes":["a2_kitchen_floor"]},"f087cf402cc588eb":{"chars":102,"bytes":65872,"credits":15,"nodes":["a2_kitchen_floor"],"sent":"[three slow knocks] Then three knocks come up through the flagstones, slow and polite, close enough to feel in your heels."},"276fd8fe6ee38261":{"chars":66,"bytes":33898,"credits":8,"nodes":["a2_kitchen_floor"]},"30b8b1f70380ffd3":{"chars":90,"bytes":51661,"credits":12,"nodes":["a2_cons_door"],"sent":"[softly] As you leave the kitchen, the floor says \"Welcome\" in the cook's voice. Her mouth is shut."},"04bd81f7f1ac59f3":{"chars":90,"bytes":53124,"credits":11,"nodes":["a2_cons_door"]},"2c162252d77c66ad":{"chars":101,"bytes":57513,"credits":12,"nodes":["a2_cons_door"]},"2cd9679b04730d83":{"chars":312,"bytes":178512,"credits":38,"nodes":["a2_kitchen_floor"]},"3e67a155aa54c4cc":{"chars":99,"bytes":68380,"credits":12,"nodes":["a2_cons_door"]},"a8703d8b3b423fcc":{"chars":62,"bytes":47273,"credits":8,"nodes":["a2_cons_door"]},"d2219e09dac4d6ce":{"chars":118,"bytes":83217,"credits":14,"nodes":["a2_cons_door"]},"d1f8998b6050a058":{"chars":96,"bytes":59394,"credits":12,"nodes":["a2_cons_door"]},"550f9ec9600930df":{"chars":340,"bytes":219472,"credits":41,"nodes":["a2_cons_door"]},"9d84851b9a80f85c":{"chars":136,"bytes":83217,"credits":16,"nodes":["a2_cons_lesson"]},"5ad4526163068e4e":{"chars":127,"bytes":70261,"credits":15,"nodes":["a2_cons_lesson"]},"60a120c660546c2a":{"chars":61,"bytes":41421,"credits":7,"nodes":["a2_cons_lesson"]},"696688b7047819f8":{"chars":128,"bytes":83217,"credits":15,"nodes":["a2_cons_lesson"]},"e0319cd9473d829d":{"chars":53,"bytes":31181,"credits":6,"nodes":["a2_cons_out"]},"7b269d97a7317226":{"chars":70,"bytes":40795,"credits":8,"nodes":["a2_cons_lesson"]},"ac3705b5a63216d3":{"chars":57,"bytes":36406,"credits":7,"nodes":["a2_cons_out"]},"da74f224c535051b":{"chars":119,"bytes":76112,"credits":14,"nodes":["a2_cons_out"]},"34f78d42fb2c0271":{"chars":219,"bytes":126685,"credits":26,"nodes":["a2_cons_out"]},"d63b26d09b6601ec":{"chars":66,"bytes":38914,"credits":8,"nodes":["a2_cons_out"]},"69cd419b70a5320d":{"chars":47,"bytes":30555,"credits":6,"nodes":["a2_cons_out"]},"d28620e6af7e1892":{"chars":52,"bytes":29301,"credits":6,"nodes":["a2_cons_out"]},"a5f951972dd1afeb":{"chars":14,"bytes":16553,"credits":3,"nodes":["a2_cons_lie"],"sent":"[quietly] \"Ah,\" he says."},"868f5cec984e2867":{"chars":125,"bytes":66499,"credits":15,"nodes":["a2_cons_out"]},"d4440e019ac4e5a8":{"chars":57,"bytes":38914,"credits":8,"nodes":["a2_cons_lie"],"sent":"[quietly] Your host writes it down in careful capitals: ONLY VINES."},"69f62b9c3dcfe1c0":{"chars":53,"bytes":34525,"credits":8,"nodes":["a2_cons_lie"],"sent":"[quietly] \"Our visitor is very good at this,\" he says, pleased."},"e7cdde9f781e1cc3":{"chars":128,"bytes":75485,"credits":17,"nodes":["a2_cons_lie"],"sent":"[quietly] \"Then we are playing after all, and you are our visitor.\" The arm he had half offered you, a guest's arm, goes back to his side."},"09f20d65d0513f71":{"chars":96,"bytes":55632,"credits":13,"nodes":["a2_cons_lie"],"sent":"[quietly] This time he does not say \"Ah.\" He underlines it, once for each story you have told him tonight."},"9006cbbf8cd47dee":{"chars":49,"bytes":26793,"credits":7,"nodes":["a2_cons_lie"],"sent":"[quietly] He walks you back to a foyer with one door fewer."},"c361aabbd83cdff2":{"chars":63,"bytes":34525,"credits":9,"nodes":["a2_cons_lie"],"sent":"[quietly] Where its door stood, the paste on the wallpaper has not dried."},"0f9317b1d68b05d1":{"chars":52,"bytes":38287,"credits":7,"nodes":["end_seconds"],"sent":"[slowly] You were warned, and you hold out your plate anyway."},"01c9ee0a113814a5":{"chars":57,"bytes":37660,"credits":8,"nodes":["end_seconds"],"sent":"[slowly] She takes it from you and looks you properly in the face."},"9ea3434de218e9ce":{"chars":145,"bytes":85098,"credits":19,"nodes":["a2_cons_lie"],"sent":"[quietly] The velvet rope is down. At the foot of the stair he crooks an elbow at you with a little bow. It is not a guest's arm. It is a move in the game."},"95b0a0c71c9e64ea":{"chars":44,"bytes":41421,"credits":7,"nodes":["end_seconds"],"sent":"[slowly] High-ee-sah smiles for the first time since 1931."},"8e6c2aeb92e90a1e":{"chars":46,"bytes":41421,"credits":7,"nodes":["end_seconds"],"sent":"[slowly] The cook smiles for the first time since 1931."},"dd4d29c96323eb12":{"chars":63,"bytes":43511,"credits":9,"nodes":["end_seconds"],"sent":"[slowly] She fills the plate, sets it down, and hands you the tea towel."},"34bee425740b922b":{"chars":120,"bytes":78620,"credits":15,"nodes":["a3_hall"]},"46b8dfe0703a1b0a":{"chars":227,"bytes":135044,"credits":29,"nodes":["end_seconds"],"sent":"[slowly] Then she unties her apron, sits in the chair by the range, and closes her eyes. The spoons want counting. Out in the foyer the front door is opening for someone new, and you find you already know what they will want for supper."},"25223e90dd07080d":{"chars":189,"bytes":102235,"credits":23,"nodes":["a3_hall"]},"44ca32b02d1a249d":{"chars":71,"bytes":38914,"credits":9,"nodes":["a3_hall"]},"67f354bdcb2e1019":{"chars":102,"bytes":58140,"credits":12,"nodes":["a3_hall"]},"23f95c1bb707ecd5":{"chars":93,"bytes":60648,"credits":11,"nodes":["a3_hall"]},"33a5bc00057f07bf":{"chars":16,"bytes":14672,"credits":2,"nodes":["a3_hall"]},"32880f82edd5c5e8":{"chars":13,"bytes":12791,"credits":2,"nodes":["a3_hall"]},"851393c5ff4eb425":{"chars":15,"bytes":16553,"credits":2,"nodes":["a3_hall"]},"a58b4011c16f46c2":{"chars":150,"bytes":92621,"credits":18,"nodes":["a3_hall"]},"41b6da3303b6e0df":{"chars":13,"bytes":14672,"credits":2,"nodes":["a3_hall"]},"6b6c3948ac666ef1":{"chars":17,"bytes":15299,"credits":2,"nodes":["a3_hall"]},"379b1383920b3597":{"chars":15,"bytes":14045,"credits":2,"nodes":["a3_hall"]},"7877ba72a0dcc6e6":{"chars":220,"bytes":127312,"credits":27,"nodes":["a3_hall"]},"f02649e8ee40f808":{"chars":14,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"61514f12ec4b8c64":{"chars":12,"bytes":12791,"credits":1,"nodes":["a3_hall"]},"59730ac915940c2d":{"chars":14,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"01408b99bc90bf57":{"chars":13,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"d7a32c49a6bab5ab":{"chars":13,"bytes":14045,"credits":2,"nodes":["a3_hall"]},"b764f51686ff32a3":{"chars":14,"bytes":12791,"credits":2,"nodes":["a3_hall"]},"7db8089d8b2a35be":{"chars":14,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"235600907530102b":{"chars":13,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"e9384e2c5b948cd3":{"chars":11,"bytes":13418,"credits":1,"nodes":["a3_hall"]},"49b027f2d001c645":{"chars":15,"bytes":14045,"credits":2,"nodes":["a3_hall"]},"1e31e6560656fd40":{"chars":10,"bytes":14045,"credits":1,"nodes":["a3_hall"]},"1dcc7eeeb5abf287":{"chars":13,"bytes":14672,"credits":2,"nodes":["a3_hall"]},"b318242fcb1d0bf7":{"chars":13,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"9791a24f17867eeb":{"chars":15,"bytes":12791,"credits":2,"nodes":["a3_hall"]},"34857b1d03346e38":{"chars":13,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"9f9ef24a2cbad034":{"chars":13,"bytes":12164,"credits":2,"nodes":["a3_hall"]},"56325bb04707570d":{"chars":14,"bytes":12791,"credits":2,"nodes":["a3_hall"]},"0f8843747225d496":{"chars":16,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"bd34454be3189e5a":{"chars":14,"bytes":13418,"credits":2,"nodes":["a3_hall"]},"fe7512b753f3f8b7":{"chars":14,"bytes":12791,"credits":2,"nodes":["a3_hall"]},"9f884b3dd24c20b0":{"chars":93,"bytes":47273,"credits":11,"nodes":["a3_hall_long"]},"343562db58072aa8":{"chars":105,"bytes":56259,"credits":13,"nodes":["a3_hall_long"]},"96c0447645f32734":{"chars":51,"bytes":36406,"credits":6,"nodes":["a3_hall_long"]},"046278af1131bf2d":{"chars":48,"bytes":35152,"credits":6,"nodes":["a3_hall_long"]},"024e5427e4106e38":{"chars":50,"bytes":38914,"credits":7,"nodes":["a3_hall_long"]},"0b00ca83d05555aa":{"chars":48,"bytes":33898,"credits":6,"nodes":["a3_hall_long"]},"0558c334de2da718":{"chars":52,"bytes":36406,"credits":6,"nodes":["a3_hall_long"]},"2bb47100054c84a6":{"chars":50,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"e0beee897a392802":{"chars":334,"bytes":197111,"credits":40,"nodes":["a3_hall_long"]},"e24c5460d8a4eabf":{"chars":49,"bytes":34525,"credits":6,"nodes":["a3_hall_long"]},"d16c77aadf4e725f":{"chars":47,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"cfdd07437fc6196a":{"chars":49,"bytes":37033,"credits":6,"nodes":["a3_hall_long"]},"c27090ea6e7da75a":{"chars":48,"bytes":35152,"credits":6,"nodes":["a3_hall_long"]},"e02c82efc7c108ca":{"chars":48,"bytes":34525,"credits":6,"nodes":["a3_hall_long"]},"e977cae1d2360c0c":{"chars":49,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"51cc3511fce36641":{"chars":49,"bytes":35152,"credits":6,"nodes":["a3_hall_long"]},"cf0c94fb045e72a2":{"chars":48,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"f6dcddbf2cadcef6":{"chars":46,"bytes":34525,"credits":6,"nodes":["a3_hall_long"]},"49ace7bfcd2369f8":{"chars":50,"bytes":37033,"credits":6,"nodes":["a3_hall_long"]},"cba0e1fbb35cb88b":{"chars":45,"bytes":35152,"credits":5,"nodes":["a3_hall_long"]},"8fefdaa6461dc2be":{"chars":48,"bytes":34525,"credits":6,"nodes":["a3_hall_long"]},"44483ff469b0c6fa":{"chars":48,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"29f40a10b195c042":{"chars":50,"bytes":36406,"credits":6,"nodes":["a3_hall_long"]},"199c92aa02ef0459":{"chars":48,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"ccb40417157a9035":{"chars":48,"bytes":36406,"credits":6,"nodes":["a3_hall_long"]},"f41319ac16bfb9e2":{"chars":49,"bytes":35152,"credits":6,"nodes":["a3_hall_long"]},"11e639944cdd0d41":{"chars":51,"bytes":35779,"credits":6,"nodes":["a3_hall_long"]},"12bb6525b66b0415":{"chars":49,"bytes":34525,"credits":6,"nodes":["a3_hall_long"]},"90b5b7d1ac8e94f4":{"chars":49,"bytes":33898,"credits":6,"nodes":["a3_hall_long"]},"4decc762c726673c":{"chars":74,"bytes":42257,"credits":9,"nodes":["a3_hall_dark"]},"71467e707ea937dd":{"chars":94,"bytes":61275,"credits":11,"nodes":["a3_hall_dark"]},"8daf012391784ef4":{"chars":202,"bytes":120207,"credits":24,"nodes":["a3_hall_dark"]},"766355e93297434e":{"chars":158,"bytes":83844,"credits":19,"nodes":["a3_hall_dark"]},"77501e83a4703fcd":{"chars":157,"bytes":97219,"credits":19,"nodes":["a3_hall_dark"]},"06dc126dfc8abef5":{"chars":80,"bytes":51661,"credits":10,"nodes":["a3_hall_dark"]},"f059899a8d7b0f45":{"chars":72,"bytes":44138,"credits":9,"nodes":["a3_hall_dark"]},"15363ea4734fb03e":{"chars":69,"bytes":43511,"credits":8,"nodes":["a3_hall_dark"]},"632ebf72d7de1fb9":{"chars":71,"bytes":46019,"credits":9,"nodes":["a3_hall_dark"]},"635d8bb9f4b34d3f":{"chars":69,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"82f26e20423d2119":{"chars":73,"bytes":45392,"credits":9,"nodes":["a3_hall_dark"]},"d14f45dc805b17cb":{"chars":71,"bytes":44138,"credits":9,"nodes":["a3_hall_dark"]},"97bd32034c29a7a4":{"chars":70,"bytes":44138,"credits":8,"nodes":["a3_hall_dark"]},"9107c011dcc39e44":{"chars":68,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"bb2d612a82cb55ff":{"chars":70,"bytes":43511,"credits":8,"nodes":["a3_hall_dark"]},"c446a78b3c61d22f":{"chars":69,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"d5aff81a8b9e6c5f":{"chars":69,"bytes":43511,"credits":8,"nodes":["a3_hall_dark"]},"e02022fe0a7a338d":{"chars":70,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"24efc7cfb7fcbbf2":{"chars":70,"bytes":44138,"credits":8,"nodes":["a3_hall_dark"]},"cbc2d3bcd2b3aca7":{"chars":69,"bytes":42257,"credits":8,"nodes":["a3_hall_dark"]},"709f154be73716db":{"chars":67,"bytes":43511,"credits":8,"nodes":["a3_hall_dark"]},"d0a113368ef3e579":{"chars":71,"bytes":44138,"credits":9,"nodes":["a3_hall_dark"]},"f9f010a8107015d0":{"chars":66,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"85d1116d673f8673":{"chars":69,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"f876e5e28bd1e44f":{"chars":69,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"87eaa74fa62ff7c7":{"chars":71,"bytes":44138,"credits":9,"nodes":["a3_hall_dark"]},"80c75eb2f72aed5a":{"chars":69,"bytes":43511,"credits":8,"nodes":["a3_hall_dark"]},"804be3a8f0e04476":{"chars":69,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"781a913c7f458be7":{"chars":70,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"882f5585d90b90f2":{"chars":72,"bytes":42884,"credits":9,"nodes":["a3_hall_dark"]},"915072d43dbff8d6":{"chars":70,"bytes":42884,"credits":8,"nodes":["a3_hall_dark"]},"fec1bdca374e1e05":{"chars":70,"bytes":43511,"credits":8,"nodes":["a3_hall_dark"]},"a2da6b45bfd02ac7":{"chars":66,"bytes":35779,"credits":8,"nodes":["a3_hall_arm"]},"397b56d5193c8aa9":{"chars":41,"bytes":23658,"credits":5,"nodes":["a3_hall_arm"]},"fb4cc963de2b943a":{"chars":88,"bytes":52497,"credits":11,"nodes":["a3_hall_arm"]},"9e1a01fa401f386b":{"chars":40,"bytes":19688,"credits":5,"nodes":["a3_hall_arm"]},"3aaede6beaf6f5e3":{"chars":92,"bytes":53751,"credits":11,"nodes":["a3_hall_arm"]},"b6e5a28ae24a03b9":{"chars":118,"bytes":67126,"credits":14,"nodes":["a3_hall_arm"]},"2978c5163f873dea":{"chars":124,"bytes":72977,"credits":15,"nodes":["a3_hall_arm"]},"9a413fca0e01792d":{"chars":40,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"aa16faa9d91ffb83":{"chars":171,"bytes":94084,"credits":21,"nodes":["a3_hall_arm"]},"489e7ce12971b79b":{"chars":39,"bytes":32017,"credits":5,"nodes":["a3_hall_arm"]},"5f8803652effd976":{"chars":37,"bytes":29928,"credits":4,"nodes":["a3_hall_arm"]},"90602ed87ec7e14d":{"chars":37,"bytes":29301,"credits":4,"nodes":["a3_hall_arm"]},"4c597261a265381f":{"chars":41,"bytes":32644,"credits":5,"nodes":["a3_hall_arm"]},"be543dafbffbd435":{"chars":39,"bytes":32017,"credits":5,"nodes":["a3_hall_arm"]},"9b97e9b18ecbc216":{"chars":38,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"9be0807cfbc0ae7a":{"chars":36,"bytes":29928,"credits":4,"nodes":["a3_hall_arm"]},"d07cd4d238494633":{"chars":38,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"3f25cdb91e1610f5":{"chars":37,"bytes":29301,"credits":4,"nodes":["a3_hall_arm"]},"a9f087ab97502be9":{"chars":38,"bytes":30555,"credits":5,"nodes":["a3_hall_arm"]},"a42a30fec39134e1":{"chars":37,"bytes":29928,"credits":4,"nodes":["a3_hall_arm"]},"c8a139146dacd4e4":{"chars":38,"bytes":29301,"credits":5,"nodes":["a3_hall_arm"]},"37b705fce1417f61":{"chars":37,"bytes":31181,"credits":4,"nodes":["a3_hall_arm"]},"fe3d34486e2e3b59":{"chars":35,"bytes":28674,"credits":4,"nodes":["a3_hall_arm"]},"72a1d701c0bcc0bb":{"chars":39,"bytes":31181,"credits":5,"nodes":["a3_hall_arm"]},"68462b61c3520a25":{"chars":37,"bytes":28674,"credits":4,"nodes":["a3_hall_arm"]},"09adb77aebc3867e":{"chars":34,"bytes":28674,"credits":4,"nodes":["a3_hall_arm"]},"913ebded349c5e15":{"chars":37,"bytes":31181,"credits":4,"nodes":["a3_hall_arm"]},"00a8bd3952bcb546":{"chars":37,"bytes":29928,"credits":4,"nodes":["a3_hall_arm"]},"fea900887dae7621":{"chars":39,"bytes":31181,"credits":5,"nodes":["a3_hall_arm"]},"6987547f7dbf368a":{"chars":37,"bytes":29301,"credits":4,"nodes":["a3_hall_arm"]},"a968e5eed09ce893":{"chars":38,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"341405520805c46c":{"chars":40,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"7307a309c95ad7c8":{"chars":38,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"ea391a1cf2ce5cd5":{"chars":38,"bytes":29928,"credits":5,"nodes":["a3_hall_arm"]},"089fe56e0e36dfc2":{"chars":32,"bytes":26166,"credits":4,"nodes":["a3_hall_2"]},"7f53a7d3947308d2":{"chars":115,"bytes":61275,"credits":14,"nodes":["a3_hall_2"]},"17fd1afe3b62a140":{"chars":87,"bytes":48527,"credits":11,"nodes":["a3_hall_2"]},"171968790fe47f7b":{"chars":87,"bytes":47273,"credits":11,"nodes":["a3_hall_2"]},"989e7e1c4d34c92c":{"chars":153,"bytes":95965,"credits":20,"nodes":["a3_nursery_door"],"sent":"[gently] The room is new. The paint smells new, the moon in the window is too round, and the crib is exactly your size. It was made the moment you gave your name."},"a89513ac9849ca0e":{"chars":106,"bytes":65872,"credits":14,"nodes":["a3_nursery_door"],"sent":"[gently] Someone is in it already: a girl in a bedsheet ghost, the eyeholes cut crooked, one higher than the other."},"3472693dbe125866":{"chars":232,"bytes":130447,"credits":28,"nodes":["a3_hall_2"]},"8ed1ef2f5238eb9c":{"chars":43,"bytes":23658,"credits":6,"nodes":["a3_nursery_door"],"sent":"[gently] She peers at you through the lower eyehole."},"888556e66e567c8d":{"chars":60,"bytes":37660,"credits":8,"nodes":["a3_nursery_door"],"sent":"[gently] \"You've been fibbing to him all night,\" she says, delighted."},"85f04f1bcdc6d4f9":{"chars":105,"bytes":61901,"credits":15,"nodes":["a3_nursery_door"],"sent":"[gently] [whispers] \"You're a guest too,\" she whispers. \"Don't take anything else off him. He's nice. That's how he does it.\""},"03f4bcc88838a622":{"chars":50,"bytes":32644,"credits":7,"nodes":["a3_nursery_door"],"sent":"[gently] \"You've been fibbing to him,\" she says, delighted."},"ccb50372662e4038":{"chars":67,"bytes":47273,"credits":9,"nodes":["a3_nursery_door"],"sent":"[gently] \"I can tell. He's gone all polite with you. Good. Somebody has to.\""},"57e86da9ba555dc1":{"chars":69,"bytes":49154,"credits":9,"nodes":["a3_nursery_door"],"sent":"[gently] \"You didn't say treat,\" she says, delighted. \"Good. Somebody has to.\""},"673a71bedb5f09af":{"chars":106,"bytes":51035,"credits":14,"nodes":["a3_nursery_door"],"sent":"[gently] Where the candle shines through the eyeholes there is nothing behind them, and the sheet stands up anyway."},"abe9d546cbc45091":{"chars":79,"bytes":43511,"credits":11,"nodes":["a3_nursery_pip"],"sent":"[gently] She tucks your sweet away under the sheet, quickly, before anyone can count it."},"a491e8c5644e2a4d":{"chars":51,"bytes":33271,"credits":9,"nodes":["a3_nursery_pip"],"sent":"[gently] [whispers] She whispers hello back, as quietly as you said it."},"34ba617f047fa95c":{"chars":114,"bytes":69634,"credits":16,"nodes":["a3_nursery_pip"],"sent":"[gently] [laughs] The sheet has gone very still where you laughed at it. Nobody else ever comes, though, so she talks to you anyway."},"304e134cff5a5304":{"chars":62,"bytes":46019,"credits":10,"nodes":["a3_nursery_pip"],"sent":"[gently] [laughs] She laughs into the sheet, the muffled laugh of an accomplice."},"906002c7da2daab4":{"chars":113,"bytes":55632,"credits":15,"nodes":["a3_nursery_pip"],"sent":"[gently] She looks up at the little clock above the crib, which says one minute to midnight like every clock in the house."},"d05a8355bf1d1656":{"chars":192,"bytes":105578,"credits":24,"nodes":["a3_nursery_pip"],"sent":"[gently] \"I'm Dee,\" she says. \"Dina Ashdown, really, but nobody says it. Is it still Halloween out there? I said I'd be home before Mum switches the porch light off. I've only been here about an hour.\""},"e85e4a41f0e10dfc":{"chars":115,"bytes":64618,"credits":15,"nodes":["a3_nursery_pip"],"sent":"[gently] \"The house says you guessed the clock downstairs. Nobody ever has. So you'll know how late it really is out there.\""},"7f1936ae777482b7":{"chars":103,"bytes":61901,"credits":14,"nodes":["a3_nursery_pip"],"sent":"[gently] \"They all say that,\" she says. \"Mr. Marrow says they're only being polite, so as not to hurry anybody.\""},"0ad5ba67cd550024":{"chars":93,"bytes":51035,"credits":12,"nodes":["a3_nursery_pip"],"sent":"[gently] She tilts her head. \"You've the look of someone who came back. I don't know how I know that.\""},"aacd10a22f735300":{"chars":74,"bytes":55005,"credits":12,"nodes":["a3_nursery_pip"],"sent":"[gently] [three slow knocks] Inside the wall something knocks three times, and waits for an answer too."},"e2b4bc1a053c28b2":{"chars":31,"bytes":23658,"credits":5,"nodes":["a3_nursery_year"],"sent":"[gently] \"That's not an hour,\" she says."},"d486e62b61afeef6":{"chars":54,"bytes":30555,"credits":8,"nodes":["a3_nursery_year"],"sent":"[gently] She goes to the window anyway and kneels on the chair."},"ee5955ebec65b3a5":{"chars":150,"bytes":90741,"credits":19,"nodes":["a3_nursery_year"],"sent":"[gently] You tell her. The sheet goes still, and then her fingers start moving under it, counting. She gets past her own age, and past her mother's, and stops."},"b800beba6f40f502":{"chars":77,"bytes":49781,"credits":10,"nodes":["a3_nursery_year"],"sent":"[gently] Where she looks you see only a grey nothing, and she looks at it a long time."},"b9a36e8602a46f5e":{"chars":96,"bytes":57513,"credits":13,"nodes":["a3_nursery_year"],"sent":"[gently] At the bottom of a street that runs on too far, a porch light in a little iron cage is still on."},"fc3e95960e88f8bd":{"chars":137,"bytes":77366,"credits":18,"nodes":["a3_nursery_year"],"sent":"[gently] She unties a ribbon from under the sheet. \"Then you'd better take me. Promise properly. Promises count at midnight; everyone knows that.\""},"04bb9c78e398d982":{"chars":71,"bytes":42257,"credits":10,"nodes":["a3_nursery_year","a3_nursery_window"],"sent":"[gently] She winds a ribbon round her fingers and does not hold it out. Not yet."},"effa7632b1c23040":{"chars":68,"bytes":35779,"credits":9,"nodes":["a3_nursery_year"],"sent":"[gently] She keeps her hands on the glass and does not ask you anything else."},"3ebb0e5f3b786d2d":{"chars":75,"bytes":61275,"credits":12,"nodes":["a3_nursery_window"],"sent":"[gently] [one knock] The wall answers your knock once, softer, and waits. A question, this time."},"68945057530de73e":{"chars":114,"bytes":65245,"credits":15,"nodes":["a3_nursery_window"],"sent":"[gently] Dee takes your answer to the window with her and kneels on a chair, eyeholes to the glass. \"There. Past the lamp.\""},"d3b1dffa29b0a579":{"chars":49,"bytes":28047,"credits":7,"nodes":["a3_nursery_window"],"sent":"[gently] \"She always leaves it on till the last one's in.\""},"cdbe5455f2f3cb3d":{"chars":143,"bytes":85725,"credits":18,"nodes":["a3_nursery_window"],"sent":"[gently] Where she looks you see only a soft grey nothing, with nothing written on it yet. Her face, through the sheet, is turned toward it and shining."},"c8ce54bc653b33a5":{"chars":119,"bytes":69634,"credits":15,"nodes":["a3_nursery_window"],"sent":"[gently] At the bottom of a street that runs on further than any street should is a porch light in a little iron cage. It is on."},"29ddcb25f25e39a6":{"chars":33,"bytes":19688,"credits":5,"nodes":["a3_nursery_window"],"sent":"[gently] She keeps her hands on the glass."},"bd178472384c6c53":{"chars":110,"bytes":70261,"credits":14,"nodes":["a3_nursery_window"],"sent":"[gently] She turns from you to the wall and says, quite clearly, \"They're in here.\" Somewhere in the house a pen moves."},"7030057eba7aa2af":{"chars":65,"bytes":40168,"credits":9,"nodes":["a3_nursery_stay"],"sent":"[gently] She watches the grey nothing beyond the glass, and you watch her."},"519d3f2db906fb84":{"chars":55,"bytes":35152,"credits":8,"nodes":["a3_nursery_stay"],"sent":"[gently] Far down the street, the caged porch light is still on."},"ccfaf1d9f43eb9f3":{"chars":168,"bytes":100981,"credits":21,"nodes":["a3_nursery_stay"],"sent":"[gently] You sit down on the floor by her chair, and stay. Nobody counts how long. In this house a while costs nothing on the clock: the hands do not move, however long you sit."},"8b13505927ddb392":{"chars":147,"bytes":82381,"credits":19,"nodes":["a3_nursery_stay"],"sent":"[gently] At last she unties the ribbon from under the sheet. \"Then you'd better take me. Promise properly. Promises count at midnight; everyone knows that.\""},"1c0fdd6be47fff4a":{"chars":49,"bytes":29301,"credits":7,"nodes":["a3_nursery_stay"],"sent":"[gently] She lets you sit, and says nothing to you at all."},"57e9317489260354":{"chars":104,"bytes":60648,"credits":14,"nodes":["a3_nursery_stay"],"sent":"[gently] After a while the sheet leans against your shoulder, a little. The ribbon stays wound round her fingers."},"681a9d3fddf6189c":{"chars":109,"bytes":61275,"credits":14,"nodes":["a3_mirror_door"],"sent":"[quietly] Your reflection lifts its hand half a second after you. Then, having decided something, half a second before."},"f1c5ab58f88e470d":{"chars":132,"bytes":75485,"credits":17,"nodes":["a3_mirror_door"],"sent":"[quietly] A room that is all mirror, every wall and the back of the door, and the glass is perfectly steady. The candles in it do not flicker."},"be950af670b5abda":{"chars":139,"bytes":75485,"credits":18,"nodes":["a3_mirror_door"],"sent":"[quietly] Where you should be, the glass shows a front door with a brass number and a worn mat. It is yours. You could not have said so a minute ago."},"169bc18519f298b4":{"chars":20,"bytes":14045,"credits":4,"nodes":["a3_mirror_door"],"sent":"[quietly] It lets that settle."},"7110fa0d1f854fd6":{"chars":83,"bytes":53124,"credits":11,"nodes":["a3_mirror_door"],"sent":"[quietly] \"Go on, then,\" it says, in your voice. \"You first. Or me. Let's see who's quicker.\""},"e9730eae4a01e86b":{"chars":90,"bytes":56259,"credits":12,"nodes":["a3_mirror_door"],"sent":"[quietly] \"I'd only like a word,\" it says, in your voice, wheedling. \"You'd be doing me a kindness.\""},"f30d0ff961869027":{"chars":60,"bytes":40168,"credits":8,"nodes":["a3_mirror_door"],"sent":"[quietly] \"I guessed the same as you, downstairs. I'm you, after all.\""},"a36936ff27fa421c":{"chars":67,"bytes":46646,"credits":9,"nodes":["a3_mirror_door"],"sent":"[quietly] \"I knew the answer too, downstairs. The clock. I'm you, after all.\""},"ca266cd24a16d65c":{"chars":77,"bytes":55005,"credits":11,"nodes":["a3_mirror_door"],"sent":"[quietly] Then, nearly kind: \"We've had this talk before. You never remember it. I do.\""},"a5b6cc85317e7926":{"chars":61,"bytes":32017,"credits":9,"nodes":["a3_mirror_offer"],"sent":"[quietly] It speaks first, before you have finished deciding to listen."},"c45f12f1e2f84ddb":{"chars":82,"bytes":41421,"credits":11,"nodes":["a3_mirror_offer"],"sent":"[quietly] The front door in the glass stays put the whole time, and only the voice is yours."},"2c362dc6fac3153c":{"chars":93,"bytes":47900,"credits":12,"nodes":["a3_mirror_offer"],"sent":"[quietly] Your reflection lays its palm flat on the inside of the glass, and the glass does not shiver."},"d813e7b4f357d123":{"chars":15,"bytes":12164,"credits":3,"nodes":["a3_mirror_back"],"sent":"[quietly] You turn round."},"8c90ccb45fdcc1b8":{"chars":99,"bytes":54378,"credits":13,"nodes":["a3_mirror_offer"],"sent":"[quietly] It has noticed the ribbon at your pocket. \"Or one of us could stay in her place. Think about that.\""},"21c00b0a772cc605":{"chars":108,"bytes":61901,"credits":14,"nodes":["a3_mirror_back"],"sent":"[quietly] No wall shows any of you. In the glass of the door your own front door waits, and the voice comes out of it."},"9901e45addb81d50":{"chars":190,"bytes":102861,"credits":24,"nodes":["a3_mirror_back"],"sent":"[quietly] Every wall shows you the back of your own head, the collar, the parting in your hair, all of it half a second late. Only the glass in the door shows your face, and your face is watching you."},"8fac897105b22fc3":{"chars":326,"bytes":199619,"credits":41,"nodes":["a3_mirror_offer"],"sent":"[quietly] \"Here's the offer,\" it says, plainly. It is not the house, and it has no need to be polite. \"Let me keep your reflection. The house counts heads, not faces, so it will count one of us as staying, and you can go. The price is your face. You never see it again: not in glass, not in water, not in a dark window, not in a spoon.\""},"12a8e43d4d092944":{"chars":37,"bytes":18434,"credits":6,"nodes":["a3_mirror_back"],"sent":"[quietly] You'd have to turn round to say yes.\""},"79baffe398177598":{"chars":55,"bytes":32017,"credits":8,"nodes":["a3_mirror_back"],"sent":"[quietly] Or one of us could stay in her place. Think about that."},"19a8c5aa8e55321b":{"chars":15,"bytes":12164,"credits":3,"nodes":["a3_mirror_no"],"sent":"[quietly] You tell it no."},"49be86e5f6c47101":{"chars":221,"bytes":121461,"credits":28,"nodes":["a3_mirror_back"],"sent":"[quietly] \"Suit yourself,\" it says to the back of your head. \"I'll be quick, then. The house counts heads, not faces. Let me keep your reflection and it counts one of us as staying, and you can go. The price is your face, for good."},"994eff77abad2e8c":{"chars":59,"bytes":35779,"credits":8,"nodes":["a3_mirror_no"],"sent":"[quietly] The front door in the glass begins, very slightly, to fade."},"3e211f371f9a38ed":{"chars":92,"bytes":62737,"credits":12,"nodes":["a3_mirror_no"],"sent":"[quietly] \"Oh,\" it says, in your voice, hurt. \"You'd have been doing me a kindness. Only a small one.\""},"6f336a2ecdc0206f":{"chars":84,"bytes":56886,"credits":11,"nodes":["a3_mirror_no"],"sent":"[quietly] \"Your move, then,\" it says, in your voice, amused. \"I'll wait. I'm good at waiting.\""},"f61b4fb1d2b16cfd":{"chars":45,"bytes":22404,"credits":7,"nodes":["a3_mirror_no"],"sent":"[quietly] \"She'll need someone in her chair, you know.\""},"878b550686b9f444":{"chars":85,"bytes":53124,"credits":11,"nodes":["a3_mirror_no"],"sent":"[quietly] It stays half a second late a moment longer, and then, pointedly, keeps perfect time."},"940ec4a580d5fbe6":{"chars":66,"bytes":39541,"credits":9,"nodes":["a3_mirror_no"],"sent":"[quietly] \"The offer stands,\" it says. \"Right up until you leave this room.\""},"5095d88754c9f32a":{"chars":22,"bytes":14045,"credits":3,"nodes":["a3_attic_stair"]},"8f6fb06ba19b7d77":{"chars":105,"bytes":59394,"credits":13,"nodes":["a3_attic_stair"]},"d827187a74fdc2c9":{"chars":60,"bytes":36406,"credits":7,"nodes":["a3_attic_stair"]},"e88552b822da17f4":{"chars":147,"bytes":126685,"credits":18,"nodes":["a3_attic_stair"]},"bdf0917b043b5d3c":{"chars":56,"bytes":33898,"credits":7,"nodes":["a3_attic_stair"]},"6b7e46f6eb03a735":{"chars":18,"bytes":14045,"credits":2,"nodes":["a3_attic_floor"]},"28242c77bd6ed31b":{"chars":246,"bytes":151554,"credits":30,"nodes":["a3_attic_stair"]},"73c5796a0f6d5a94":{"chars":25,"bytes":16553,"credits":3,"nodes":["a3_attic_floor"]},"9417ef85173eaefb":{"chars":49,"bytes":32644,"credits":6,"nodes":["a3_attic_floor"]},"f3cdcc92678567da":{"chars":126,"bytes":68380,"credits":15,"nodes":["a3_attic_stair"]},"269494884d347aeb":{"chars":109,"bytes":55632,"credits":13,"nodes":["a3_attic_floor"]},"d83a013e4859f78c":{"chars":81,"bytes":58140,"credits":10,"nodes":["a3_attic_floor"]},"a745303d9fcfae97":{"chars":158,"bytes":94084,"credits":19,"nodes":["a3_attic_floor"]},"c16ac354c7dbbaf6":{"chars":61,"bytes":37660,"credits":7,"nodes":["a3_attic_floor"]},"62eb9eedc0914655":{"chars":119,"bytes":77993,"credits":17,"nodes":["a3_attic_floor"],"sent":"[three slow knocks] Then three knocks come, slow and polite, from so far down that the whole house ought to be between them and your knees."},"8bca951351c4587d":{"chars":120,"bytes":79874,"credits":16,"nodes":["a3_attic_floor"],"sent":"They come from well below the girl. [whispers] \"Don't,\" she whispers. \"It's only asking. But if you answer, that's you saying yes.\""},"d3f684f5000b4b1f":{"chars":55,"bytes":35779,"credits":7,"nodes":["a3_attic_floor"]},"04ba435b967a6ea4":{"chars":70,"bytes":42257,"credits":8,"nodes":["a3_attic_floor"]},"1c189e52a970c70d":{"chars":41,"bytes":29928,"credits":5,"nodes":["a3_attic_floor"]},"4368fec20fd42445":{"chars":62,"bytes":33898,"credits":9,"nodes":["a3_hatch"],"sent":"[quietly] Below you, something has stopped knocking and started waiting."},"03d862e0d8652b75":{"chars":81,"bytes":40168,"credits":11,"nodes":["a3_hatch"],"sent":"[quietly] Answered more than once tonight, it sounds less like a knock than a conversation."},"282362f7964eecfe":{"chars":67,"bytes":41421,"credits":9,"nodes":["a3_hatch"],"sent":"[quietly] Behind you, in your own voice, someone is still saying \"Thank you.\""},"0340cf2316a7ad00":{"chars":41,"bytes":23658,"credits":6,"nodes":["a3_hatch"],"sent":"[quietly] Nobody is in the shine of the brass ring."},"b1af2d50b3bf32e5":{"chars":76,"bytes":42257,"credits":10,"nodes":["a3_hatch"],"sent":"[quietly] At the foot of the stair a sheet with crooked eyeholes waits, pointing down."},"885eb0de977bc306":{"chars":66,"bytes":37033,"credits":9,"nodes":["a3_hatch"],"sent":"[quietly] The hatch already stands open. Someone below knows you are coming."},"7ca645ad624a2457":{"chars":254,"bytes":155524,"credits":32,"nodes":["a3_hatch"],"sent":"[quietly] When you come out, the hall is gone. In its place a narrow back stair drops under a hatch with a brass ring, and warm air breathes up it: in, a long pause, out. The doors you did not open have become wallpaper, the pattern not quite matched at the seams."},"04b7ae51d571a9d4":{"chars":188,"bytes":119580,"credits":24,"nodes":["end_lights_out"],"sent":"[slowly] Then it does. You keep walking. It is easy, after a while. Somewhere far back a coat hangs on a hook that was not there before, and the house, which never lies, does not mention you again."},"b2f93fadfb1135bf":{"chars":251,"bytes":173288,"credits":31,"nodes":["end_lights_out"],"sent":"[slowly] You walk past the last candle, and nobody stops you, because nobody has to. The dark gives you exactly what you are owed: no doors, no runner, no portraits to count, no end. Behind you the hall is a small square of light that does not get any smaller."},"c58cfe862991a903":{"chars":21,"bytes":15926,"credits":4,"nodes":["a4_cellar"],"sent":"[quietly] You are hungry again."},"eab00246e74251e9":{"chars":266,"bytes":145911,"credits":33,"nodes":["a4_cellar"],"sent":"[quietly] The hatch comes down over your head and shuts. Pale roots come through the cellar walls, and they have pushed the bricks aside so gently that the mortar is still whole. They all lean one way. Shelves of jars run off into the dark. It smells of warm bread and cloves."},"a17274e52e3f08a1":{"chars":87,"bytes":42257,"credits":12,"nodes":["a4_cellar"],"sent":"[quietly] The roots part before you reach them. Somebody told the house which way you would come."},"c65e028e841b1be7":{"chars":123,"bytes":66499,"credits":17,"nodes":["a4_cellar"],"sent":"[quietly] The sheet with crooked eyeholes slips past you, close to the floor. [whispers] \"Round the big root,\" she whispers. \"Don't look at it.\""},"49921abbf9a4173b":{"chars":98,"bytes":70261,"credits":13,"nodes":["a4_jars"],"sent":"[low, tense] One jar from 1953 is different. It holds sweets in waxed paper, twisted at both ends, never spent."},"569f7359d460871d":{"chars":94,"bytes":60021,"credits":14,"nodes":["a4_jars"],"sent":"[low, tense] The sheet at your elbow goes very still. [whispers] \"Those are mine,\" it whispers. \"For when I get home.\""},"d5eff80eb4b6e9ac":{"chars":136,"bytes":76739,"credits":18,"nodes":["a4_jars"],"sent":"[low, tense] At the end of the shelf stands a new jar, its lid still bright. The label is a street you do not recognise, and you are sure you should."},"a38c509feee036a7":{"chars":117,"bytes":67753,"credits":16,"nodes":["a4_jars_sweets"],"sent":"[low, tense] You twist the lid off and take them. The sweets are warm in your hand, waxed paper twisted at both ends, never spent."},"b9ca7e49e14a50f8":{"chars":251,"bytes":177885,"credits":32,"nodes":["a4_jars"],"sent":"[low, tense] Every jar has a paper label tied round its neck in careful capitals: a date and a street. *OCT. 31, 1931. ORCHARD LANE.* Inside each, very small, something goes round and round the glass. A screen door. A mother calling a name across a garden at dusk."},"5ecca4790706d1d6":{"chars":68,"bytes":33271,"credits":10,"nodes":["a4_jars_sweets"],"sent":"[low, tense] They are the same as the three the gloved hand gave you at the door."},"6112d6aeedb3fbec":{"chars":100,"bytes":65872,"credits":14,"nodes":["a4_jars_sweets"],"sent":"[low, tense] On the shelf the emptied jar goes on turning, slowly, looking for them. Nobody else down here minds."},"1065077413588344":{"chars":140,"bytes":80501,"credits":19,"nodes":["a4_jars_sweets"],"sent":"[low, tense] The sheet beside you does not reach for them. \"I was saving those,\" she says. \"For when I got home.\" Her crooked eyeholes stay on your hand."},"97006070e46b7a9d":{"chars":151,"bytes":85725,"credits":20,"nodes":["a4_door"],"sent":"[low, tense] You leave the shelves behind. The roots end at a door painted the green of a front door on a good street, with a brass plate, a handle, and no keyhole."},"54a437321b9eeca8":{"chars":95,"bytes":55005,"credits":13,"nodes":["a4_door"],"sent":"[low, tense] By your candle the green is only paint on brick, and through it you can see a long table, laid."},"8f0f6d68a2b89e01":{"chars":167,"bytes":86979,"credits":22,"nodes":["a4_door"],"sent":"[low, tense] Your hand goes flat on the warm paint. You have answered three times tonight, and the count is already whole. Whatever is behind the door is on its way up to meet you."},"0a086a8f5edabb1e":{"chars":184,"bytes":102235,"credits":24,"nodes":["a4_door"],"sent":"[low, tense] Your hand goes flat on the warm paint. You have answered it twice tonight. Answer once more and the count is whole: it will come up to meet you. Nobody has ever asked it what it wants."},"3d5b0e64dd045b09":{"chars":160,"bytes":98473,"credits":21,"nodes":["a4_door"],"sent":"[low, tense] From the other side, low down, comes a knock. Then another. Then a third, and then the patient nothing of someone waiting on a step, because it is always 11:59."},"321916cbbedc8db0":{"chars":117,"bytes":77993,"credits":16,"nodes":["a4_table"],"sent":"[low, tense] The door opens inward, slowly, for someone expected. Beyond is the Marrow: a table under the roots, set for hundreds."},"b91a156ca6e240c9":{"chars":47,"bytes":28047,"credits":7,"nodes":["a4_table"],"sent":"[low, tense] Its corners are soft from being set out before."},"fcec8ffb254fe87d":{"chars":72,"bytes":38287,"credits":10,"nodes":["a4_table"],"sent":"[low, tense] Under it something has heard the count come whole, and begun to come up."},"522a1ca9b5ce9f07":{"chars":42,"bytes":29301,"credits":7,"nodes":["a4_table"],"sent":"[low, tense] Mr. Marrow waits at the head. \"After you.\""},"60c9606e8762c5fe":{"chars":95,"bytes":76739,"credits":13,"nodes":["a4_table"],"sent":"[low, tense] The place cards are in careful capitals: *R. CARVALHO. MISS D. ASHDOWN. E. OKAFOR.* Then yours."},"b708275bf6d4e7c0":{"chars":59,"bytes":35152,"credits":9,"nodes":["a4_table"],"sent":"[low, tense] Your card is blank. \"The house will know what to call you.\""},"e457530e25f17f34":{"chars":80,"bytes":44765,"credits":11,"nodes":["a4_table"],"sent":"[low, tense] \"The clocks stopped the night I said Treat,\" he says. \"You were first to guess.\""},"e9d7d3211949dd18":{"chars":64,"bytes":46019,"credits":9,"nodes":["a4_table"],"sent":"[low, tense] \"Every clock says 11:59,\" he says, \"and one of them is ticking.\""},"616198ebc5410789":{"chars":64,"bytes":46646,"credits":9,"nodes":["a4_table"],"sent":"[low, tense] \"Every clock says 11:59,\" he says, \"as it did when you came in.\""},"9c5130e173b51a06":{"chars":22,"bytes":17180,"credits":4,"nodes":["a4_table"],"sent":"[low, tense] He opens a green book."},"9c096475f9ce10ee":{"chars":37,"bytes":27420,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] Your page holds a single neat stroke."},"dd6192450cf33078":{"chars":33,"bytes":25539,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] Your page holds two neat strokes."},"6ffc74b1e7d1f9c6":{"chars":35,"bytes":26166,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] Your page holds three neat strokes."},"aa81db53a16501fc":{"chars":34,"bytes":26166,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] Your page holds four neat strokes."},"3016839f7591f5cc":{"chars":34,"bytes":26166,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] Your page holds five neat strokes."},"d2092bdaba7c3949":{"chars":19,"bytes":16553,"credits":4,"nodes":["a4_table"],"sent":"[low, tense] Your page is blank."},"ca0824b45147e81e":{"chars":33,"bytes":26166,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] Your page holds six neat strokes."},"ae73f39960a4b0f0":{"chars":25,"bytes":22404,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] He does not say \"Lovely.\""},"dea9d4c97c7dbff4":{"chars":35,"bytes":25539,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] A silver lid keeps your plate warm."},"a3acdf6a6d491434":{"chars":33,"bytes":24912,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] It says *Douglas*, spelled right."},"b0c467e81ded74e7":{"chars":30,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Dina*, spelled right."},"f98e85f8969ed22e":{"chars":32,"bytes":26166,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] It says *High-ee-sah*, spelled right."},"28e13d874489584c":{"chars":30,"bytes":23658,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Eric*, spelled right."},"3b33ec7a56a59d26":{"chars":34,"bytes":25539,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] It says *Victoria*, spelled right."},"e3eb7b9f57aac5a8":{"chars":32,"bytes":25539,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Steven*, spelled right."},"816a250dec29f423":{"chars":31,"bytes":23658,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Glenn*, spelled right."},"076250dc8fcb180b":{"chars":29,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Joe*, spelled right."},"046a56c655b2d35a":{"chars":31,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Riley*, spelled right."},"871fecbe4cff0278":{"chars":30,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Jack*, spelled right."},"619dabb3bea34394":{"chars":30,"bytes":23031,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Lisa*, spelled right."},"7e21c1b7f0b6ce94":{"chars":31,"bytes":24912,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Casey*, spelled right."},"8a53711a1cdff649":{"chars":31,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Neill*, spelled right."},"447be43112fc1644":{"chars":30,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Wade*, spelled right."},"f90a374ec29ae3b8":{"chars":28,"bytes":23658,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Ty*, spelled right."},"e205619b33c4d2de":{"chars":32,"bytes":24912,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Trudie*, spelled right."},"14cb2fbf32ca9343":{"chars":27,"bytes":23658,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *J*, spelled right."},"bc7f2d3689e65418":{"chars":30,"bytes":24912,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Nico*, spelled right."},"f8ce3599a404d594":{"chars":30,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Sean*, spelled right."},"3794ba8a3cc4482c":{"chars":32,"bytes":23658,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Dennis*, spelled right."},"753edf739e102f67":{"chars":30,"bytes":23658,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Matt*, spelled right."},"dbed1f36e1bd7062":{"chars":31,"bytes":24912,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Kevin*, spelled right."},"283cd41a4a8a8d03":{"chars":30,"bytes":23031,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Zach*, spelled right."},"7f55aaa6f096c0dd":{"chars":31,"bytes":24912,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Ethan*, spelled right."},"aa2ff53ecd0fac15":{"chars":33,"bytes":24285,"credits":6,"nodes":["a4_table"],"sent":"[low, tense] It says *Georgia*, spelled right."},"13eddf8ee40c9878":{"chars":31,"bytes":24285,"credits":5,"nodes":["a4_table"],"sent":"[low, tense] It says *Jason*, spelled right."},"8d6cd48b3c5ebddf":{"chars":38,"bytes":23031,"credits":5,"nodes":["a4_table_book"]},"82d25de55d22e0cf":{"chars":35,"bytes":20315,"credits":4,"nodes":["a4_table_book"]},"2aef41cbda43cd46":{"chars":44,"bytes":24912,"credits":5,"nodes":["a4_table_book"]},"8c753850622275bd":{"chars":37,"bytes":20315,"credits":4,"nodes":["a4_table_book"]},"d9515d041607e8db":{"chars":36,"bytes":20315,"credits":4,"nodes":["a4_table_book"]},"4a1ec85196cf5f2b":{"chars":36,"bytes":20941,"credits":4,"nodes":["a4_table_book"]},"013005878ab2f725":{"chars":35,"bytes":20315,"credits":4,"nodes":["a4_table_book"]},"c580aa3d85de03e4":{"chars":50,"bytes":29301,"credits":6,"nodes":["a4_table_book"]},"9247d9a56ee90cd6":{"chars":91,"bytes":54378,"credits":11,"nodes":["a4_table_book"]},"92bd2a1e5c75473e":{"chars":138,"bytes":89487,"credits":17,"nodes":["a4_table_book"]},"820f36821b773a7f":{"chars":94,"bytes":53124,"credits":11,"nodes":["a4_table_book"]},"c04a8e8675d7c0b4":{"chars":33,"bytes":23658,"credits":6,"nodes":["a4_gate"],"sent":"[low, tense] Mr. Marrow closes the green book."},"638244bebde3ec31":{"chars":25,"bytes":20315,"credits":5,"nodes":["a4_gate"],"sent":"[low, tense] Something is still owing."},"699513c8ef8dcc51":{"chars":71,"bytes":40168,"credits":9,"nodes":["a4_table_book"]},"79f0694480b39f74":{"chars":19,"bytes":19061,"credits":4,"nodes":["a4_gate"],"sent":"[low, tense] Your page is clean."},"c43a7d8e83a55436":{"chars":30,"bytes":19688,"credits":5,"nodes":["a4_gate"],"sent":"[low, tense] You can still taste the plate."},"bcf55ee3406b9868":{"chars":20,"bytes":16553,"credits":4,"nodes":["a4_gate"],"sent":"[low, tense] It has had practice."},"4a50a29fb4d6f31b":{"chars":43,"bytes":29301,"credits":7,"nodes":["a4_gate"],"sent":"[low, tense] It wears it carefully, like borrowed shoes."},"8b07da1970c1afef":{"chars":99,"bytes":70888,"credits":14,"nodes":["a4_gate"],"sent":"[low, tense] From under the table, from the roots, something speaks its one word. \"Welcome.\" It uses your voice."},"509fee7451840657":{"chars":74,"bytes":42884,"credits":11,"nodes":["a4_gate"],"sent":"[low, tense] Everything you did upstairs and down has come to this table to be counted."},"9cbab22a22de7ca0":{"chars":39,"bytes":28674,"credits":6,"nodes":["a4_gate"],"sent":"[low, tense] Behind Mr. Marrow the clock is ticking."},"2226db232684733d":{"chars":62,"bytes":36406,"credits":9,"nodes":["a4_gate"],"sent":"[low, tense] In the glasses along the table, nobody stands where you stand."},"772cfb8c54cc7967":{"chars":58,"bytes":31181,"credits":9,"nodes":["a4_gate"],"sent":"[low, tense] His name is in your pocket, where you put it in the attic."},"53f57891e1adb676":{"chars":46,"bytes":26793,"credits":7,"nodes":["a4_gate"],"sent":"[low, tense] The honest flame stands straight in your hand."},"8ead28af0544c887":{"chars":44,"bytes":29928,"credits":7,"nodes":["a4_gate"],"sent":"[low, tense] It gutters once, for what you promised Eric."},"44aefa2d4040e08b":{"chars":42,"bytes":25539,"credits":7,"nodes":["a4_gate"],"sent":"[low, tense] The wishbone in your pocket has gone warm."},"99332373d32ecc06":{"chars":51,"bytes":35779,"credits":8,"nodes":["a4_gate"],"sent":"[low, tense] The ribbon tugs twice: Dee, checking you are there."},"7ce550ba7078b87d":{"chars":87,"bytes":55632,"credits":12,"nodes":["a4_gate"],"sent":"[low, tense] You have no light of your own, no clock that moves, and no name for him but Mr. Marrow."},"f469f00f3e65d1fb":{"chars":35,"bytes":24285,"credits":6,"nodes":["a4_gate"],"sent":"[low, tense] He pulls out your chair, and waits."},"84e9a802c16606d6":{"chars":27,"bytes":23031,"credits":4,"nodes":["a4_gate_name"],"sent":"[quietly] \"Douglas A. Tull,\" you say."},"8a5f999fc5fcc22e":{"chars":67,"bytes":42884,"credits":10,"nodes":["a4_gate"],"sent":"[low, tense] \"You have been a very good guest,\" he says. It is not a compliment."},"01baeeeefa78516a":{"chars":9,"bytes":12791,"credits":2,"nodes":["a4_gate_name"],"sent":"[quietly] Only yes."},"2fa53cc11ecac1c2":{"chars":23,"bytes":22404,"credits":4,"nodes":["a4_gate_name"],"sent":"[quietly] Not \"Lovely.\" Only yes."},"4daa27e9ffba372a":{"chars":53,"bytes":38287,"credits":8,"nodes":["a4_gate_name"],"sent":"[quietly] \"One question, or one order. Make it something good.\""},"da69487d2d0242de":{"chars":102,"bytes":51661,"credits":14,"nodes":["a4_gate_name"],"sent":"[quietly] You have eaten at his table. If he opened every door in the house, you would not know which was yours."},"897da933761df494":{"chars":94,"bytes":47900,"credits":13,"nodes":["a4_gate_name"],"sent":"[quietly] You have eaten nothing here, and still know the way home, if someone would only open the door."},"b9c417903a07a323":{"chars":71,"bytes":35779,"credits":10,"nodes":["a4_gate_name"],"sent":"[quietly] You think of the guestbook's blank first line, where a host would sign."},"1647141efc630c6c":{"chars":223,"bytes":140687,"credits":28,"nodes":["a4_gate_name"],"sent":"[quietly] It goes into the room like a stone into a well. \"Ashby,\" he says, and for a moment he is not Mr. Marrow but a boy of eleven in his dead father's coat. He wipes his mouth, and the moustache smears. \"Douglas Ashby Tull. Yes.\""},"049de730efda5b58":{"chars":36,"bytes":20315,"credits":6,"nodes":["a4_gate_name"],"sent":"[quietly] The wishbone in your pocket is warm."},"6190ed01b5d89fc2":{"chars":72,"bytes":40795,"credits":10,"nodes":["a4_gate_name"],"sent":"[quietly] Under the cloth something is waiting for a knock it cannot start itself."},"2e33310e98706c63":{"chars":101,"bytes":59394,"credits":12,"nodes":["a4_gate_light"]},"f0d88f6704d97214":{"chars":74,"bytes":36406,"credits":9,"nodes":["a4_gate_light"]},"1c7f3836058c6b37":{"chars":83,"bytes":48527,"credits":10,"nodes":["a4_gate_light"]},"0a530f83c3b1d1f6":{"chars":256,"bytes":145911,"credits":31,"nodes":["a4_gate_light"]},"0e4dacede9675343":{"chars":97,"bytes":59394,"credits":12,"nodes":["a4_gate_light"]},"5b5c21d078d39395":{"chars":50,"bytes":38287,"credits":8,"nodes":["a4_gate_midnight"],"sent":"[low, tense] He looks at you. \"Guests, mind. It is particular.\""},"3c439de7971f0d1d":{"chars":167,"bytes":99727,"credits":22,"nodes":["a4_gate_midnight"],"sent":"[low, tense] The clock behind Mr. Marrow lets go of its minute hand, and strikes. Every clock in the house answers at once, after a hundred and twenty-eight years. The candles bow."},"ccc39960cde7936c":{"chars":79,"bytes":41421,"credits":11,"nodes":["a4_gate_midnight"],"sent":"[low, tense] For you each stroke arrives a little late, and you find yourself counting them."},"ee81d6a8a3a5801e":{"chars":194,"bytes":109967,"credits":25,"nodes":["a4_gate_midnight"],"sent":"[low, tense] \"Midnight,\" Mr. Marrow says between strokes, holding the back of your chair. \"It lets go of every guest who owes nothing, and anyone holding a living promise to leave. It forgives nothing else.\""},"bef006b0d248ab9b":{"chars":44,"bytes":28674,"credits":7,"nodes":["a4_gate_midnight"],"sent":"[low, tense] Beside your plate the green book stays open."},"5117cb852e6d0fd3":{"chars":62,"bytes":36406,"credits":9,"nodes":["a4_gate_seat"],"sent":"[low, tense] You have eaten in this house already, and your plate knows it."},"b44a406747bac497":{"chars":40,"bytes":43511,"credits":6,"nodes":["a4_gate_midnight"],"sent":"[low, tense] Four. Five. Six. It will only come once."},"90ddc486e48d762b":{"chars":64,"bytes":33898,"credits":9,"nodes":["a4_gate_seat"],"sent":"[low, tense] You have eaten nothing here, and the lid is still on your plate."},"99ff0a40751cd53e":{"chars":104,"bytes":51035,"credits":14,"nodes":["a4_gate_seat"],"sent":"[low, tense] Under your feet there is a hatch, and something on the other side is waiting very politely to be let up."},"9f33af71f9580d4f":{"chars":184,"bytes":109967,"credits":24,"nodes":["a4_gate_seat"],"sent":"[low, tense] Your place card. Your chair. It is warm, and it takes you all at once. Mr. Marrow pushes it in and lays the napkin in your lap. He is waiting to see what you have brought to the table."},"42642b95c17a64ae":{"chars":144,"bytes":79874,"credits":19,"nodes":["a4_gate_seat"],"sent":"[low, tense] At his elbow the green book lies open at the back page, where bills are kept. Behind you the cellar is dark and long, and nobody is guarding it."},"fa06783341aca3c5":{"chars":126,"bytes":100981,"credits":17,"nodes":["end_housewarming"],"sent":"[slowly] The hunger has a name and something to be. The room cools. High-ee-sah unties her apron. Upstairs, a candle you never saw goes out."},"d828123bdf72fb8b":{"chars":49,"bytes":36406,"credits":7,"nodes":["end_housewarming"],"sent":"[slowly] A sheet with crooked eyeholes runs for the stair."},"4ee7043eeed135d4":{"chars":300,"bytes":177258,"credits":37,"nodes":["end_housewarming"],"sent":"[slowly] \"Fetch the guestbook,\" you tell him, by his name, and Douglas brings it. The host's line is blank. You knock a fourth time, on the table, the first knock anyone has ever started from this side. You snap the wishbone, wish the house a name of its own, and write it there in the host's place. *Marrow.*"},"c791771d53fdb527":{"chars":21,"bytes":26166,"credits":4,"nodes":["end_housewarming"],"sent":"[slowly] Nobody says \"Lovely.\""},"06a263fbceae05e3":{"chars":141,"bytes":94711,"credits":18,"nodes":["end_housewarming"],"sent":"[slowly] Douglas is eleven for one second, then dust in a good coat. You walk out the front door into an ordinary morning, and only you remember them."},"cb6427c3a587af2e":{"chars":48,"bytes":38914,"credits":7,"nodes":["end_all_hallows"],"sent":"[slowly] You never see your own face again, in any glass."},"3ab4f37db23a65f7":{"chars":168,"bytes":108713,"credits":21,"nodes":["end_all_hallows"],"sent":"[slowly] The clock strikes, and your reflection gets up from its chair. It walks down the table with your walk and sits in Dee's place. The house counts, and the count is right."},"c58ed6c9a02b9e78":{"chars":52,"bytes":37660,"credits":7,"nodes":["end_settled_account"],"sent":"[slowly] At the threshold the ribbon in your hand goes slack."},"692a96225796eacc":{"chars":327,"bytes":207351,"credits":41,"nodes":["end_all_hallows"],"sent":"[slowly] You go out together through a door that stays open for one stroke of the bell. The street is two streets at once: wet leaves and a car alarm, and 1953, a privet hedge and a house with its porch light on. Dee lets go of the ribbon and runs up the path. The door opens before she reaches it. Just as it shuts, the light goes out."},"39a2c6fbcc023680":{"chars":65,"bytes":43511,"credits":9,"nodes":["end_settled_account"],"sent":"[slowly] In the dark glass of the front door, nobody walks out beside you."},"fcdb4a511aa57eb6":{"chars":61,"bytes":45392,"credits":8,"nodes":["end_settled_account"],"sent":"[slowly] You go down the path alone, past a jack-o'-lantern gone dark."},"e79037eb521cef2c":{"chars":323,"bytes":202127,"credits":40,"nodes":["end_settled_account"],"sent":"[slowly] Midnight finds you with your hands empty and nothing written against you, so the house has to bow. Mr. Marrow draws himself up to the whole of his eleven years and bows from the waist, and every stillness at the table bows with him. \"Thank you for coming,\" he says. He does not say \"Lovely.\" There is nothing to write down."},"4a4d85e724332c9d":{"chars":110,"bytes":86979,"credits":14,"nodes":["end_settled_account"],"sent":"[slowly] Every year after, a cream envelope comes in a careful schoolboy hand. *Do call again. —M.* You keep every one."},"5bccbaefaf2f06ce":{"chars":33,"bytes":29928,"credits":5,"nodes":["end_long_way_round"],"sent":"[slowly] The door opens as far as it must."},"77ecbd37d5f26f24":{"chars":65,"bytes":45392,"credits":9,"nodes":["end_long_way_round"],"sent":"[slowly] Rooms stand back to let you pass, because his name asked them to."},"9929bb2aff22ab6d":{"chars":16,"bytes":20315,"credits":3,"nodes":["end_long_way_round"],"sent":"[slowly] You ate nothing."},"f5145bbf07013a21":{"chars":128,"bytes":87606,"credits":17,"nodes":["end_long_way_round"],"sent":"[slowly] You go up behind the honest flame through rooms that are only rooms: a hall, a stair, the front step, where the candle goes out."},"86181a20e8296f7f":{"chars":150,"bytes":100354,"credits":19,"nodes":["end_long_way_round"],"sent":"[slowly] At the top of the cellar stair the ribbon pulls once, back toward the table, and goes slack. The house counts heads, and you left no one in her place."},"bbdf6f93302d0c48":{"chars":50,"bytes":32644,"credits":7,"nodes":["end_long_way_round"],"sent":"[slowly] Nobody comes to close your page in the green book."},"9e201e9af267f1ca":{"chars":16,"bytes":23031,"credits":3,"nodes":["end_long_way_round"],"sent":"[slowly] You owe nothing."},"8bc85a29b1b70999":{"chars":39,"bytes":31181,"credits":6,"nodes":["end_long_way_round"],"sent":"[slowly] No window on the street gives you back."},"8475a820eb1e2634":{"chars":42,"bytes":36406,"credits":6,"nodes":["end_long_way_round"],"sent":"[slowly] Nobody, ever, asks you to stay for dinner."},"d43aaf0418528770":{"chars":137,"bytes":85098,"credits":18,"nodes":["end_long_way_round"],"sent":"[slowly] You get home late. Your mother says she waited up, and that is the last time anyone does. People are kind to you, and lend you umbrellas."},"7761cd67f5ef4485":{"chars":135,"bytes":101608,"credits":17,"nodes":["end_long_way_round"],"sent":"[slowly] You are the only person alive who knows the name of the boy who keeps that house. Every Halloween you say it once, at 11:59, to nobody."},"e3d4b54bb77520c4":{"chars":122,"bytes":80501,"credits":16,"nodes":["end_head_count"],"sent":"[slowly] Your reflection pulls out a chair at the long table, sits, and smooths the cloth with your hands. It does not look at you."},"0999d812da1da5df":{"chars":35,"bytes":31181,"credits":5,"nodes":["end_head_count"],"sent":"[slowly] Behind you, every chair stays full."},"0a969aa4b50ffe83":{"chars":112,"bytes":69007,"credits":15,"nodes":["end_head_count"],"sent":"[slowly] Halfway up, the ribbon in your hand goes slack, trailing back into the dark toward a chair with a cushion on it."},"6b37a40e1eb9dcac":{"chars":204,"bytes":128566,"credits":26,"nodes":["end_head_count"],"sent":"[slowly] You hold up the candle and walk. By its light the stair is short and the hall is only a hall. Nobody stops you. A guest went down to the table and a guest is sitting at it, and the house does not look up."},"95f573319cdea7c9":{"chars":43,"bytes":39541,"credits":6,"nodes":["end_new_host"],"sent":"[slowly] \"Go,\" you tell him, by his name. \"Get out.\""},"755f212bd8270dc7":{"chars":119,"bytes":86979,"credits":15,"nodes":["end_head_count"],"sent":"[slowly] On the front step the candle goes out. Afterwards nothing shows you: not windows, not puddles, not the back of a spoon."},"bd4932b86fd4b279":{"chars":152,"bytes":109967,"credits":19,"nodes":["end_every_day_november"],"sent":"[slowly] Between two strokes you slip out. Midnight does not let you go; it only fails to stop you. As the door closes Mr. Marrow says, \"It comes due, you know.\""},"7c4f739188472f20":{"chars":260,"bytes":152181,"credits":33,"nodes":["end_new_host"],"sent":"[slowly] Edwin takes off his gloves one finger at a time and lays them on the cloth, and shrugs out of his father's coat, and he is a thin boy in shirtsleeves with cork on his lip. He goes first through a doorway, for the first time in a hundred and twenty-eight years."},"138d6e003449325e":{"chars":253,"bytes":156778,"credits":32,"nodes":["end_new_host"],"sent":"[slowly] You turn to follow, and there is no way out that you can remember. Far above, someone knocks at the front door. The coat is nearly your size. Someone hands you the gloves. You put three sweets in a paper bag, and you hear yourself say, warmly, \"Lovely.\""},"308d5bf9c9f9b60f":{"chars":25,"bytes":24912,"credits":4,"nodes":["end_every_day_november"],"sent":"[slowly] No shop window shows you."},"7650655932e08622":{"chars":64,"bytes":45392,"credits":9,"nodes":["end_every_day_november"],"sent":"[slowly] Dee's ribbon stays in your pocket, a promise with nowhere to go."},"b0784651fddc3f98":{"chars":111,"bytes":83844,"credits":15,"nodes":["end_every_day_november"],"sent":"[slowly] Everyone else grows older around you, politely, while you stay in one bright, cold, unending first of November."},"c77ff7a09d2aa227":{"chars":102,"bytes":72141,"credits":13,"nodes":["end_open_house"],"sent":"[slowly] You find the ring of the hatch under the cloth, and pull. You asked three times. It is only accepting."},"2ac0a870a7a1a40d":{"chars":256,"bytes":176004,"credits":32,"nodes":["end_every_day_november"],"sent":"[slowly] Outside it is the first of November: cold sun, white sky, jack-o'-lanterns going soft on every step. You go home and go to bed. You wake, and it is the first of November. The same pumpkins at the same stage of rot, the same bus, the same dog barking at it."},"ebe0302ec93313c3":{"chars":279,"bytes":161794,"credits":35,"nodes":["end_seat_at_table"],"sent":"[slowly] You pick up your fork. It is the best thing you have ever tasted, and by the third mouthful you have stopped comparing it to anything, because there is nothing left to compare it with. There was a street once, and a voice calling you in. It goes the way breath goes off a window."},"8651d4cd39ce9053":{"chars":30,"bytes":31181,"credits":5,"nodes":["end_paid_in_full"],"sent":"[slowly] \"The bill,\" you say. \"Please.\""},"9886f8a490383206":{"chars":254,"bytes":158659,"credits":32,"nodes":["end_seat_at_table"],"sent":"[slowly] Mr. Marrow lays a gloved hand on the back of your chair. \"Lovely,\" he says, and for once it means only that. Someone passes you the bread. The stillness in the next chair leans against your shoulder. You are very happy. You are part of the furniture now."},"81a1d9effd1feb4e":{"chars":22,"bytes":24285,"credits":4,"nodes":["end_paid_in_full"],"sent":"[slowly] The line is your name."},"f9727a5907b5505e":{"chars":442,"bytes":273807,"credits":55,"nodes":["end_open_house"],"sent":"[slowly] It comes up slowly, the way a guest comes up a garden path, and it follows you home. It is very polite about it. It walks a little behind you, wearing your coat, and wipes its feet on your mat, and whoever opens your door says, without knowing why, \"Well, come in, then.\" After that your house is warm. There is always something in the oven. The neighbours drop round, and stay, and stay. Everything smells, faintly, of warm bread and cloves."},"c764cbbedb95f572":{"chars":59,"bytes":40168,"credits":8,"nodes":["end_paid_in_full"],"sent":"[slowly] It is a blank the length of a name, which is enough for it."},"3ad53e65ded7970f":{"chars":159,"bytes":113101,"credits":20,"nodes":["end_paid_in_full"],"sent":"[slowly] Mr. Marrow takes a long slip from the green book and turns it round by your plate: *Oct. 31*, and ruled columns. In the column marked *Item* there is one line."},"228bcabf200d4976":{"chars":97,"bytes":63991,"credits":13,"nodes":["end_paid_in_full"],"sent":"[slowly] What you owed is listed down the side, and every line is crossed out, settled with what you were."},"85ea25e280e91901":{"chars":72,"bytes":54378,"credits":10,"nodes":["end_paid_in_full"],"sent":"[slowly] \"A clean page is let out at midnight,\" he says. \"Midnight did not come.\""},"b928e9fad37e4add":{"chars":174,"bytes":111221,"credits":22,"nodes":["end_paid_in_full"],"sent":"[slowly] Under *Owing* every line is struck through, or was never written. You paid your way, and that is worse: you have no claim on anything here, and the house is free to keep you."},"e103cff616385822":{"chars":46,"bytes":40795,"credits":7,"nodes":["end_paid_in_full"],"sent":"[slowly] He closes the book and says, gently, \"Lovely.\""},"0e77c5ef291dceb6":{"chars":59,"bytes":42884,"credits":8,"nodes":["end_paid_in_full"],"sent":"[slowly] Your name goes down into the warm dark with all the others."},"e424e35e057644ce":{"chars":70,"bytes":51661,"credits":10,"nodes":["end_paid_in_full"],"sent":"[slowly] The blank goes down into the warm dark with all the others, and fills."},"48552913f2247862":{"chars":228,"bytes":135671,"credits":29,"nodes":["end_paid_in_full"],"sent":"[slowly] Under *Owing* nothing was ever written. \"Our visitor owes the house nothing,\" he says, \"and the house owes our visitor nothing. That is the trouble with it.\" You have no claim on anything here, and the house is free to keep you."},"53e011db9dfccb3f":{"chars":62,"bytes":44138,"credits":9,"nodes":["end_strangers_wages"],"sent":"[slowly] \"Then our guest is playing after all,\" Mr. Marrow says mildly."},"e441a36c65b28cfe":{"chars":135,"bytes":83844,"credits":17,"nodes":["end_strangers_wages"],"sent":"[slowly] You shove the chair back and run, down the long table, before the napkin has settled. The stillnesses turn their heads to watch you go."},"50dd10c48c6eb3a0":{"chars":56,"bytes":40168,"credits":8,"nodes":["end_strangers_wages"],"sent":"[slowly] At the door the candle slips from your hand and is gone."},"5c88883137d07757":{"chars":77,"bytes":54378,"credits":10,"nodes":["end_strangers_wages"],"sent":"[slowly] Nothing chases a guest. A guest leaves by the front door, and this is not it."},"a14701d4d986897a":{"chars":73,"bytes":51035,"credits":10,"nodes":["end_strangers_wages"],"sent":"[slowly] It took more than one lie to make you a player, and he counted every one."},"6963158f47f258e5":{"chars":37,"bytes":30555,"credits":6,"nodes":["end_strangers_wages"],"sent":"[slowly] It took one lie to make you a player."},"8bdb48c68077564a":{"chars":60,"bytes":47273,"credits":8,"nodes":["end_strangers_wages"],"sent":"[slowly] The roots close round you, kindly, the way an armchair does."},"2488e2d15b6bb002":{"chars":210,"bytes":131701,"credits":26,"nodes":["end_strangers_wages"],"sent":"[slowly] The cellar has never had a light in it. You find the shelves by touch, and the roots, which are warm. You cannot find the stair. Far behind you a boy's voice says, without any malice at all, \"One to the house.\""}},"provider":"elevenlabs","model":"eleven_v4","voice":"Callum - Husky Trickster","voice_id":"N2lVS1w4EtoT3dr4eOWO","settings":{"stability":0.5,"similarity_boost":0.75,"style":0.3,"use_speaker_boost":true},"format":"mp3_44100_64","directed":true,"instructions":"Directed pass for Eleven v4. Each run gets at most one scene tag and a few cue tags:\n  scene: void palette or silence -> [quietly]; heartbeat >= 0.5 -> [low, tense]; lullaby -> [gently]; endings -> [slowly]\n  cues: a sentence with laughter -> [laughs]; whisper -> [whispers]; sigh -> [sighs]; three knocks -> [three slow knocks];\n        a single knock -> [one knock]; the house's polite voice and the floor's \"Welcome.\" -> [softly]","credits":6888,"generatedAt":"2026-10-12T06:09:54.798Z"}
+{
+  "clips": {
+    "0961f6af7b3a18dd": {
+      "chars": 172,
+      "bytes": 108086,
+      "credits": 22,
+      "nodes": [
+        "a1_trick_laugh"
+      ],
+      "sent": "For a moment there is no sound from inside. [laughs] Then laughter: a boy's laugh coming out of a gentleman's throat, from someone who has not heard that answer in a very long time."
+    },
+    "aea24959cb66674d": {
+      "chars": 115,
+      "bytes": 75485,
+      "credits": 14,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "c61ecfc885ff1849": {
+      "chars": 47,
+      "bytes": 26793,
+      "credits": 6,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "6e27f4487634eea7": {
+      "chars": 35,
+      "bytes": 19061,
+      "credits": 4,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "69b3b7628dd8a9fe": {
+      "chars": 45,
+      "bytes": 26166,
+      "credits": 5,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "9791162b23e70c01": {
+      "chars": 67,
+      "bytes": 44765,
+      "credits": 8,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "a53f3c5d05d39a63": {
+      "chars": 82,
+      "bytes": 42884,
+      "credits": 10,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "81fc5be7921124cb": {
+      "chars": 102,
+      "bytes": 60648,
+      "credits": 12,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "ca504911e2b48366": {
+      "chars": 15,
+      "bytes": 12164,
+      "credits": 2,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "005fe6667c1c12a1": {
+      "chars": 65,
+      "bytes": 36406,
+      "credits": 8,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "d4535d79d4cb44ce": {
+      "chars": 59,
+      "bytes": 37660,
+      "credits": 7,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "03e22eca57b0370c": {
+      "chars": 40,
+      "bytes": 22404,
+      "credits": 6,
+      "nodes": [
+        "a2_hub_stair",
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] The bread smell has gone out of the air."
+    },
+    "51c3625f8452539e": {
+      "chars": 43,
+      "bytes": 23031,
+      "credits": 6,
+      "nodes": [
+        "a2_hub_stair",
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] There is no firelight to the left any more."
+    },
+    "03e4834e09ec3284": {
+      "chars": 60,
+      "bytes": 33898,
+      "credits": 8,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] The velvet rope is down, and the stair climbs into the dark."
+    },
+    "759151d5b95e7f6a": {
+      "chars": 107,
+      "bytes": 60648,
+      "credits": 13,
+      "nodes": [
+        "a2_parlor_false"
+      ]
+    },
+    "2f276160916e348c": {
+      "chars": 112,
+      "bytes": 65245,
+      "credits": 14,
+      "nodes": [
+        "a2_parlor_clock"
+      ]
+    },
+    "9c7ff72d94de69df": {
+      "chars": 29,
+      "bytes": 21777,
+      "credits": 4,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "276fd8fe6ee38261": {
+      "chars": 66,
+      "bytes": 33898,
+      "credits": 8,
+      "nodes": [
+        "a2_kitchen_floor"
+      ]
+    },
+    "69cd419b70a5320d": {
+      "chars": 47,
+      "bytes": 30555,
+      "credits": 6,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "a5f951972dd1afeb": {
+      "chars": 14,
+      "bytes": 16553,
+      "credits": 3,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] \"Ah,\" he says."
+    },
+    "d4440e019ac4e5a8": {
+      "chars": 57,
+      "bytes": 38914,
+      "credits": 8,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] Your host writes it down in careful capitals: ONLY VINES."
+    },
+    "e7cdde9f781e1cc3": {
+      "chars": 128,
+      "bytes": 75485,
+      "credits": 17,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] \"Then we are playing after all, and you are our visitor.\" The arm he had half offered you, a guest's arm, goes back to his side."
+    },
+    "9006cbbf8cd47dee": {
+      "chars": 49,
+      "bytes": 26793,
+      "credits": 7,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] He walks you back to a foyer with one door fewer."
+    },
+    "85f04f1bcdc6d4f9": {
+      "chars": 105,
+      "bytes": 61901,
+      "credits": 15,
+      "nodes": [
+        "a3_nursery_door"
+      ],
+      "sent": "[gently] [whispers] \"You're a guest too,\" she whispers. \"Don't take anything else off him. He's nice. That's how he does it.\""
+    },
+    "7f1936ae777482b7": {
+      "chars": 103,
+      "bytes": 61901,
+      "credits": 14,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] \"They all say that,\" she says. \"Mr. Marrow says they're only being polite, so as not to hurry anybody.\""
+    },
+    "e2b4bc1a053c28b2": {
+      "chars": 31,
+      "bytes": 23658,
+      "credits": 5,
+      "nodes": [
+        "a3_nursery_year"
+      ],
+      "sent": "[gently] \"That's not an hour,\" she says."
+    },
+    "b800beba6f40f502": {
+      "chars": 77,
+      "bytes": 49781,
+      "credits": 10,
+      "nodes": [
+        "a3_nursery_year"
+      ],
+      "sent": "[gently] Where she looks you see only a grey nothing, and she looks at it a long time."
+    },
+    "b9a36e8602a46f5e": {
+      "chars": 96,
+      "bytes": 57513,
+      "credits": 13,
+      "nodes": [
+        "a3_nursery_year"
+      ],
+      "sent": "[gently] At the bottom of a street that runs on too far, a porch light in a little iron cage is still on."
+    },
+    "d3b1dffa29b0a579": {
+      "chars": 49,
+      "bytes": 28047,
+      "credits": 7,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] \"She always leaves it on till the last one's in.\""
+    },
+    "cdbe5455f2f3cb3d": {
+      "chars": 143,
+      "bytes": 85725,
+      "credits": 18,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] Where she looks you see only a soft grey nothing, with nothing written on it yet. Her face, through the sheet, is turned toward it and shining."
+    },
+    "7030057eba7aa2af": {
+      "chars": 65,
+      "bytes": 40168,
+      "credits": 9,
+      "nodes": [
+        "a3_nursery_stay"
+      ],
+      "sent": "[gently] She watches the grey nothing beyond the glass, and you watch her."
+    },
+    "519d3f2db906fb84": {
+      "chars": 55,
+      "bytes": 35152,
+      "credits": 8,
+      "nodes": [
+        "a3_nursery_stay"
+      ],
+      "sent": "[gently] Far down the street, the caged porch light is still on."
+    },
+    "57e9317489260354": {
+      "chars": 104,
+      "bytes": 60648,
+      "credits": 14,
+      "nodes": [
+        "a3_nursery_stay"
+      ],
+      "sent": "[gently] After a while the sheet leans against your shoulder, a little. The ribbon stays wound round her fingers."
+    },
+    "7110fa0d1f854fd6": {
+      "chars": 83,
+      "bytes": 53124,
+      "credits": 11,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] \"Go on, then,\" it says, in your voice. \"You first. Or me. Let's see who's quicker.\""
+    },
+    "21c00b0a772cc605": {
+      "chars": 108,
+      "bytes": 61901,
+      "credits": 14,
+      "nodes": [
+        "a3_mirror_back"
+      ],
+      "sent": "[quietly] No wall shows any of you. In the glass of the door your own front door waits, and the voice comes out of it."
+    },
+    "12a8e43d4d092944": {
+      "chars": 37,
+      "bytes": 18434,
+      "credits": 6,
+      "nodes": [
+        "a3_mirror_back"
+      ],
+      "sent": "[quietly] You'd have to turn round to say yes.\""
+    },
+    "79baffe398177598": {
+      "chars": 55,
+      "bytes": 32017,
+      "credits": 8,
+      "nodes": [
+        "a3_mirror_back"
+      ],
+      "sent": "[quietly] Or one of us could stay in her place. Think about that."
+    },
+    "6f336a2ecdc0206f": {
+      "chars": 84,
+      "bytes": 56886,
+      "credits": 11,
+      "nodes": [
+        "a3_mirror_no"
+      ],
+      "sent": "[quietly] \"Your move, then,\" it says, in your voice, amused. \"I'll wait. I'm good at waiting.\""
+    },
+    "d5eff80eb4b6e9ac": {
+      "chars": 136,
+      "bytes": 76739,
+      "credits": 18,
+      "nodes": [
+        "a4_jars"
+      ],
+      "sent": "[low, tense] At the end of the shelf stands a new jar, its lid still bright. The label is a street you do not recognise, and you are sure you should."
+    },
+    "9247d9a56ee90cd6": {
+      "chars": 91,
+      "bytes": 54378,
+      "credits": 11,
+      "nodes": [
+        "a4_table_book"
+      ]
+    },
+    "84e9a802c16606d6": {
+      "chars": 27,
+      "bytes": 23031,
+      "credits": 4,
+      "nodes": [
+        "a4_gate_name"
+      ],
+      "sent": "[quietly] \"Douglas A. Tull,\" you say."
+    },
+    "1c7f3836058c6b37": {
+      "chars": 83,
+      "bytes": 48527,
+      "credits": 10,
+      "nodes": [
+        "a4_gate_light"
+      ]
+    },
+    "0e4dacede9675343": {
+      "chars": 97,
+      "bytes": 59394,
+      "credits": 12,
+      "nodes": [
+        "a4_gate_light"
+      ]
+    },
+    "cb6427c3a587af2e": {
+      "chars": 48,
+      "bytes": 38914,
+      "credits": 7,
+      "nodes": [
+        "end_all_hallows"
+      ],
+      "sent": "[slowly] You never see your own face again, in any glass."
+    },
+    "c58ed6c9a02b9e78": {
+      "chars": 52,
+      "bytes": 37660,
+      "credits": 7,
+      "nodes": [
+        "end_settled_account"
+      ],
+      "sent": "[slowly] At the threshold the ribbon in your hand goes slack."
+    },
+    "39a2c6fbcc023680": {
+      "chars": 65,
+      "bytes": 43511,
+      "credits": 9,
+      "nodes": [
+        "end_settled_account"
+      ],
+      "sent": "[slowly] In the dark glass of the front door, nobody walks out beside you."
+    },
+    "4a4d85e724332c9d": {
+      "chars": 110,
+      "bytes": 86979,
+      "credits": 14,
+      "nodes": [
+        "end_settled_account"
+      ],
+      "sent": "[slowly] Every year after, a cream envelope comes in a careful schoolboy hand. *Do call again. —M.* You keep every one."
+    },
+    "95f573319cdea7c9": {
+      "chars": 43,
+      "bytes": 39541,
+      "credits": 6,
+      "nodes": [
+        "end_new_host"
+      ],
+      "sent": "[slowly] \"Go,\" you tell him, by his name. \"Get out.\""
+    },
+    "755f212bd8270dc7": {
+      "chars": 119,
+      "bytes": 86979,
+      "credits": 15,
+      "nodes": [
+        "end_head_count"
+      ],
+      "sent": "[slowly] On the front step the candle goes out. Afterwards nothing shows you: not windows, not puddles, not the back of a spoon."
+    },
+    "308d5bf9c9f9b60f": {
+      "chars": 25,
+      "bytes": 24912,
+      "credits": 4,
+      "nodes": [
+        "end_every_day_november"
+      ],
+      "sent": "[slowly] No shop window shows you."
+    },
+    "8651d4cd39ce9053": {
+      "chars": 30,
+      "bytes": 31181,
+      "credits": 5,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] \"The bill,\" you say. \"Please.\""
+    },
+    "81a1d9effd1feb4e": {
+      "chars": 22,
+      "bytes": 24285,
+      "credits": 4,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] The line is your name."
+    },
+    "8bdb48c68077564a": {
+      "chars": 60,
+      "bytes": 47273,
+      "credits": 8,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] The roots close round you, kindly, the way an armchair does."
+    },
+    "5654b2cdcd937b89": {
+      "chars": 97,
+      "bytes": 63363,
+      "credits": 47,
+      "nodes": [
+        "a1_porch"
+      ],
+      "sent": "[softly] \"Trick,\" says a polite voice from the dark inside. \"Or treat.\" A pause. \"Which would you prefer?\""
+    },
+    "36659f53d3c33354": {
+      "chars": 131,
+      "bytes": 78619,
+      "credits": 58,
+      "nodes": [
+        "a1_porch"
+      ]
+    },
+    "0bd3afaa90596f95": {
+      "chars": 204,
+      "bytes": 106204,
+      "credits": 90,
+      "nodes": [
+        "a1_porch"
+      ]
+    },
+    "2b6ebf52e6915508": {
+      "chars": 39,
+      "bytes": 24284,
+      "credits": 17,
+      "nodes": [
+        "a1_porch"
+      ]
+    },
+    "73e430a13cd1006a": {
+      "chars": 83,
+      "bytes": 44764,
+      "credits": 37,
+      "nodes": [
+        "a1_porch"
+      ]
+    },
+    "b2842b8e9a89bccf": {
+      "chars": 84,
+      "bytes": 42883,
+      "credits": 37,
+      "nodes": [
+        "a1_porch"
+      ]
+    },
+    "1c57426939122deb": {
+      "chars": 85,
+      "bytes": 49780,
+      "credits": 37,
+      "nodes": [
+        "a1_porch"
+      ]
+    },
+    "62bd7afb70b4b292": {
+      "chars": 33,
+      "bytes": 24911,
+      "credits": 15,
+      "nodes": [
+        "a1_trick_laugh"
+      ]
+    },
+    "45b063f226640dd1": {
+      "chars": 272,
+      "bytes": 161166,
+      "credits": 124,
+      "nodes": [
+        "a1_treat_hand"
+      ],
+      "sent": "The hand turns over and reveals three sweets wrapped in waxed paper twisted at both ends. They drop into your bag one at a time, each with the soft sound of a coin going into velvet. [softly] \"Lovely,\" says the voice, and somewhere deep in the house a pen scratches one short line."
+    },
+    "9750870e094ee592": {
+      "chars": 79,
+      "bytes": 47272,
+      "credits": 35,
+      "nodes": [
+        "a1_treat_hand"
+      ]
+    },
+    "05bb051155facb3e": {
+      "chars": 54,
+      "bytes": 32016,
+      "credits": 24,
+      "nodes": [
+        "a1_treat_hand"
+      ]
+    },
+    "2822c75bc8dde766": {
+      "chars": 114,
+      "bytes": 63990,
+      "credits": 50,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "7b674152101eba88": {
+      "chars": 44,
+      "bytes": 26792,
+      "credits": 19,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "adb97464019b58c5": {
+      "chars": 167,
+      "bytes": 109339,
+      "credits": 77,
+      "nodes": [
+        "a1_trick_laugh"
+      ],
+      "sent": "[softly] \"Trick,\" says the voice, tasting it. \"Oh, well done. Then you'd better come in and play it.\" It adds, as if marking a card, \"One to our visitor, nothing to the house.\""
+    },
+    "cb21b23bf7d693a1": {
+      "chars": 223,
+      "bytes": 122714,
+      "credits": 98,
+      "nodes": [
+        "a1_trick_laugh"
+      ]
+    },
+    "ea98dce124d5cf18": {
+      "chars": 96,
+      "bytes": 55004,
+      "credits": 42,
+      "nodes": [
+        "a1_trick_porch"
+      ]
+    },
+    "c7ef0e12b5fcb7e4": {
+      "chars": 101,
+      "bytes": 55004,
+      "credits": 44,
+      "nodes": [
+        "a1_trick_porch",
+        "a1_name"
+      ]
+    },
+    "efada2a2d5da54ca": {
+      "chars": 129,
+      "bytes": 81754,
+      "credits": 57,
+      "nodes": [
+        "a1_trick_porch"
+      ]
+    },
+    "a488987244cb5174": {
+      "chars": 150,
+      "bytes": 74857,
+      "credits": 66,
+      "nodes": [
+        "a1_trick_porch"
+      ]
+    },
+    "ca1df686e89580d2": {
+      "chars": 73,
+      "bytes": 43510,
+      "credits": 32,
+      "nodes": [
+        "a1_trick_porch"
+      ]
+    },
+    "df57fd24e45a1215": {
+      "chars": 154,
+      "bytes": 86351,
+      "credits": 68,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "6dc99b0dee21a712": {
+      "chars": 360,
+      "bytes": 191886,
+      "credits": 163,
+      "nodes": [
+        "a1_trick_path"
+      ],
+      "sent": "[quietly] You go down the steps with your back to the open door, and nothing stops you. Halfway to the gate you look back once. The porch light is still on, and the warm air is still pouring out into the cold, as if the house would sooner heat the whole street than shut its door on you. Nobody stands in the doorway. Nobody calls you back, or calls you anything at all."
+    },
+    "dc3eeca62356b573": {
+      "chars": 79,
+      "bytes": 40167,
+      "credits": 39,
+      "nodes": [
+        "a1_trick_path"
+      ],
+      "sent": "[quietly] The candle in your hand leans toward the house, the way it leaned for the wind."
+    },
+    "2f79fec4b6ab0f36": {
+      "chars": 118,
+      "bytes": 61900,
+      "credits": 56,
+      "nodes": [
+        "a1_trick_path"
+      ],
+      "sent": "[quietly] A fine rain begins. At the corner your friends are arguing about whose turn it is, and none of them has looked up yet."
+    },
+    "9e4257cceb35de33": {
+      "chars": 87,
+      "bytes": 49153,
+      "credits": 38,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "3c2676d8149a2f3c": {
+      "chars": 238,
+      "bytes": 132954,
+      "credits": 105,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "1bdab84c9a1a354f": {
+      "chars": 40,
+      "bytes": 32643,
+      "credits": 18,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "4e7eb653390c991b": {
+      "chars": 194,
+      "bytes": 114563,
+      "credits": 85,
+      "nodes": [
+        "a1_name"
+      ]
+    },
+    "727a9cd3d4db5a3d": {
+      "chars": 81,
+      "bytes": 41420,
+      "credits": 36,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "b5d53eae5d598141": {
+      "chars": 127,
+      "bytes": 93456,
+      "credits": 56,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "ff7a82c4aed7629a": {
+      "chars": 143,
+      "bytes": 91994,
+      "credits": 63,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "91e9b96bd49e740e": {
+      "chars": 157,
+      "bytes": 94710,
+      "credits": 71,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "91bbaadcd28e7adf": {
+      "chars": 149,
+      "bytes": 101607,
+      "credits": 70,
+      "nodes": [
+        "a1_foyer"
+      ],
+      "sent": "[laughs] Far off, behind glass and leaves, somebody laughs. \"We have one of those too,\" your host says, less pleased. \"He will tell you he was expecting you.\""
+    },
+    "9bbd84d07c6b1f5f": {
+      "chars": 140,
+      "bytes": 79246,
+      "credits": 62,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "cb34036d18ab149f": {
+      "chars": 162,
+      "bytes": 90113,
+      "credits": 71,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "c8045467b202aa2d": {
+      "chars": 280,
+      "bytes": 168271,
+      "credits": 123,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "b4e35c0eb84209f3": {
+      "chars": 101,
+      "bytes": 65244,
+      "credits": 44,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "9e7ab2379c64b7c8": {
+      "chars": 185,
+      "bytes": 135670,
+      "credits": 81,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "610653866b996916": {
+      "chars": 115,
+      "bytes": 67125,
+      "credits": 51,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "15000e22c4482f3d": {
+      "chars": 41,
+      "bytes": 35778,
+      "credits": 18,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "335ae2d6f0f92c90": {
+      "chars": 38,
+      "bytes": 35778,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "545e9f70ef2dd499": {
+      "chars": 40,
+      "bytes": 37032,
+      "credits": 20,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "8df9a1d37494d84f": {
+      "chars": 38,
+      "bytes": 32643,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "a9cb4a9a9f6a9879": {
+      "chars": 42,
+      "bytes": 35151,
+      "credits": 18,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "30e03fca90f7ce23": {
+      "chars": 40,
+      "bytes": 33897,
+      "credits": 18,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "410e08a1df20b3de": {
+      "chars": 39,
+      "bytes": 33897,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "f4d7e2632d8ea4fe": {
+      "chars": 37,
+      "bytes": 35151,
+      "credits": 16,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "02aa4f7a1a448c0f": {
+      "chars": 39,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "527a6b8a4701f6df": {
+      "chars": 38,
+      "bytes": 32643,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "5c8fb0ae7773af6f": {
+      "chars": 38,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "8de5d471671a0555": {
+      "chars": 39,
+      "bytes": 33897,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "6a79027b75204c8c": {
+      "chars": 39,
+      "bytes": 35151,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "0eef7b4e11d82e87": {
+      "chars": 38,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "ecee70ba3a7d7113": {
+      "chars": 36,
+      "bytes": 33270,
+      "credits": 16,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "f21cbfa6d8687d59": {
+      "chars": 40,
+      "bytes": 34524,
+      "credits": 18,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "70e60923926853e2": {
+      "chars": 35,
+      "bytes": 33270,
+      "credits": 15,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "5beea7831f980f5b": {
+      "chars": 38,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "034c7ce210219aff": {
+      "chars": 38,
+      "bytes": 33897,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "a7ea5add860d0b27": {
+      "chars": 40,
+      "bytes": 33270,
+      "credits": 18,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "04d11906b2e11b04": {
+      "chars": 38,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "5fcdff2f2c4b29f8": {
+      "chars": 38,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "32a3a127e75940c7": {
+      "chars": 39,
+      "bytes": 34524,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "7e865f71bd5cbb8c": {
+      "chars": 41,
+      "bytes": 33897,
+      "credits": 18,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "7740d420e01e28d8": {
+      "chars": 39,
+      "bytes": 33897,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "8377f6021bbb69fd": {
+      "chars": 39,
+      "bytes": 33897,
+      "credits": 17,
+      "nodes": [
+        "a1_foyer"
+      ]
+    },
+    "1a9426d6783a6077": {
+      "chars": 140,
+      "bytes": 74857,
+      "credits": 62,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "901053c15b633c58": {
+      "chars": 74,
+      "bytes": 44764,
+      "credits": 33,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "b93c4b0192462354": {
+      "chars": 142,
+      "bytes": 92620,
+      "credits": 68,
+      "nodes": [
+        "a1_riddle"
+      ],
+      "sent": "[one knock] In the quiet, something under the floor knocks once and stops, as if remembering its manners. \"Then you have told me no lies,\" says your host."
+    },
+    "c06bbf85eb2ea4a0": {
+      "chars": 205,
+      "bytes": 121460,
+      "credits": 94,
+      "nodes": [
+        "a1_push"
+      ],
+      "sent": "You shoulder past him before he can ask you anything. [laughs] He flattens himself against the frame so that you never quite touch, and follows you in, laughing. \"You went first,\" he says. \"A point to our visitor.\""
+    },
+    "b8f180c531a326ea": {
+      "chars": 384,
+      "bytes": 214874,
+      "credits": 169,
+      "nodes": [
+        "a1_push"
+      ]
+    },
+    "38882e85e61d225b": {
+      "chars": 47,
+      "bytes": 26792,
+      "credits": 21,
+      "nodes": [
+        "a1_push"
+      ]
+    },
+    "dfddd16e5e1d35f0": {
+      "chars": 113,
+      "bytes": 69006,
+      "credits": 50,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "13bf882fda7d6cb0": {
+      "chars": 156,
+      "bytes": 91367,
+      "credits": 69,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "a0745f87ccc8143e": {
+      "chars": 116,
+      "bytes": 69006,
+      "credits": 51,
+      "nodes": [
+        "a1_riddle"
+      ]
+    },
+    "3c4b32ce8ba7a445": {
+      "chars": 157,
+      "bytes": 86351,
+      "credits": 73,
+      "nodes": [
+        "end_no_one_home"
+      ],
+      "sent": "[slowly] You do not look round. You keep your eyes on your friends under the lamp, who want to know what took you so long, and you find you have nothing to tell them."
+    },
+    "aed4c17eabc7f478": {
+      "chars": 85,
+      "bytes": 61900,
+      "credits": 41,
+      "nodes": [
+        "end_no_one_home"
+      ],
+      "sent": "[slowly] The stolen sweets sit in a drawer for years, never eaten and never quite thrown away."
+    },
+    "e89e671454da29ef": {
+      "chars": 75,
+      "bytes": 51034,
+      "credits": 37,
+      "nodes": [
+        "end_no_one_home"
+      ],
+      "sent": "[slowly] The candle burns down that night on your windowsill, leaning with the wind."
+    },
+    "81303cd12ab4c9c8": {
+      "chars": 268,
+      "bytes": 168898,
+      "credits": 122,
+      "nodes": [
+        "end_no_one_home"
+      ],
+      "sent": "[slowly] You grow up and have a front door of your own, with a good lock. Every Halloween, at one minute to midnight, it swings open by itself and lets the warm out into the dark, politely, as if someone had knocked. Every year you get up and shut it. Every year it asks again."
+    },
+    "2bc0a7847061b3f5": {
+      "chars": 65,
+      "bytes": 38913,
+      "credits": 29,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "4e91151cf379b225": {
+      "chars": 95,
+      "bytes": 58139,
+      "credits": 42,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "a7ba797f85c8c155": {
+      "chars": 321,
+      "bytes": 172033,
+      "credits": 141,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "72927341d4301a60": {
+      "chars": 59,
+      "bytes": 33270,
+      "credits": 26,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "1f34ac3b3afd37ef": {
+      "chars": 57,
+      "bytes": 29300,
+      "credits": 25,
+      "nodes": [
+        "a2_hub"
+      ]
+    },
+    "fe0a6b239454d7a2": {
+      "chars": 50,
+      "bytes": 29927,
+      "credits": 22,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "f6423da53dd3db74": {
+      "chars": 137,
+      "bytes": 75484,
+      "credits": 60,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "32ff252e490e0e3b": {
+      "chars": 387,
+      "bytes": 219471,
+      "credits": 170,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "b3853da97ab3ca31": {
+      "chars": 79,
+      "bytes": 37659,
+      "credits": 39,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] You come back into the foyer and notice there is one door fewer than there was."
+    },
+    "674566c59e5c98c4": {
+      "chars": 47,
+      "bytes": 23030,
+      "credits": 25,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] The green light has gone from beside the stair."
+    },
+    "f3ef9c36aa1dbc06": {
+      "chars": 105,
+      "bytes": 55004,
+      "credits": 51,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] Where that room's door stood there is wallpaper, matched to the rest so well you could not find the join."
+    },
+    "db4281cce03649e7": {
+      "chars": 78,
+      "bytes": 43510,
+      "credits": 39,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] By your candle, the door shows through the paper anyway, faint as a watermark."
+    },
+    "cf8df952a5ace4ac": {
+      "chars": 108,
+      "bytes": 63990,
+      "credits": 52,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] Your host offers you his arm. \"It is dark on the stair, my guest,\" he says, like a man hoping to be refused."
+    },
+    "12cbbaf46c68aee1": {
+      "chars": 159,
+      "bytes": 79246,
+      "credits": 74,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] Your host crooks his arm at you with a little bow, a move in the game. \"Our visitor may take it, of course, though I think that would be a point to the house.\""
+    },
+    "97d7117a9736d1d7": {
+      "chars": 139,
+      "bytes": 85724,
+      "credits": 61,
+      "nodes": [
+        "a2_parlor_book"
+      ]
+    },
+    "ccdb384663266ba2": {
+      "chars": 393,
+      "bytes": 240578,
+      "credits": 176,
+      "nodes": [
+        "a2_parlor_book"
+      ]
+    },
+    "0ad00ef3b41843d0": {
+      "chars": 55,
+      "bytes": 29927,
+      "credits": 24,
+      "nodes": [
+        "a2_parlor_book"
+      ]
+    },
+    "4c8f4d27cb94cae5": {
+      "chars": 34,
+      "bytes": 22403,
+      "credits": 15,
+      "nodes": [
+        "a2_parlor_book"
+      ]
+    },
+    "91dd43f0b315a1b4": {
+      "chars": 92,
+      "bytes": 56885,
+      "credits": 40,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "60874239cbac209a": {
+      "chars": 263,
+      "bytes": 153434,
+      "credits": 116,
+      "nodes": [
+        "a2_parlor_pages"
+      ]
+    },
+    "988c46f95f65b1d0": {
+      "chars": 273,
+      "bytes": 145283,
+      "credits": 120,
+      "nodes": [
+        "a2_parlor_pages"
+      ]
+    },
+    "34ae19603219b455": {
+      "chars": 91,
+      "bytes": 51660,
+      "credits": 40,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "257bc3231c862a46": {
+      "chars": 105,
+      "bytes": 63990,
+      "credits": 46,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "6319a5c52d80d67f": {
+      "chars": 269,
+      "bytes": 162420,
+      "credits": 118,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "764ca8eb24cfde2e": {
+      "chars": 143,
+      "bytes": 79873,
+      "credits": 63,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "8dd1ed5cef625f47": {
+      "chars": 76,
+      "bytes": 45391,
+      "credits": 33,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "78c7a5474a3129d0": {
+      "chars": 68,
+      "bytes": 39540,
+      "credits": 30,
+      "nodes": [
+        "a2_parlor_fire"
+      ]
+    },
+    "bd70c75847885707": {
+      "chars": 128,
+      "bytes": 82380,
+      "credits": 60,
+      "nodes": [
+        "a2_parlor_clock"
+      ],
+      "sent": "[sighs] With a small sigh he does not let himself finish, he unhooks the key and closes your fingers over it with both gloves. \"Lovely.\""
+    },
+    "6b7df5103da27820": {
+      "chars": 84,
+      "bytes": 44137,
+      "credits": 37,
+      "nodes": [
+        "a2_parlor_leave"
+      ]
+    },
+    "a504642bff1ac777": {
+      "chars": 57,
+      "bytes": 40794,
+      "credits": 25,
+      "nodes": [
+        "a2_parlor_false"
+      ]
+    },
+    "59cc85d998aa84d0": {
+      "chars": 153,
+      "bytes": 89486,
+      "credits": 67,
+      "nodes": [
+        "a2_parlor_false"
+      ]
+    },
+    "0de0c5739731c4c0": {
+      "chars": 113,
+      "bytes": 70260,
+      "credits": 50,
+      "nodes": [
+        "a2_parlor_false"
+      ]
+    },
+    "25f7388c2b2fdfcc": {
+      "chars": 272,
+      "bytes": 151553,
+      "credits": 120,
+      "nodes": [
+        "a2_parlor_false"
+      ]
+    },
+    "d91278c6cb4aa723": {
+      "chars": 261,
+      "bytes": 158658,
+      "credits": 115,
+      "nodes": [
+        "a2_parlor_clock"
+      ]
+    },
+    "b4680e801a5131b9": {
+      "chars": 203,
+      "bytes": 108712,
+      "credits": 89,
+      "nodes": [
+        "a2_parlor_clock"
+      ]
+    },
+    "fa04881fe1c8db0b": {
+      "chars": 86,
+      "bytes": 46018,
+      "credits": 38,
+      "nodes": [
+        "a2_parlor_clock"
+      ]
+    },
+    "17deb6ea5b434167": {
+      "chars": 160,
+      "bytes": 108085,
+      "credits": 70,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "4759d26ca406190f": {
+      "chars": 61,
+      "bytes": 31180,
+      "credits": 27,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "f66c2910bf602bc6": {
+      "chars": 148,
+      "bytes": 81127,
+      "credits": 65,
+      "nodes": [
+        "a2_parlor_leave"
+      ]
+    },
+    "d3ff08f72d2bf728": {
+      "chars": 426,
+      "bytes": 241832,
+      "credits": 187,
+      "nodes": [
+        "a2_parlor_leave"
+      ]
+    },
+    "868724c69403ee44": {
+      "chars": 163,
+      "bytes": 97845,
+      "credits": 72,
+      "nodes": [
+        "a2_parlor_leave"
+      ]
+    },
+    "ea0bb255dd6e5c80": {
+      "chars": 55,
+      "bytes": 32643,
+      "credits": 24,
+      "nodes": [
+        "a2_parlor_leave"
+      ]
+    },
+    "8ae996bf23282c72": {
+      "chars": 140,
+      "bytes": 84470,
+      "credits": 62,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "0ce56d082fce1ca5": {
+      "chars": 132,
+      "bytes": 81127,
+      "credits": 58,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "238458ff0c13d776": {
+      "chars": 146,
+      "bytes": 82380,
+      "credits": 64,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "5634d971ba0c4fe6": {
+      "chars": 121,
+      "bytes": 73603,
+      "credits": 53,
+      "nodes": [
+        "a2_hub_2"
+      ]
+    },
+    "1ccb73f8ff782c54": {
+      "chars": 361,
+      "bytes": 211739,
+      "credits": 159,
+      "nodes": [
+        "a2_kitchen_door"
+      ]
+    },
+    "7cfa86f2d5b02892": {
+      "chars": 93,
+      "bytes": 49153,
+      "credits": 41,
+      "nodes": [
+        "a2_kitchen_door"
+      ]
+    },
+    "fb4333dd8babc84f": {
+      "chars": 133,
+      "bytes": 73603,
+      "credits": 59,
+      "nodes": [
+        "a2_kitchen_door"
+      ]
+    },
+    "71d02e4bb43ae574": {
+      "chars": 102,
+      "bytes": 49153,
+      "credits": 45,
+      "nodes": [
+        "a2_kitchen_door"
+      ]
+    },
+    "48ed5ebbe29e2160": {
+      "chars": 108,
+      "bytes": 58139,
+      "credits": 48,
+      "nodes": [
+        "a2_kitchen_door"
+      ]
+    },
+    "96f1dd6a30697c0c": {
+      "chars": 116,
+      "bytes": 70260,
+      "credits": 51,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "3fb205ac1b99a8e0": {
+      "chars": 110,
+      "bytes": 63990,
+      "credits": 48,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "6ae9d01f78a67e5c": {
+      "chars": 125,
+      "bytes": 63990,
+      "credits": 55,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "3d334da2a4da36cd": {
+      "chars": 129,
+      "bytes": 70260,
+      "credits": 57,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "a888a9c3da920ef5": {
+      "chars": 132,
+      "bytes": 73603,
+      "credits": 58,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "47c0c959ec434c60": {
+      "chars": 95,
+      "bytes": 57512,
+      "credits": 42,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "a36276d8a344d226": {
+      "chars": 113,
+      "bytes": 55004,
+      "credits": 50,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "1f6914855a96faac": {
+      "chars": 102,
+      "bytes": 54377,
+      "credits": 45,
+      "nodes": [
+        "a2_kitchen_thanks"
+      ]
+    },
+    "9409cda1065e969a": {
+      "chars": 100,
+      "bytes": 60020,
+      "credits": 44,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "4b27d5165388aabb": {
+      "chars": 134,
+      "bytes": 78619,
+      "credits": 59,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "60a60a971545d538": {
+      "chars": 363,
+      "bytes": 201499,
+      "credits": 160,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "b5e2a319bfd01e82": {
+      "chars": 41,
+      "bytes": 19687,
+      "credits": 18,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "6cf6c23a29c2a8aa": {
+      "chars": 258,
+      "bytes": 140686,
+      "credits": 114,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "f5ca0d2f3eb4c649": {
+      "chars": 113,
+      "bytes": 54377,
+      "credits": 50,
+      "nodes": [
+        "a2_kitchen_floor"
+      ]
+    },
+    "33c8c18c2917f254": {
+      "chars": 120,
+      "bytes": 57512,
+      "credits": 53,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "24d710dc6617a996": {
+      "chars": 102,
+      "bytes": 60020,
+      "credits": 45,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "802b98791a0ffaf9": {
+      "chars": 186,
+      "bytes": 104323,
+      "credits": 82,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "bf24e084317499e0": {
+      "chars": 117,
+      "bytes": 67752,
+      "credits": 51,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "04aa21908670335e": {
+      "chars": 68,
+      "bytes": 45391,
+      "credits": 30,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "7912b1defaa21f92": {
+      "chars": 116,
+      "bytes": 67752,
+      "credits": 51,
+      "nodes": [
+        "a2_kitchen_bone"
+      ]
+    },
+    "da2578ebdd20d98b": {
+      "chars": 84,
+      "bytes": 60647,
+      "credits": 37,
+      "nodes": [
+        "a2_kitchen_floor"
+      ]
+    },
+    "354470fa908c7e84": {
+      "chars": 113,
+      "bytes": 60647,
+      "credits": 50,
+      "nodes": [
+        "a2_kitchen_floor"
+      ]
+    },
+    "3213d83d81edd612": {
+      "chars": 129,
+      "bytes": 69006,
+      "credits": 57,
+      "nodes": [
+        "a2_kitchen_feast"
+      ]
+    },
+    "50c2b0211b4bb44e": {
+      "chars": 76,
+      "bytes": 42256,
+      "credits": 33,
+      "nodes": [
+        "a2_kitchen_floor"
+      ]
+    },
+    "3c97f1d9a21e2bad": {
+      "chars": 168,
+      "bytes": 99726,
+      "credits": 83,
+      "nodes": [
+        "a2_kitchen_floor"
+      ],
+      "sent": "[three slow knocks] Three knocks come up through the flagstones, slow and polite, close enough that you feel them in your heels before you hear them. The cook goes white and grips a spoon."
+    },
+    "e321019b1839d464": {
+      "chars": 330,
+      "bytes": 182273,
+      "credits": 145,
+      "nodes": [
+        "a2_kitchen_floor"
+      ]
+    },
+    "50f7055061ee6fbb": {
+      "chars": 153,
+      "bytes": 88859,
+      "credits": 77,
+      "nodes": [
+        "a2_cons_door"
+      ],
+      "sent": "[one knock] You knock once on the warm stone. [softly] The floor says \"Welcome\" in the cook's voice, though her mouth is shut. She walks you back to the foyer without a word."
+    },
+    "408505f49f1a8245": {
+      "chars": 157,
+      "bytes": 94083,
+      "credits": 83,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] [one knock] You kneel and knock once on the warm stone. [softly] Cloves and new bread rise between the flags, and the floor says \"Welcome\" in the cook's voice. Her mouth is shut."
+    },
+    "06c07f287d81339a": {
+      "chars": 105,
+      "bytes": 56258,
+      "credits": 46,
+      "nodes": [
+        "a2_cons_door"
+      ]
+    },
+    "f9618c4e7d0a58b5": {
+      "chars": 101,
+      "bytes": 60020,
+      "credits": 49,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] You step off the warm stone. The cook lets out her breath, and after a long moment the floor settles."
+    },
+    "a51b13f0ab7811d8": {
+      "chars": 449,
+      "bytes": 264820,
+      "credits": 198,
+      "nodes": [
+        "a2_cons_door"
+      ]
+    },
+    "7a1e055628765ea4": {
+      "chars": 143,
+      "bytes": 94710,
+      "credits": 63,
+      "nodes": [
+        "a2_cons_door"
+      ]
+    },
+    "9b03c92349e5ac87": {
+      "chars": 156,
+      "bytes": 97845,
+      "credits": 69,
+      "nodes": [
+        "a2_cons_door"
+      ]
+    },
+    "8a5839273f21b854": {
+      "chars": 72,
+      "bytes": 50407,
+      "credits": 32,
+      "nodes": [
+        "a2_cons_door"
+      ]
+    },
+    "0cea65fad03b3cfa": {
+      "chars": 91,
+      "bytes": 55631,
+      "credits": 45,
+      "nodes": [
+        "a2_cons_door"
+      ],
+      "sent": "[whispers] Your flame and his lean toward each other across the gap, like two people about to whisper."
+    },
+    "c49b5bfad7864ac3": {
+      "chars": 140,
+      "bytes": 83216,
+      "credits": 62,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "44e2fcfdf6d18568": {
+      "chars": 147,
+      "bytes": 91994,
+      "credits": 65,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "9bf9881ae1b02f09": {
+      "chars": 73,
+      "bytes": 40167,
+      "credits": 32,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "2b187b98b082e9ee": {
+      "chars": 228,
+      "bytes": 137551,
+      "credits": 100,
+      "nodes": [
+        "a2_cons_lesson"
+      ]
+    },
+    "bea4daceab1f61c2": {
+      "chars": 142,
+      "bytes": 92620,
+      "credits": 62,
+      "nodes": [
+        "a2_cons_lesson"
+      ]
+    },
+    "0eeb0192ce6cf45c": {
+      "chars": 157,
+      "bytes": 83843,
+      "credits": 69,
+      "nodes": [
+        "a2_cons_lesson"
+      ]
+    },
+    "285d182f941833b2": {
+      "chars": 59,
+      "bytes": 39540,
+      "credits": 26,
+      "nodes": [
+        "a2_cons_lesson"
+      ]
+    },
+    "fe2229fff5d19d22": {
+      "chars": 116,
+      "bytes": 63363,
+      "credits": 51,
+      "nodes": [
+        "a2_cons_lesson"
+      ]
+    },
+    "9d1cd04b062ce3f8": {
+      "chars": 233,
+      "bytes": 122714,
+      "credits": 103,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "18ab9821fff7d190": {
+      "chars": 48,
+      "bytes": 26165,
+      "credits": 21,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "27f418d9fb607c2d": {
+      "chars": 227,
+      "bytes": 127311,
+      "credits": 100,
+      "nodes": [
+        "a2_cons_out"
+      ]
+    },
+    "9c9d62ad05fed76e": {
+      "chars": 130,
+      "bytes": 77992,
+      "credits": 62,
+      "nodes": [
+        "a2_hub_stair"
+      ],
+      "sent": "[quietly] You say nothing at all. Your host holds his pen over the page a moment longer, then caps it and stands aside for you. \"After you.\""
+    },
+    "c1161462b7283469": {
+      "chars": 131,
+      "bytes": 69633,
+      "credits": 62,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] This time he does not say \"Ah.\" He underlines it, once for each story you have told him tonight, and looks rather pleased with you."
+    },
+    "857506ba024d2ca4": {
+      "chars": 107,
+      "bytes": 55631,
+      "credits": 51,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] The bread smell has gone out of the air, and the passage it came down is papered over, the paste still wet."
+    },
+    "372d73abf9306fa2": {
+      "chars": 111,
+      "bytes": 55631,
+      "credits": 53,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] The firelight has gone from the left, and where the parlor doors stood there is wallpaper, the paste still wet."
+    },
+    "34bf553b0e0fb7ed": {
+      "chars": 95,
+      "bytes": 54377,
+      "credits": 46,
+      "nodes": [
+        "a2_cons_lie"
+      ],
+      "sent": "[quietly] The velvet rope is down. At the foot of the stair he crooks his elbow at you with a little bow."
+    },
+    "7a197305b3f18c5c": {
+      "chars": 58,
+      "bytes": 40794,
+      "credits": 29,
+      "nodes": [
+        "end_seconds"
+      ],
+      "sent": "[slowly] You were told plainly, and you hold out your plate anyway."
+    },
+    "e8076ed96726ef7a": {
+      "chars": 48,
+      "bytes": 33897,
+      "credits": 25,
+      "nodes": [
+        "end_seconds"
+      ],
+      "sent": "[slowly] She takes it and looks you properly in the face."
+    },
+    "083941a63f48a41b": {
+      "chars": 123,
+      "bytes": 101607,
+      "credits": 58,
+      "nodes": [
+        "end_seconds"
+      ],
+      "sent": "[slowly] Then, slowly, the cook smiles. It is the first smile since 1931, and it takes years off her, and then it takes all of them."
+    },
+    "34d5dcb6fb20cd2e": {
+      "chars": 365,
+      "bytes": 203380,
+      "credits": 165,
+      "nodes": [
+        "end_seconds"
+      ],
+      "sent": "[slowly] She fills the plate. Then she unties her apron and ties it on you, the way you would for a child helping with the baking, and puts the clean tea towel in your hands. She sits down in the chair by the range and closes her eyes. The spoons want counting. Out in the foyer the front door is opening for someone new, and you already know what they will want for supper."
+    },
+    "70cf2557defadf1b": {
+      "chars": 182,
+      "bytes": 102234,
+      "credits": 80,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "dc180edc874871d6": {
+      "chars": 182,
+      "bytes": 93456,
+      "credits": 80,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "4a44057775fac294": {
+      "chars": 86,
+      "bytes": 56885,
+      "credits": 38,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "ddb5330fe3ecb54f": {
+      "chars": 213,
+      "bytes": 110593,
+      "credits": 94,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "0a3a02786912a5fb": {
+      "chars": 49,
+      "bytes": 32643,
+      "credits": 22,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "e7b7a3203dd04fe1": {
+      "chars": 252,
+      "bytes": 143194,
+      "credits": 111,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "912e3a3f5c558287": {
+      "chars": 14,
+      "bytes": 10700,
+      "credits": 6,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "6d6ef3bdacb798e0": {
+      "chars": 11,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "c9109289f161a78d": {
+      "chars": 13,
+      "bytes": 13417,
+      "credits": 8,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "3cba7ef14ef53327": {
+      "chars": 11,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "81ae6556114a7b39": {
+      "chars": 15,
+      "bytes": 12790,
+      "credits": 7,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "f72dc5b5e1cd321f": {
+      "chars": 13,
+      "bytes": 11536,
+      "credits": 6,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "0b385685deda2ca0": {
+      "chars": 12,
+      "bytes": 10700,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "7cdfb663655bed0c": {
+      "chars": 10,
+      "bytes": 9447,
+      "credits": 4,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "fd39482a3564af45": {
+      "chars": 12,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "0fbb70d34a65286f": {
+      "chars": 11,
+      "bytes": 10700,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "a78850fbfabe6d43": {
+      "chars": 11,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "b849f7ca93c392db": {
+      "chars": 12,
+      "bytes": 10700,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "6952698868a34226": {
+      "chars": 12,
+      "bytes": 9447,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "c4b8d5652ab81cc3": {
+      "chars": 11,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "04058935b064393b": {
+      "chars": 9,
+      "bytes": 10700,
+      "credits": 4,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "7cb11d7478c7d6cd": {
+      "chars": 13,
+      "bytes": 10074,
+      "credits": 6,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "fadcbff168ddd398": {
+      "chars": 8,
+      "bytes": 11536,
+      "credits": 4,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "b8c5ba0b6ef4d4af": {
+      "chars": 11,
+      "bytes": 10700,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "f02b81926267f89f": {
+      "chars": 11,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "b07b666132b220f3": {
+      "chars": 13,
+      "bytes": 10700,
+      "credits": 6,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "87447f631df02a70": {
+      "chars": 11,
+      "bytes": 11536,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "87f07141d870545c": {
+      "chars": 11,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "1e5fb92686ca4905": {
+      "chars": 12,
+      "bytes": 10700,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "e237a24909db5a5e": {
+      "chars": 14,
+      "bytes": 10700,
+      "credits": 6,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "81ddeca5bd458942": {
+      "chars": 12,
+      "bytes": 10074,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "97d29c8f54f6134f": {
+      "chars": 12,
+      "bytes": 11536,
+      "credits": 5,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "3457f0187eb836be": {
+      "chars": 400,
+      "bytes": 211739,
+      "credits": 176,
+      "nodes": [
+        "a3_hall_long"
+      ]
+    },
+    "2417512aa1a29079": {
+      "chars": 88,
+      "bytes": 49153,
+      "credits": 39,
+      "nodes": [
+        "a3_hall_long"
+      ]
+    },
+    "0eaf8d0ea44bb7af": {
+      "chars": 94,
+      "bytes": 48526,
+      "credits": 41,
+      "nodes": [
+        "a3_hall_long"
+      ]
+    },
+    "c9849c9b11a78ab8": {
+      "chars": 125,
+      "bytes": 85097,
+      "credits": 55,
+      "nodes": [
+        "a3_hall"
+      ]
+    },
+    "e56bb1c8e65a9ed4": {
+      "chars": 100,
+      "bytes": 56885,
+      "credits": 44,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "1afa0de71b53154a": {
+      "chars": 249,
+      "bytes": 134416,
+      "credits": 110,
+      "nodes": [
+        "a3_hall_dark"
+      ]
+    },
+    "b4b72aaa8642db62": {
+      "chars": 156,
+      "bytes": 80500,
+      "credits": 69,
+      "nodes": [
+        "a3_hall_dark"
+      ]
+    },
+    "c3f2c9c9a4538c9c": {
+      "chars": 143,
+      "bytes": 84470,
+      "credits": 63,
+      "nodes": [
+        "a3_hall_dark"
+      ]
+    },
+    "f68528f15ee8a80f": {
+      "chars": 114,
+      "bytes": 68379,
+      "credits": 50,
+      "nodes": [
+        "a3_hall_dark"
+      ]
+    },
+    "e74978d3ee229d66": {
+      "chars": 57,
+      "bytes": 33270,
+      "credits": 25,
+      "nodes": [
+        "a3_hall_dark"
+      ]
+    },
+    "e6d052fcc3080139": {
+      "chars": 159,
+      "bytes": 87605,
+      "credits": 70,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "c9a8e453e651e65b": {
+      "chars": 84,
+      "bytes": 42256,
+      "credits": 37,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "f623ede141405ad0": {
+      "chars": 93,
+      "bytes": 49153,
+      "credits": 41,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "a0217cadfcadd0fb": {
+      "chars": 59,
+      "bytes": 33897,
+      "credits": 26,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "f14ac2af83fb5a5f": {
+      "chars": 132,
+      "bytes": 72976,
+      "credits": 58,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "df2b06c9039bd4f3": {
+      "chars": 116,
+      "bytes": 58139,
+      "credits": 51,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "9f1c79d3b4e2b931": {
+      "chars": 100,
+      "bytes": 59393,
+      "credits": 44,
+      "nodes": [
+        "a3_hall_arm"
+      ]
+    },
+    "70b90ca283d6c520": {
+      "chars": 62,
+      "bytes": 38286,
+      "credits": 27,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "8a8a2cb73c6ca2fe": {
+      "chars": 38,
+      "bytes": 26792,
+      "credits": 17,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "54902d6bd80fa130": {
+      "chars": 439,
+      "bytes": 237443,
+      "credits": 193,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "e2f98a311933bfff": {
+      "chars": 212,
+      "bytes": 114563,
+      "credits": 97,
+      "nodes": [
+        "a3_nursery_door"
+      ],
+      "sent": "[gently] The paint in here is new enough to smell, and the moon in the window is a little too round, the moon as you would draw it. The room was made for you the moment you gave your name. Somebody is in the crib already."
+    },
+    "6ca5cd657d6efb96": {
+      "chars": 128,
+      "bytes": 70887,
+      "credits": 60,
+      "nodes": [
+        "a3_nursery_door"
+      ],
+      "sent": "[gently] She is a girl in a bedsheet ghost, and the eyeholes are cut crooked, one higher than the other, as if she had done them herself."
+    },
+    "2f0c2c3ee3e66e25": {
+      "chars": 152,
+      "bytes": 91994,
+      "credits": 71,
+      "nodes": [
+        "a3_nursery_door"
+      ],
+      "sent": "[gently] She bends to peer at you through the lower eyehole. \"You're not a guest,\" she says, delighted. \"I can tell. Good. Somebody ought to trick him for once.\""
+    },
+    "42c67c8949b688c2": {
+      "chars": 89,
+      "bytes": 47272,
+      "credits": 43,
+      "nodes": [
+        "a3_nursery_door"
+      ],
+      "sent": "[gently] By your candle there is nothing behind the eyeholes at all, and the sheet sits up anyway."
+    },
+    "c9caa80731799bcd": {
+      "chars": 68,
+      "bytes": 42883,
+      "credits": 39,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] [whispers] You say hello as quietly as she whispered, and she whispers it back."
+    },
+    "8f7e4cde7427be7d": {
+      "chars": 79,
+      "bytes": 55631,
+      "credits": 43,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] [laughs] You say boo, and she laughs into the sheet, the muffled laugh of an accomplice."
+    },
+    "1d3a21646db96713": {
+      "chars": 78,
+      "bytes": 43510,
+      "credits": 38,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] She tucks the sweet away under the sheet, quickly, before anyone can count it."
+    },
+    "e361243a4abdf931": {
+      "chars": 141,
+      "bytes": 89486,
+      "credits": 70,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] [laughs] You laugh, and the eyeholes droop, the way a sad face does. Nobody else ever comes up here, though, so after a while she talks to you anyway."
+    },
+    "108bb73d74c7d4ad": {
+      "chars": 247,
+      "bytes": 134416,
+      "credits": 113,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] \"I'm Dee,\" she says. \"Dina Ashdown, really, but nobody says it.\" Then she asks the thing she has been waiting to ask. \"Is it still Halloween out there? I said I'd be home before Mum switches the porch light off. I've only been here about an hour.\""
+    },
+    "e82e29228fb9baa9": {
+      "chars": 91,
+      "bytes": 47899,
+      "credits": 44,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] The little clock above the crib says one minute to midnight, like every clock in the house."
+    },
+    "f5f5994f33cc50cf": {
+      "chars": 100,
+      "bytes": 54377,
+      "credits": 48,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] \"The house says you guessed the clock downstairs,\" she says. \"So you'll know how late it really is.\""
+    },
+    "2f5f4656a2871d55": {
+      "chars": 101,
+      "bytes": 70887,
+      "credits": 57,
+      "nodes": [
+        "a3_nursery_pip"
+      ],
+      "sent": "[gently] [three slow knocks] Inside the wall, low down by the skirting, something knocks three times, and waits for an answer too."
+    },
+    "01e06907a017df3a": {
+      "chars": 144,
+      "bytes": 85724,
+      "credits": 67,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] She lets out a breath she must have been holding a long time, and the sheet sags with it. \"Oh, good,\" she says. \"I thought it was ever so late.\""
+    },
+    "438a85957ac3b22a": {
+      "chars": 120,
+      "bytes": 69006,
+      "credits": 57,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] It is still Halloween, strictly speaking. She knows that it is not the whole truth, and decides not to ask for the rest."
+    },
+    "78112b92174a2172": {
+      "chars": 143,
+      "bytes": 83216,
+      "credits": 67,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] You knock three times on the wallpaper, the way it knocked. The wall answers once, softer, and the smell of warm bread comes through the paper."
+    },
+    "74062997e9417c66": {
+      "chars": 212,
+      "bytes": 127938,
+      "credits": 97,
+      "nodes": [
+        "a3_nursery_year"
+      ],
+      "sent": "[gently] When you tell her, the sheet goes still. Then her fingers begin to move under it, counting. She gets past her own age, and past her mother's, and has to go back and start again, and then she gets there and stops."
+    },
+    "671af1ac3dcb6bb8": {
+      "chars": 104,
+      "bytes": 59393,
+      "credits": 50,
+      "nodes": [
+        "a3_nursery_year"
+      ],
+      "sent": "[gently] She does not cry. She goes to the window instead and kneels on the chair with her eyeholes to the glass."
+    },
+    "c7f48d7470f497ce": {
+      "chars": 167,
+      "bytes": 93456,
+      "credits": 77,
+      "nodes": [
+        "a3_nursery_year"
+      ],
+      "sent": "[gently] Then she unties a ribbon from under the sheet and holds it out to you. \"You'd better take me, then. Promise properly. Promises count at midnight; everyone knows that.\""
+    },
+    "94df8ee8ec92a7c2": {
+      "chars": 104,
+      "bytes": 58766,
+      "credits": 50,
+      "nodes": [
+        "a3_nursery_year",
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] She winds a ribbon round her fingers, as if she might give it to you, and does not hold it out, not yet."
+    },
+    "b6922fc8fb9eb467": {
+      "chars": 148,
+      "bytes": 76111,
+      "credits": 65,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "129c4a635b3ccfba": {
+      "chars": 66,
+      "bytes": 36405,
+      "credits": 29,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "2855acebd4c99001": {
+      "chars": 121,
+      "bytes": 67125,
+      "credits": 57,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] Dee goes to the window and kneels on the chair there, with her eyeholes to the glass. \"There,\" she says. \"Past the lamp.\""
+    },
+    "6df1ab944acab69b": {
+      "chars": 208,
+      "bytes": 122714,
+      "credits": 95,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] The street below runs on further than any street should, down a long hill of roofs, and right at the end of it, so small it could be a star come down too low, is a porch light in a little iron cage, still on."
+    },
+    "80113f57301500a8": {
+      "chars": 115,
+      "bytes": 68379,
+      "credits": 55,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] Then she turns from you to the wall and says, quite clearly, \"They're in here.\" Somewhere in the house a pen moves."
+    },
+    "df8e5cd1f8115a1b": {
+      "chars": 62,
+      "bytes": 33897,
+      "credits": 31,
+      "nodes": [
+        "a3_nursery_window"
+      ],
+      "sent": "[gently] She keeps her hands flat on the glass and does not look round."
+    },
+    "531ea682b0d5f99f": {
+      "chars": 286,
+      "bytes": 152180,
+      "credits": 130,
+      "nodes": [
+        "a3_nursery_stay"
+      ],
+      "sent": "[gently] You sit down on the floor by her chair. Neither of you says anything for a long while, long enough for one of your feet to go to sleep, and above the crib the little clock says one minute to midnight the whole time. When at last you look up at it again, its hands have not moved at all."
+    },
+    "397f3062e29e53d1": {
+      "chars": 151,
+      "bytes": 88232,
+      "credits": 70,
+      "nodes": [
+        "a3_nursery_stay"
+      ],
+      "sent": "[gently] In the end she lays her ribbon across one palm and rests that hand on the floor between you, where you could reach it. \"Only if you mean it,\" she says."
+    },
+    "91eb4413e12be67e": {
+      "chars": 58,
+      "bytes": 33897,
+      "credits": 29,
+      "nodes": [
+        "a3_nursery_stay"
+      ],
+      "sent": "[gently] She lets you sit, and does not say anything to you at all."
+    },
+    "b8e2a9bfa067a968": {
+      "chars": 78,
+      "bytes": 38286,
+      "credits": 34,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "a13071b79e6372b3": {
+      "chars": 95,
+      "bytes": 49153,
+      "credits": 42,
+      "nodes": [
+        "a3_hall_2"
+      ]
+    },
+    "0f7f952ea75ae465": {
+      "chars": 231,
+      "bytes": 122714,
+      "credits": 106,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] Every wall in here is mirror, and the back of the door as well, so the room's few candles burn by the hundred. Old glass always shivers a little when someone walks past it, but this glass holds as still as water nobody has touched."
+    },
+    "4cb14d817f71f489": {
+      "chars": 156,
+      "bytes": 84470,
+      "credits": 73,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] Where you should be, it shows a front door with a brass number and a worn step. You know this door is yours, though until a minute ago you had forgotten it."
+    },
+    "8142945fca8e3a22": {
+      "chars": 164,
+      "bytes": 83843,
+      "credits": 77,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] You lift your hand, and your reflection lifts its hand half a second after you, as if it had to look first. You lift it again, and this time its hand is already up."
+    },
+    "a9318a5ac9a6dec2": {
+      "chars": 79,
+      "bytes": 46645,
+      "credits": 39,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] \"I'd only like a word,\" it says, in your voice. \"You'd be doing me a kindness.\""
+    },
+    "a1e2e07b377f41b3": {
+      "chars": 105,
+      "bytes": 66498,
+      "credits": 51,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] It lets that sit a moment. \"I knew it was the clock, downstairs, same as you,\" it adds. \"We think alike.\""
+    },
+    "6cd87dd2564d2a1a": {
+      "chars": 94,
+      "bytes": 58139,
+      "credits": 46,
+      "nodes": [
+        "a3_mirror_door"
+      ],
+      "sent": "[quietly] It lets that sit a moment. \"I guessed the same as you, downstairs,\" it adds. \"We think alike.\""
+    },
+    "e493aae1f80a174b": {
+      "chars": 155,
+      "bytes": 86351,
+      "credits": 73,
+      "nodes": [
+        "a3_mirror_offer"
+      ],
+      "sent": "[quietly] You keep perfectly still and wait for it to move. It waits too, for longer than you would have thought anyone could, and then it gives in and speaks first."
+    },
+    "60a7c1de80a94c53": {
+      "chars": 110,
+      "bytes": 63990,
+      "credits": 53,
+      "nodes": [
+        "a3_mirror_offer"
+      ],
+      "sent": "[quietly] You find the door in the glass and hold on to it: the brass number, the worn step, a light above it, still on."
+    },
+    "9ca9523b761d79a8": {
+      "chars": 90,
+      "bytes": 45391,
+      "credits": 44,
+      "nodes": [
+        "a3_mirror_offer"
+      ],
+      "sent": "[quietly] The front door in the glass stays where it is the whole time, and only the voice is yours."
+    },
+    "baf0f48580516dcc": {
+      "chars": 98,
+      "bytes": 49780,
+      "credits": 48,
+      "nodes": [
+        "a3_mirror_offer"
+      ],
+      "sent": "[quietly] Your reflection lays its palm flat against the inside of the glass, and the glass does not shiver."
+    },
+    "4af06a11edf23244": {
+      "chars": 438,
+      "bytes": 238697,
+      "credits": 197,
+      "nodes": [
+        "a3_mirror_offer"
+      ],
+      "sent": "[quietly] \"Here's the offer,\" it says, plainly, without any of the house's manners. \"Let me keep your reflection. The house doesn't like letting people leave. But it counts heads, not faces, so it will count one of us as staying, and you will be able to leave this place. The price is your face. You'll never see it again, not in glass or water or a dark window, not even in a spoon. You'll have to take other people's word for what you look like.\""
+    },
+    "189f43fd272307fb": {
+      "chars": 81,
+      "bytes": 44764,
+      "credits": 40,
+      "nodes": [
+        "a3_mirror_offer"
+      ],
+      "sent": "[quietly] It has seen the ribbon. \"Or one of us could stay in her place. Think about that.\""
+    },
+    "5b6bf5ee3fc0cc5b": {
+      "chars": 121,
+      "bytes": 76738,
+      "credits": 53,
+      "nodes": [
+        "a3_attic_stair",
+        "a3_hatch"
+      ]
+    },
+    "c4dd8fe99cc4a695": {
+      "chars": 57,
+      "bytes": 29300,
+      "credits": 29,
+      "nodes": [
+        "a3_mirror_back"
+      ],
+      "sent": "[quietly] Turning your back on a room made of mirror does not help."
+    },
+    "fd2f2e4c4c9f87e9": {
+      "chars": 193,
+      "bytes": 103696,
+      "credits": 89,
+      "nodes": [
+        "a3_mirror_back"
+      ],
+      "sent": "[quietly] Every wall shows you the back of your own head, the collar and the parting in your hair, all of it half a second late. Only the glass in the door shows your face, and your face is watching you."
+    },
+    "8a2f7e6b4045dc5a": {
+      "chars": 225,
+      "bytes": 121460,
+      "credits": 103,
+      "nodes": [
+        "a3_mirror_back"
+      ],
+      "sent": "[quietly] \"Suit yourself,\" it says to the back of your head. \"I'll be quick, then. The house counts heads, not faces. Let me keep your reflection and it will count one of us as staying, and you can go. The price is your face, for good."
+    },
+    "80bfbb070ce4ae97": {
+      "chars": 106,
+      "bytes": 67125,
+      "credits": 51,
+      "nodes": [
+        "a3_mirror_no"
+      ],
+      "sent": "[quietly] \"Oh,\" it says, in your voice, and it sounds hurt. \"You'd have been doing me a kindness. Only a small one.\""
+    },
+    "0f251c7d76e5ecec": {
+      "chars": 101,
+      "bytes": 57512,
+      "credits": 49,
+      "nodes": [
+        "a3_mirror_no"
+      ],
+      "sent": "[quietly] The front door in the glass begins, very slightly, to fade, like a photograph left in a sunny window."
+    },
+    "22ddcfce898cb63e": {
+      "chars": 113,
+      "bytes": 67752,
+      "credits": 54,
+      "nodes": [
+        "a3_mirror_no"
+      ],
+      "sent": "[quietly] It stays half a second late a moment longer, to show you that it can, and then, pointedly, it keeps perfect time."
+    },
+    "ae2426912d6f7ba5": {
+      "chars": 80,
+      "bytes": 40167,
+      "credits": 40,
+      "nodes": [
+        "a3_mirror_no"
+      ],
+      "sent": "[quietly] \"If you want her to leave, she'll need someone in her chair, you know,\" it adds."
+    },
+    "09a26a23149b4966": {
+      "chars": 202,
+      "bytes": 114563,
+      "credits": 93,
+      "nodes": [
+        "a3_mirror_no"
+      ],
+      "sent": "[quietly] It does not argue any further. None of the candles in the glass has moved since you came in, and they do not move now. \"The offer stands,\" it says, quite patiently, \"right up until you leave this room.\""
+    },
+    "8045b8ee6c42b64e": {
+      "chars": 157,
+      "bytes": 122714,
+      "credits": 69,
+      "nodes": [
+        "a3_attic_stair"
+      ]
+    },
+    "b86b419657d0ee29": {
+      "chars": 180,
+      "bytes": 115190,
+      "credits": 79,
+      "nodes": [
+        "a3_attic_stair"
+      ]
+    },
+    "7265c0c6a90c48a3": {
+      "chars": 62,
+      "bytes": 32643,
+      "credits": 27,
+      "nodes": [
+        "a3_attic_stair"
+      ]
+    },
+    "d1a77a9edb729097": {
+      "chars": 77,
+      "bytes": 43510,
+      "credits": 34,
+      "nodes": [
+        "a3_attic_stair"
+      ]
+    },
+    "0e1849d5be7a216c": {
+      "chars": 78,
+      "bytes": 52496,
+      "credits": 34,
+      "nodes": [
+        "a3_attic_stair"
+      ]
+    },
+    "c44a6a3642f93485": {
+      "chars": 158,
+      "bytes": 86978,
+      "credits": 70,
+      "nodes": [
+        "a3_attic_stair"
+      ]
+    },
+    "0ed1a35ecc4c5c8c": {
+      "chars": 141,
+      "bytes": 87605,
+      "credits": 62,
+      "nodes": [
+        "a3_attic_floor"
+      ]
+    },
+    "2926a4dd4ccc0ad7": {
+      "chars": 148,
+      "bytes": 94083,
+      "credits": 65,
+      "nodes": [
+        "a3_attic_floor"
+      ]
+    },
+    "68464b61b0be5b61": {
+      "chars": 112,
+      "bytes": 74230,
+      "credits": 49,
+      "nodes": [
+        "a3_attic_floor"
+      ]
+    },
+    "6d9b010aaec16e47": {
+      "chars": 266,
+      "bytes": 154060,
+      "credits": 126,
+      "nodes": [
+        "a3_attic_floor"
+      ],
+      "sent": "Rain goes over the roof like someone counting coins. [three slow knocks] Then, under it, three knocks come up through the attic floor, slow and evenly spaced, from so far down that the whole house ought to be between them and the soles of your feet. The boards under your feet are warm."
+    },
+    "5a32bdc82ceb8bf2": {
+      "chars": 130,
+      "bytes": 81127,
+      "credits": 62,
+      "nodes": [
+        "a3_attic_floor"
+      ],
+      "sent": "The girl under the boards has heard them too. [whispers] \"Don't,\" she whispers. \"It's only asking. But if you answer, that's you saying yes.\""
+    },
+    "5274efe0b3cb20cf": {
+      "chars": 144,
+      "bytes": 83216,
+      "credits": 63,
+      "nodes": [
+        "a3_attic_floor"
+      ]
+    },
+    "9b032aba4f1254fa": {
+      "chars": 111,
+      "bytes": 59393,
+      "credits": 49,
+      "nodes": [
+        "a3_attic_floor"
+      ]
+    },
+    "f423e482f97b6b15": {
+      "chars": 139,
+      "bytes": 95964,
+      "credits": 71,
+      "nodes": [
+        "a3_hatch"
+      ],
+      "sent": "[quietly] [one knock] You knock once on the warm boards, slow and polite, the way it knocked. Far below, something that has waited a long while settles, pleased."
+    },
+    "712fc4a6fa033a79": {
+      "chars": 378,
+      "bytes": 208604,
+      "credits": 171,
+      "nodes": [
+        "a3_hatch"
+      ],
+      "sent": "[quietly] When you come out, the hall has gone. Where it was, there is a square hatch in the floorboards with a brass ring set flush in one corner, and warm air comes up round its edges like breath: in, and a long pause, and out. On the out-breath you smell bread and cloves. Whatever door you did not open tonight has been papered over, and the pattern is not quite matched at the seams."
+    },
+    "d6f13cc1c722bb57": {
+      "chars": 93,
+      "bytes": 48526,
+      "credits": 45,
+      "nodes": [
+        "a3_hatch"
+      ],
+      "sent": "[quietly] The polished brass ring shows the ceiling, and the papered walls, and nobody bending over it."
+    },
+    "9f0ef6ddae5326f4": {
+      "chars": 155,
+      "bytes": 81754,
+      "credits": 73,
+      "nodes": [
+        "a3_hatch"
+      ],
+      "sent": "[quietly] A small figure in a bedsheet ghost crouches by the hatch, though you did not hear her come. She looks at you through the crooked eyeholes, and points down."
+    },
+    "0b2edae9de99f211": {
+      "chars": 95,
+      "bytes": 46018,
+      "credits": 46,
+      "nodes": [
+        "a3_hatch"
+      ],
+      "sent": "[quietly] The hatch already stands open a hand's width. Someone has told those below that you are coming."
+    },
+    "42e6dfe03ecefe00": {
+      "chars": 322,
+      "bytes": 198364,
+      "credits": 146,
+      "nodes": [
+        "end_lights_out"
+      ],
+      "sent": "[slowly] You walk on past the last candle, and nobody stops you, because nobody has to. The runner ends, and then the boards, and then there is only the sound of your feet on something that answers like boards. You put a hand out to the wall. It is there, and then it is a little further away than it was, and then it is not there."
+    },
+    "c9b21006ccb5284c": {
+      "chars": 210,
+      "bytes": 135043,
+      "credits": 96,
+      "nodes": [
+        "end_lights_out"
+      ],
+      "sent": "[slowly] You stop counting doors, and then steps, and somewhere you could not have named you stop being the one who counts. Far back, in a gilt frame, a portrait has a new sitter in your coat, with the eyes painted out."
+    },
+    "23a6855a5e65d47f": {
+      "chars": 290,
+      "bytes": 147164,
+      "credits": 132,
+      "nodes": [
+        "a4_cellar"
+      ],
+      "sent": "[quietly] The cellar is as warm as the air in front of an oven door. Roots come through the walls, pale as the inside of a loaf, and they have pushed the bricks aside so gently that the mortar is still whole. Every one of them leans the same way, like weeds in a current, toward something further in."
+    },
+    "11b2309f7efd3701": {
+      "chars": 91,
+      "bytes": 47899,
+      "credits": 44,
+      "nodes": [
+        "a4_cellar"
+      ],
+      "sent": "[quietly] They smell of bread and cloves, and though you have eaten in this house, your mouth waters."
+    },
+    "6e3ff4d2cbe4802a": {
+      "chars": 72,
+      "bytes": 38913,
+      "credits": 36,
+      "nodes": [
+        "a4_cellar"
+      ],
+      "sent": "[quietly] They smell of bread and cloves, the way a kitchen smells on a feast day."
+    },
+    "5fe1d6689ed46167": {
+      "chars": 63,
+      "bytes": 37659,
+      "credits": 32,
+      "nodes": [
+        "a4_cellar"
+      ],
+      "sent": "[quietly] Along one wall, shelves of labelled jars run off into the dark."
+    },
+    "e74b3dd00ca72e3c": {
+      "chars": 177,
+      "bytes": 100980,
+      "credits": 87,
+      "nodes": [
+        "a4_cellar"
+      ],
+      "sent": "[quietly] A sheet with crooked eyeholes slips past you, light as laundry, and looks back from between the roots. [whispers] \"This way,\" Dee whispers. \"They all go to the door. Don't touch the jars.\""
+    },
+    "8b04b47f896fb63c": {
+      "chars": 101,
+      "bytes": 49780,
+      "credits": 49,
+      "nodes": [
+        "a4_cellar"
+      ],
+      "sent": "[quietly] The roots draw apart before you reach them, the way a crowd parts for someone it has been told about."
+    },
+    "de954d7bd0eeb827": {
+      "chars": 281,
+      "bytes": 179138,
+      "credits": 129,
+      "nodes": [
+        "a4_jars"
+      ],
+      "sent": "[low, tense] Each label is tied on with string and gives a date and a street in careful capitals. *OCT. 31, 1931. ORCHARD LANE.* Inside that jar something very small goes round and round the glass, and when you lean close you know it for a sound: a woman calling a name across a garden at dusk."
+    },
+    "5544bdf863eb9894": {
+      "chars": 92,
+      "bytes": 68379,
+      "credits": 46,
+      "nodes": [
+        "a4_jars"
+      ],
+      "sent": "[low, tense] One jar, dated 1953, is full of sweets in waxed paper, twisted at both ends and never spent."
+    },
+    "05feaebda4b576c8": {
+      "chars": 95,
+      "bytes": 60647,
+      "credits": 52,
+      "nodes": [
+        "a4_jars"
+      ],
+      "sent": "[low, tense] The sheet at your elbow goes very still. [whispers] \"Those are mine,\" Dee whispers. \"For when I get home.\""
+    },
+    "f508b1c1f2cb7f88": {
+      "chars": 131,
+      "bytes": 70260,
+      "credits": 63,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] You lift the bright jar, and for as long as you hold it you can name the street. When you set it down, the name stays in the glass."
+    },
+    "536ea314c45a8997": {
+      "chars": 138,
+      "bytes": 74230,
+      "credits": 66,
+      "nodes": [
+        "a4_jars_sweets"
+      ],
+      "sent": "[low, tense] The lid comes off with a small, reluctant sound, and you tip the sweets into your palm. The waxed paper crackles when you close your hand."
+    },
+    "ba79430468df2a38": {
+      "chars": 97,
+      "bytes": 52496,
+      "credits": 48,
+      "nodes": [
+        "a4_jars_sweets"
+      ],
+      "sent": "[low, tense] They are the same sweets the gloved hand gave you at the door, twisted the same way at both ends."
+    },
+    "696f1d762536b9c1": {
+      "chars": 145,
+      "bytes": 86351,
+      "credits": 70,
+      "nodes": [
+        "a4_jars_sweets"
+      ],
+      "sent": "[low, tense] The sheet beside you does not reach for them. \"I was saving those,\" Dee says. Her crooked eyeholes stay on your hand, and she waits, expectantly."
+    },
+    "0e0cd123daf04844": {
+      "chars": 150,
+      "bytes": 100353,
+      "credits": 72,
+      "nodes": [
+        "a4_jars_sweets"
+      ],
+      "sent": "[low, tense] Nobody down here minds. On the shelf the empty jar begins to turn by itself, slowly, once round and then once more, looking for what used to be in it."
+    },
+    "153a65da61a62fc6": {
+      "chars": 124,
+      "bytes": 70887,
+      "credits": 60,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] Dee takes the sweets under the sheet without a word. Then, very quietly, she says thank you, the way somebody taught her to."
+    },
+    "a7b09472f26645ea": {
+      "chars": 98,
+      "bytes": 54377,
+      "credits": 49,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] You drop the sweets back into the jar and screw the lid down tight. On the shelf it stops turning."
+    },
+    "c0fd12c50b2ceedc": {
+      "chars": 126,
+      "bytes": 68379,
+      "credits": 61,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] The roots end at a door painted the dark green of a front door on a good street, with a brass plate, a handle, and no keyhole."
+    },
+    "193ecbdbedbaf26e": {
+      "chars": 98,
+      "bytes": 58139,
+      "credits": 49,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] By your candle the green is translucent, and through it you can see the end of a long table, laid."
+    },
+    "f27eb81262c5bf8a": {
+      "chars": 145,
+      "bytes": 79873,
+      "credits": 70,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] From the other side comes a knock, then another, then a third. After that there is only the quiet of someone waiting on a step with folded hands."
+    },
+    "a237222425fe2647": {
+      "chars": 187,
+      "bytes": 93456,
+      "credits": 88,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] Your hand goes flat on the warm paint. You have answered three times tonight, and these knocks came from higher up than the others, as if whatever makes them has already started to climb."
+    },
+    "1af4318a28cdccea": {
+      "chars": 121,
+      "bytes": 65244,
+      "credits": 59,
+      "nodes": [
+        "a4_door"
+      ],
+      "sent": "[low, tense] Your hand goes flat on the warm paint. You have answered twice tonight, and the door waits under your palm for the third."
+    },
+    "b5f69a9a0e3ba435": {
+      "chars": 138,
+      "bytes": 74230,
+      "credits": 66,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] You knock back once, as it did. The quiet on the other side changes, the way a room goes quiet when the guest it was waiting for walks in."
+    },
+    "7b58bae3a0636365": {
+      "chars": 127,
+      "bytes": 74857,
+      "credits": 62,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] You fold your hands, as the knocking did, and let it be somebody else's move. After a long moment the handle turns from within."
+    },
+    "6bc8bebc090e0173": {
+      "chars": 309,
+      "bytes": 186243,
+      "credits": 142,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] The door swings inward, and a great kind heat comes out. Beyond it runs a table so long that its far end is only a rumour, laid for hundreds, with a card at every place. The nearest cards say *R. CARVALHO* and *MISS D. ASHDOWN* and *E. OKAFOR*. Halfway down, one chair has been pulled all the way out for you."
+    },
+    "787a8d1693e6963a": {
+      "chars": 44,
+      "bytes": 28046,
+      "credits": 25,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card is blank, and propped up with care."
+    },
+    "980c4b07af7b510d": {
+      "chars": 168,
+      "bytes": 94710,
+      "credits": 80,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] From the head of the table Mr. Marrow bows you in. \"After you.\" Beside your plate he has opened a book bound in green cloth, and a silver lid is keeping the plate warm."
+    },
+    "0a18b2e180223c97": {
+      "chars": 66,
+      "bytes": 35151,
+      "credits": 35,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Your page holds a short column of pen strokes in his careful hand."
+    },
+    "5e85cdd37d17212a": {
+      "chars": 38,
+      "bytes": 23030,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Eric's candle leans away from the lid."
+    },
+    "a5976abc66f2f162": {
+      "chars": 77,
+      "bytes": 45391,
+      "credits": 40,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Your page is blank, and he looks at it a long moment without saying \"Lovely.\""
+    },
+    "d5ef8b75735f5453": {
+      "chars": 39,
+      "bytes": 29300,
+      "credits": 23,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Douglas*, spelled right."
+    },
+    "e0b369dbd751f9aa": {
+      "chars": 36,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Dina*, spelled right."
+    },
+    "87698e47432d37ff": {
+      "chars": 38,
+      "bytes": 31180,
+      "credits": 25,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *High-ee-sah*, spelled right."
+    },
+    "6dc31a5e18ba97d5": {
+      "chars": 36,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Eric*, spelled right."
+    },
+    "7e80f8b2587ea037": {
+      "chars": 40,
+      "bytes": 28673,
+      "credits": 23,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Victoria*, spelled right."
+    },
+    "4b32cea203f4c4d9": {
+      "chars": 38,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Steven*, spelled right."
+    },
+    "08835a3b40a6fb08": {
+      "chars": 37,
+      "bytes": 28673,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Glenn*, spelled right."
+    },
+    "bbc775bbaab996e0": {
+      "chars": 35,
+      "bytes": 26792,
+      "credits": 21,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Joe*, spelled right."
+    },
+    "d9d9c17787db8555": {
+      "chars": 37,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Riley*, spelled right."
+    },
+    "f507654faa55d91d": {
+      "chars": 36,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Jack*, spelled right."
+    },
+    "97a490b8b9049515": {
+      "chars": 36,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Lisa*, spelled right."
+    },
+    "aca007f9ec0b11fb": {
+      "chars": 37,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Casey*, spelled right."
+    },
+    "525a75eeb3e64c3e": {
+      "chars": 37,
+      "bytes": 26165,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Neill*, spelled right."
+    },
+    "ce8e2726462ff49d": {
+      "chars": 36,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Wade*, spelled right."
+    },
+    "13b483babafc1f29": {
+      "chars": 34,
+      "bytes": 27419,
+      "credits": 21,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Ty*, spelled right."
+    },
+    "61880caf8eb10d2f": {
+      "chars": 38,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Trudie*, spelled right."
+    },
+    "52a96f0c367009e4": {
+      "chars": 33,
+      "bytes": 26165,
+      "credits": 20,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *J*, spelled right."
+    },
+    "68db9f6be92d13a9": {
+      "chars": 36,
+      "bytes": 26792,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Sean*, spelled right."
+    },
+    "535bb3cab6cf887d": {
+      "chars": 36,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Nico*, spelled right."
+    },
+    "487815c0d5ab1fb5": {
+      "chars": 38,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Dennis*, spelled right."
+    },
+    "75feeaa89c1531ee": {
+      "chars": 36,
+      "bytes": 26792,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Zach*, spelled right."
+    },
+    "515d0e1461d0ddea": {
+      "chars": 36,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Matt*, spelled right."
+    },
+    "cf0cf1aa69e53d05": {
+      "chars": 37,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Kevin*, spelled right."
+    },
+    "fe2f30347bca7f3e": {
+      "chars": 39,
+      "bytes": 28046,
+      "credits": 23,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Georgia*, spelled right."
+    },
+    "109dbd06c6e79672": {
+      "chars": 37,
+      "bytes": 27419,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Ethan*, spelled right."
+    },
+    "0779a4815c6129ab": {
+      "chars": 37,
+      "bytes": 28046,
+      "credits": 22,
+      "nodes": [
+        "a4_table"
+      ],
+      "sent": "[low, tense] Its card says *Jason*, spelled right."
+    },
+    "bd944b17810b83f2": {
+      "chars": 134,
+      "bytes": 79246,
+      "credits": 65,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] You lift the lid and eat, and whatever you still knew of the way home goes out like a lamp in another room. \"Lovely,\" says Mr. Marrow."
+    },
+    "86b9a040b9b11e92": {
+      "chars": 130,
+      "bytes": 74857,
+      "credits": 63,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] You lift the lid and eat, and whatever you still knew of the way home goes out like a lamp in another room. Nobody writes it down."
+    },
+    "210fd01f5a414af8": {
+      "chars": 326,
+      "bytes": 193767,
+      "credits": 143,
+      "nodes": [
+        "a4_table_book"
+      ]
+    },
+    "d0745f173c8467a7": {
+      "chars": 28,
+      "bytes": 17179,
+      "credits": 12,
+      "nodes": [
+        "a4_table_book"
+      ]
+    },
+    "c68254e8d5e9ce70": {
+      "chars": 90,
+      "bytes": 50407,
+      "credits": 40,
+      "nodes": [
+        "a4_table_book"
+      ]
+    },
+    "3496ec0ad3ddb690": {
+      "chars": 84,
+      "bytes": 53750,
+      "credits": 37,
+      "nodes": [
+        "a4_table_book"
+      ]
+    },
+    "9a55bb0700f340b4": {
+      "chars": 104,
+      "bytes": 63990,
+      "credits": 51,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] He takes one sweet from your palm, as carefully as a coin from a child, and draws one neat line through."
+    },
+    "3c0f72e46754d292": {
+      "chars": 105,
+      "bytes": 61274,
+      "credits": 52,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] He takes two sweets from your palm, as carefully as coins from a child, and draws two neat lines through."
+    },
+    "f702423cc93c949e": {
+      "chars": 109,
+      "bytes": 63990,
+      "credits": 54,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] He takes three sweets from your palm, as carefully as coins from a child, and draws three neat lines through."
+    },
+    "79ba4cd4a7e205d8": {
+      "chars": 88,
+      "bytes": 44137,
+      "credits": 44,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] He caps the pen without a word, the way a shopkeeper does when you only came in to look."
+    },
+    "3a36d35bd6fd6d74": {
+      "chars": 137,
+      "bytes": 74857,
+      "credits": 66,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] Mr. Marrow closes the green book and comes round to hold your chair. Behind him hangs a plain clock, its hands at one minute to midnight."
+    },
+    "8bb74331a21b0364": {
+      "chars": 48,
+      "bytes": 28673,
+      "credits": 27,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] It is ticking, and he does not look round at it."
+    },
+    "46f5b3a9bcd9f36b": {
+      "chars": 93,
+      "bytes": 52496,
+      "credits": 47,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] \"It stopped the night I said Treat,\" he says, seeing you look. \"You were the first to guess.\""
+    },
+    "f4c487d12d93715c": {
+      "chars": 197,
+      "bytes": 121460,
+      "credits": 92,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] Then the cloth lifts, every candle leans toward the middle of the table, and from under it something speaks its one word. \"Welcome.\" It uses your voice, and wears it carefully, like borrowed shoes."
+    },
+    "10370f85b5c3d7af": {
+      "chars": 77,
+      "bytes": 42883,
+      "credits": 40,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] It is close now, under the boards beneath your chair, waiting to be asked up."
+    },
+    "cc450ec23c4be99a": {
+      "chars": 48,
+      "bytes": 29300,
+      "credits": 27,
+      "nodes": [
+        "a4_gate"
+      ],
+      "sent": "[low, tense] He does not tell you what to do. He never would."
+    },
+    "e849faec2266b887": {
+      "chars": 397,
+      "bytes": 234727,
+      "credits": 179,
+      "nodes": [
+        "a4_gate_name"
+      ],
+      "sent": "[quietly] It goes into the room like a stone into a well, and the table goes still to hear where it lands. \"Ashby,\" he says. For a moment he is not Mr. Marrow but a boy of eleven in his dead father's coat, hearing his mother call him in. He wipes his mouth with a glove, and the burnt-cork moustache smears. \"Douglas Ashby Tull. Yes. One question, or one order, and I shall have to. Make it something good.\""
+    },
+    "f29b8f1365779ac3": {
+      "chars": 92,
+      "bytes": 47272,
+      "credits": 45,
+      "nodes": [
+        "a4_gate_name"
+      ],
+      "sent": "[quietly] His eyes go to your hands and stay there a moment, the way a tailor's eyes measure a sleeve."
+    },
+    "82a5e0f7c640b64e": {
+      "chars": 102,
+      "bytes": 48526,
+      "credits": 49,
+      "nodes": [
+        "a4_gate_name"
+      ],
+      "sent": "[quietly] You have eaten nothing in this house, and the way home is still where you left it, waiting for a door."
+    },
+    "b220772ec766f319": {
+      "chars": 83,
+      "bytes": 51034,
+      "credits": 41,
+      "nodes": [
+        "a4_gate_name"
+      ],
+      "sent": "[quietly] You think of the guestbook's first line, blank since 1898, where a host would sign."
+    },
+    "23d988192ee68454": {
+      "chars": 119,
+      "bytes": 74857,
+      "credits": 58,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] You say nothing. He waits for an order that does not come, and then, carefully, he puts Mr. Marrow back on like a coat."
+    },
+    "5e9205bca340748d": {
+      "chars": 266,
+      "bytes": 145910,
+      "credits": 117,
+      "nodes": [
+        "a4_gate_light"
+      ]
+    },
+    "5e74f4065414d571": {
+      "chars": 92,
+      "bytes": 58766,
+      "credits": 40,
+      "nodes": [
+        "a4_gate_light"
+      ]
+    },
+    "8817565862b0498c": {
+      "chars": 68,
+      "bytes": 34524,
+      "credits": 30,
+      "nodes": [
+        "a4_gate_light"
+      ]
+    },
+    "504dbf63d7976266": {
+      "chars": 129,
+      "bytes": 74230,
+      "credits": 62,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] You blow the candle out. The Marrow comes back all at once, long and laid and glowing, as if it had only stepped out of the room."
+    },
+    "ea358f14e5bdfa88": {
+      "chars": 241,
+      "bytes": 135670,
+      "credits": 112,
+      "nodes": [
+        "a4_gate_midnight"
+      ],
+      "sent": "[low, tense] The clock behind Mr. Marrow lets go of its minute hand. It strikes, and every clock in the house answers at once, after a hundred and twenty-eight years of standing still. The candles bow. Mr. Marrow holds your chair like the rail of a ship."
+    },
+    "05736ad48f4b76b2": {
+      "chars": 154,
+      "bytes": 90740,
+      "credits": 73,
+      "nodes": [
+        "a4_gate_midnight"
+      ],
+      "sent": "[low, tense] \"Midnight,\" he says between strokes. \"It lets go of every guest who owes nothing, and anyone holding a living promise to leave. It forgives nothing else.\""
+    },
+    "adcc9fc7eecbe569": {
+      "chars": 67,
+      "bytes": 45391,
+      "credits": 35,
+      "nodes": [
+        "a4_gate_midnight"
+      ],
+      "sent": "[low, tense] \"Guests, mind you, and you are only our visitor. It is particular.\""
+    },
+    "c8d42e459c831f4b": {
+      "chars": 83,
+      "bytes": 48526,
+      "credits": 42,
+      "nodes": [
+        "a4_gate_midnight"
+      ],
+      "sent": "[low, tense] After each stroke the clock pauses, as if it were reading back the lie in his book."
+    },
+    "42265dc507a86f3e": {
+      "chars": 64,
+      "bytes": 37659,
+      "credits": 34,
+      "nodes": [
+        "a4_gate_midnight"
+      ],
+      "sent": "[low, tense] Beside your plate the green book falls open again, at your page."
+    },
+    "6cca74afa7e33422": {
+      "chars": 80,
+      "bytes": 52496,
+      "credits": 41,
+      "nodes": [
+        "a4_gate_midnight"
+      ],
+      "sent": "[low, tense] At the far end of the room a door stands open on the cold. \"Only once,\" he says."
+    },
+    "d571d5cf29b69ff6": {
+      "chars": 115,
+      "bytes": 69006,
+      "credits": 56,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] You let it strike. On the twelfth stroke the door at the far end of the room swings shut, and then it is only wall."
+    },
+    "b7c73d06d9da3362": {
+      "chars": 232,
+      "bytes": 122714,
+      "credits": 108,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] You sit, and the chair takes you all at once, the way a warm bath does. Mr. Marrow pushes it in until your knees are under the cloth and lays the napkin in your lap, and then he stands back to see what you have brought to the table."
+    },
+    "83cc2be9b3b9f346": {
+      "chars": 134,
+      "bytes": 67125,
+      "credits": 65,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] Your plate smells exactly like everything you have already eaten tonight, and like more of it, and your hand is already near the fork."
+    },
+    "8c25ae308ea4430a": {
+      "chars": 130,
+      "bytes": 66498,
+      "credits": 63,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] You have not touched a crumb all night, and your plate has gone on steaming anyway, patiently, as if it knew you would come round."
+    },
+    "2cb6575712edf4f7": {
+      "chars": 141,
+      "bytes": 73603,
+      "credits": 68,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] Under your feet, under the cloth, there is a hatch in the floor, and something on the other side of it is waiting very politely to be let up."
+    },
+    "8215e229fa87a8bb": {
+      "chars": 66,
+      "bytes": 41420,
+      "credits": 35,
+      "nodes": [
+        "a4_gate_seat"
+      ],
+      "sent": "[low, tense] Behind you the cellar is dark and long, and nobody is guarding it."
+    },
+    "b046643d6aa170cd": {
+      "chars": 291,
+      "bytes": 174540,
+      "credits": 137,
+      "nodes": [
+        "end_housewarming"
+      ],
+      "sent": "[slowly] \"Fetch the guestbook,\" you tell him, by his name, and Douglas fetches it, held to his chest like a hymnal. [one knock] You knock once on the table, the fourth knock, the first ever started from this side. You snap the wishbone, wish the house a name of its own, and write it on the first line. *Marrow.*"
+    },
+    "c0bcfebc180a0611": {
+      "chars": 335,
+      "bytes": 222606,
+      "credits": 157,
+      "nodes": [
+        "end_housewarming"
+      ],
+      "sent": "[slowly] [sighs] The warmth goes out of the room like a sigh. High-ee-sah unties her apron. Among vines you never saw, a candle goes out, and a sheet with crooked eyeholes runs for the stair. Douglas is eleven for one second, and then he is dust in a good coat. Nobody says \"Lovely.\" You walk out into an ordinary morning, and only you remember their names."
+    },
+    "853272a277ede028": {
+      "chars": 168,
+      "bytes": 104323,
+      "credits": 78,
+      "nodes": [
+        "end_all_hallows"
+      ],
+      "sent": "[slowly] The clock strikes, and your reflection gets up from its chair. It comes down the table with your walk and sits in Dee's chair. The house counts, and the count is right."
+    },
+    "c4e69488832aea23": {
+      "chars": 367,
+      "bytes": 212366,
+      "credits": 165,
+      "nodes": [
+        "end_all_hallows"
+      ],
+      "sent": "[slowly] You go out together through a door that is there only for the length of a bell, and the street outside is two streets at once: wet leaves and a car alarm, and 1953, a privet hedge and a house with its porch light on. Her mother left it on. Dee lets go of the ribbon and runs up the path, and the door opens before she reaches it. Just as it shuts, the light goes out."
+    },
+    "706cdd98185245e6": {
+      "chars": 271,
+      "bytes": 170152,
+      "credits": 123,
+      "nodes": [
+        "end_settled_account"
+      ],
+      "sent": "[slowly] Midnight finds you at the table with nothing written against you, and so the house has to bow. Mr. Marrow draws himself up to the whole of his eleven years and bows from the waist. \"Thank you for coming,\" he says. He does not say \"Lovely.\" There is nothing to write down."
+    },
+    "e34baf07508444d3": {
+      "chars": 96,
+      "bytes": 67752,
+      "credits": 46,
+      "nodes": [
+        "end_settled_account"
+      ],
+      "sent": "[slowly] You go down the path alone, past a jack-o'-lantern gone dark, and the air smells only of leaves."
+    },
+    "18f0ac673ab9734a": {
+      "chars": 182,
+      "bytes": 126684,
+      "credits": 84,
+      "nodes": [
+        "end_long_way_round"
+      ],
+      "sent": "[slowly] The door opens exactly as far as it must, and no further. You go up through rooms that stand back to let you pass: the cellar, the stair, a hall only four doors long, the front step."
+    },
+    "c23d24ec011be77f": {
+      "chars": 105,
+      "bytes": 67125,
+      "credits": 50,
+      "nodes": [
+        "end_long_way_round"
+      ],
+      "sent": "[slowly] At the top of the cellar stair the ribbon in your hand pulls once, back toward the table, and goes slack."
+    },
+    "70f1fbd2e1d7e157": {
+      "chars": 56,
+      "bytes": 37032,
+      "credits": 29,
+      "nodes": [
+        "end_long_way_round"
+      ],
+      "sent": "[slowly] You ate nothing in the house, so you still know the way."
+    },
+    "51d146a47d554e29": {
+      "chars": 173,
+      "bytes": 113100,
+      "credits": 80,
+      "nodes": [
+        "end_long_way_round"
+      ],
+      "sent": "[slowly] You walk home in the rain, and the porch light is on. People are kind to you. They lend you umbrellas and hold doors, and not one of them, ever, asks you to stay for dinner."
+    },
+    "7583808c18152201": {
+      "chars": 77,
+      "bytes": 59393,
+      "credits": 38,
+      "nodes": [
+        "end_long_way_round"
+      ],
+      "sent": "[slowly] Every Halloween, at one minute to midnight, you say his name once, to nobody."
+    },
+    "c1423bd102af14c6": {
+      "chars": 116,
+      "bytes": 73603,
+      "credits": 55,
+      "nodes": [
+        "end_head_count"
+      ],
+      "sent": "[slowly] Your reflection draws its chair in to the long table and smooths the cloth with your hands. It does not look at you."
+    },
+    "a75f0e005b583712": {
+      "chars": 215,
+      "bytes": 135670,
+      "credits": 99,
+      "nodes": [
+        "end_head_count"
+      ],
+      "sent": "[slowly] You hold up the candle and walk. By its light the stair is short and the hall upstairs is only four doors long. A guest came down to the table and a guest is sitting at it, and the house, counting, does not look up."
+    },
+    "4eae1367b4e739fa": {
+      "chars": 128,
+      "bytes": 77992,
+      "credits": 60,
+      "nodes": [
+        "end_head_count"
+      ],
+      "sent": "[slowly] Halfway up the cellar stair the ribbon in your hand goes slack, trailing back into the dark toward a chair with a cushion on it."
+    },
+    "782d5c0409c68dab": {
+      "chars": 56,
+      "bytes": 38286,
+      "credits": 29,
+      "nodes": [
+        "end_head_count"
+      ],
+      "sent": "[slowly] You do not look back, and the house does not ask you to."
+    },
+    "2cc7e906664284f2": {
+      "chars": 299,
+      "bytes": 180392,
+      "credits": 136,
+      "nodes": [
+        "end_new_host"
+      ],
+      "sent": "[slowly] Douglas looks at you a moment. Then he takes off his gloves one finger at a time and lays them on the cloth, and shrugs out of his father's coat, and he is a thin boy in shirtsleeves with burnt cork on his lip. He goes first through a doorway, for the first time in a hundred and twenty-eight years."
+    },
+    "64275cb07d30f774": {
+      "chars": 257,
+      "bytes": 157404,
+      "credits": 117,
+      "nodes": [
+        "end_new_host"
+      ],
+      "sent": "[slowly] You turn to follow him, and there is no way out that you can remember. Far above, someone knocks at the front door. The coat is nearly your size. Someone hands you the gloves. You put three sweets in a paper bag, and you hear yourself say, warmly, \"Lovely.\""
+    },
+    "ac062f7de1ce3bd9": {
+      "chars": 160,
+      "bytes": 118952,
+      "credits": 74,
+      "nodes": [
+        "end_every_day_november"
+      ],
+      "sent": "[slowly] Between two strokes you slip out. Midnight does not let you go; it only fails to hold you. As the door closes Mr. Marrow says, kindly, \"It comes due, you know.\""
+    },
+    "2b24084134882dd3": {
+      "chars": 69,
+      "bytes": 47272,
+      "credits": 34,
+      "nodes": [
+        "end_every_day_november"
+      ],
+      "sent": "[slowly] Dee's ribbon stays in your pocket, a promise with nowhere left to go."
+    },
+    "fa19d6c9c838e921": {
+      "chars": 246,
+      "bytes": 163047,
+      "credits": 112,
+      "nodes": [
+        "end_every_day_november"
+      ],
+      "sent": "[slowly] Outside it is the first of November: cold sun, white sky, jack-o'-lanterns going soft on every step. You go home and go to bed. You wake, and it is the first of November, with the same pumpkins going soft and the same dog barking at the same bus."
+    },
+    "f0636937c6b9e8a7": {
+      "chars": 119,
+      "bytes": 81754,
+      "credits": 56,
+      "nodes": [
+        "end_every_day_november"
+      ],
+      "sent": "[slowly] Everyone else grows older around you, politely, while you stay in one bright cold day that never turns into the second."
+    },
+    "a641e87a68db025a": {
+      "chars": 112,
+      "bytes": 70887,
+      "credits": 53,
+      "nodes": [
+        "end_open_house"
+      ],
+      "sent": "[slowly] You find the ring of the hatch under the cloth, and pull. You asked it up three times, and it is only accepting."
+    },
+    "c92a31acc850c972": {
+      "chars": 496,
+      "bytes": 308496,
+      "credits": 222,
+      "nodes": [
+        "end_open_house"
+      ],
+      "sent": "[slowly] It comes up slowly, the way a guest comes up a garden path, unsure of its welcome and very glad of it, and it follows you home. It is very polite about it. It walks a little behind you, wearing your coat, and wipes its feet on your mat, and whoever opens your door says, without knowing why, \"Well, come in, then.\" After that your house is warm. There is always something in the oven. The neighbours drop round, and stay, and stay. Everything smells, faintly and always, of warm bread and cloves."
+    },
+    "c4a034d55139b66a": {
+      "chars": 237,
+      "bytes": 140686,
+      "credits": 108,
+      "nodes": [
+        "end_seat_at_table"
+      ],
+      "sent": "[slowly] You pick up your fork. It is the best thing you have ever tasted, and by the third mouthful you have stopped comparing it to anything, because there is nothing left to compare it with. There was a street once, and a voice calling you in."
+    },
+    "85a6fb0b424e5365": {
+      "chars": 50,
+      "bytes": 38286,
+      "credits": 26,
+      "nodes": [
+        "end_seat_at_table"
+      ],
+      "sent": "[slowly] Somewhere a girl is still waiting on your promise."
+    },
+    "a52c2580fc92807a": {
+      "chars": 41,
+      "bytes": 29927,
+      "credits": 22,
+      "nodes": [
+        "end_seat_at_table"
+      ],
+      "sent": "[slowly] It goes the way breath goes off a window."
+    },
+    "e2597792dd97fb9e": {
+      "chars": 286,
+      "bytes": 177884,
+      "credits": 130,
+      "nodes": [
+        "end_seat_at_table"
+      ],
+      "sent": "[slowly] Mr. Marrow lays a gloved hand on the back of your chair. \"Lovely,\" he says, and for once it means only that. Someone down the table passes you the bread. Your card is propped against your glass, and whatever it says is name enough. You are very happy. You are part of the furniture now."
+    },
+    "dc381049f8feff61": {
+      "chars": 170,
+      "bytes": 113936,
+      "credits": 79,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] Mr. Marrow takes a slip from the back of the green book and turns it round beside your plate: *Oct. 31*, and ruled columns. In the column marked *Item* there is one line."
+    },
+    "b1894d7f4f46f43b": {
+      "chars": 35,
+      "bytes": 28673,
+      "credits": 19,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] It is a blank the length of a name."
+    },
+    "a3b39d6059c07cc5": {
+      "chars": 101,
+      "bytes": 65871,
+      "credits": 48,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] What you owed is listed down the side, and every line is crossed through, settled with what you were."
+    },
+    "d60349cf0c5b12f4": {
+      "chars": 156,
+      "bytes": 102860,
+      "credits": 73,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] Under *Owing* there is nothing at all, and that is worse: you have no claim here on a chair, a crumb or a door, so nothing stops the house from keeping you."
+    },
+    "6af5fb5436d20e5b": {
+      "chars": 80,
+      "bytes": 56885,
+      "credits": 39,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] \"A guest's clean page is let out at midnight,\" he says. \"Midnight did not come.\""
+    },
+    "fda64988ed0b2bc7": {
+      "chars": 137,
+      "bytes": 98472,
+      "credits": 64,
+      "nodes": [
+        "end_paid_in_full"
+      ],
+      "sent": "[slowly] He closes the book and says, gently, \"Lovely.\" Whatever was on that line goes down into the warm dark, and the table is one guest fuller."
+    },
+    "f58e6d65531e505d": {
+      "chars": 160,
+      "bytes": 94083,
+      "credits": 74,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] You shove the chair back and run before the napkin has settled, down the long table and out through the green door, and nobody stops you, because nobody has to."
+    },
+    "fd54067126b29732": {
+      "chars": 68,
+      "bytes": 46018,
+      "credits": 34,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] On the threshold the candle slips out of your fingers, and goes out."
+    },
+    "1365d47dff621962": {
+      "chars": 221,
+      "bytes": 141940,
+      "credits": 101,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] The cellar beyond has never had a light in it. You find the shelves by touch, and the roots, which are warm, and you cannot find the stair. Far behind you a boy's voice says, without any malice at all, \"One to the house.\""
+    },
+    "f9f69b336532dd0b": {
+      "chars": 51,
+      "bytes": 40167,
+      "credits": 26,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] \"Our guest was playing after all,\" it adds, mildly."
+    },
+    "5ea0585194ae01c4": {
+      "chars": 60,
+      "bytes": 50407,
+      "credits": 30,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] He counted every lie you told tonight, and enjoyed each one."
+    },
+    "e4c2dd5dd2f7f9e5": {
+      "chars": 41,
+      "bytes": 37032,
+      "credits": 22,
+      "nodes": [
+        "end_strangers_wages"
+      ],
+      "sent": "[slowly] He counted your lie, too, and enjoyed it."
+    }
+  },
+  "provider": "elevenlabs",
+  "model": "eleven_v4",
+  "voice": "Callum - Husky Trickster",
+  "voice_id": "N2lVS1w4EtoT3dr4eOWO",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.3,
+    "use_speaker_boost": true
+  },
+  "format": "mp3_44100_64",
+  "directed": true,
+  "instructions": "Directed pass for Eleven v4. Each run gets at most one scene tag and a few cue tags:\n  scene: void palette or silence -> [quietly]; heartbeat >= 0.5 -> [low, tense]; lullaby -> [gently]; endings -> [slowly]\n  cues: a sentence with laughter -> [laughs]; whisper -> [whispers]; sigh -> [sighs]; three knocks -> [three slow knocks];\n        a single knock -> [one knock]; the house's polite voice and the floor's \"Welcome.\" -> [softly]",
+  "credits": 31333,
+  "generatedAt": "2026-10-21T21:18:20.301Z"
+}

@@ -94,6 +94,7 @@
   #text { font-size: clamp(17px, 1.35vw + 6px, 21px); line-height: 1.68; color: var(--ink); text-shadow: 0 1px 8px rgba(0,0,0,0.85); transition: opacity .5s; }
   #text p { margin: 0 0 1.05em; }
   #text p .ghost { opacity: 0; }
+  #text p.beat { font-style: italic; color: var(--ink-dim); }
   #text.out { opacity: 0; }
   #choices { list-style: none; padding: 0; margin: 1.4em 0 0; display: grid; gap: 4px; }
   #choices li { opacity: 0; transform: translateY(4px); transition: opacity .7s ease, transform .7s ease; }
@@ -118,6 +119,10 @@
   #ribbon { position: fixed; top: calc(18px + env(safe-area-inset-top, 0px)); left: clamp(22px, 7vw, 110px); z-index: 20; display: flex; align-items: center; gap: 18px;
     font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-faint); transition: opacity 1s; }
   #ribbon.hidden { opacity: 0; }
+  #pockets { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+  #pockets .tok { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; opacity: 0; transition: opacity 1.4s ease; }
+  #pockets .tok.on { opacity: 1; }
+  #pockets .tok svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
   #fearLine { height: 1px; width: 120px; background: rgba(236,227,208,0.08); position: relative; }
   #fearLine i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: #c8553a; box-shadow: 0 0 6px #c8553a; transition: width 1.5s ease; animation: pulse 2s ease-in-out infinite; }
   @keyframes pulse { 0%, 100% { opacity: .25; } 50% { opacity: .85; } }
@@ -242,7 +247,7 @@
     <div id="peekHint">hold the dark to look</div>
   </div>
 </section>
-<div id="ribbon" class="hidden"><span id="candy"></span><span id="fearLine" title="fear"><i></i></span></div>
+<div id="ribbon" class="hidden"><span id="pockets" aria-label="what you carry"></span><span id="fearLine" title="fear"><i></i></span></div>
 
 <section id="ending" class="screen hidden" aria-live="polite">
   <div class="endText">
@@ -263,6 +268,7 @@ import { createHouse, LOCATIONS, PALETTE_NAMES, CAMERAS, FIGURE_WHO } from './ho
 import { createAudio } from './audio.js';
 import { createState, applySet, renderText, visibleChoices, coerce, parseText, pickBranch, evalExpr, takeName } from './engine.js';
 import { createNarration } from './narration.js';
+import { normalizeRun } from './narration-runs.js';
 import { bindKeep } from './share.js';
 import { showPlan, roomsVisited, mergeRooms } from './plan.js';
 
@@ -456,7 +462,8 @@ function keepInView(el, pad = 28, smooth = false) {
   if (over > 1) pane.scrollTo({ top: pane.scrollTop + over, behavior: smooth ? 'smooth' : 'auto' });
 }
 
-function goTo(id) {
+// beat: the chosen choice's transition sentence (choice.beat), typed in italics and spoken before the node's own text.
+function goTo(id, beat = null) {
   const node = story.nodes[id];
   if (!node) { console.error('[marrow] missing node', id); return; }
   current = node; path.push(id);
@@ -480,7 +487,9 @@ function goTo(id) {
     $('pane').scrollTop = 0;
     const body = renderText(node.text || '', flags);
     const paras = body.split(/\n\s*\n/).map((s) => s.replace(/\s*\n\s*/g, ' ').trim()).filter(Boolean);
-    typeText(paras, (followed) => finishNode(node, followed), clipsOn() ? narrate(node, paras) : null);
+    const lead = beat ? normalizeRun(beat) : '';
+    if (lead) paras.unshift(lead);
+    typeText(paras, (followed) => finishNode(node, followed), clipsOn() ? narrate(node, paras, lead) : null, lead ? 1 : 0);
     devRender();
   }, reveal ? 1500 : 550);
 }
@@ -489,13 +498,13 @@ function goTo(id) {
 // Runs follow render order and never cross a paragraph; a conditional can split a paragraph into several runs.
 // Both sides tidy whitespace the same way (renderText's tidy, narration-runs' normalizeRun), so each run's display
 // text is found verbatim, in order; the gap before a run (a joining space) belongs to it.
-function narrate(node, paras) {
+function narrate(node, paras, beat = '') {
   const plan = { st: null, session: null, ranges: null };
   plan.session = narration.speakNode(node, flags, {
     onRunStart: (i, secs) => plan.st && plan.st.runStart(i, secs),
     onRunDuration: (i, secs) => plan.st && plan.st.runDuration(i, secs),
     onRunEnd: (i) => plan.st && plan.st.runEnd(i),
-  });
+  }, beat || null);
   plan.ranges = mapRuns(paras, plan.session.runs);
   if (!plan.ranges && DEV) console.warn('[narration] runs do not line up with the rendered text of', node.id, '; typing unpaced', plan.session.runs);
   return plan;
@@ -513,9 +522,9 @@ function mapRuns(paras, runs) {
   return new Set(out.map((r) => r.pi)).size === paras.length ? out : null; // every paragraph must be spoken by some run
 }
 
-function typeText(paras, done, plan) {
+function typeText(paras, done, plan, beatCount = 0) {
   const text = $('text');
-  const els = paras.map((p) => { const el = document.createElement('p'); const shown = document.createElement('span'); const ghost = document.createElement('span'); ghost.className = 'ghost'; ghost.textContent = p; el.append(shown, ghost); text.appendChild(el); return { el, shown, ghost, p }; });
+  const els = paras.map((p, i) => { const el = document.createElement('p'); if (i < beatCount) el.className = 'beat'; const shown = document.createElement('span'); const ghost = document.createElement('span'); ghost.className = 'ghost'; ghost.textContent = p; el.append(shown, ghost); text.appendChild(el); return { el, shown, ghost, p }; });
   $('skipHint').style.opacity = 1;
   const CPS = 52;
   const weight = (c) => (/[.,;:!?—]/.test(c) ? 6 : 1); // linger on punctuation
@@ -576,13 +585,13 @@ function finishNode(node, followed) {
   // The reader followed the cursor to the end, so bring the choices up too. After a hurry, leave the scroll
   // where it is: the text they skipped to is still unread.
   if (followed) setTimeout(() => { if (current === node) keepInView(ch, 20, true); }, 250);
-  if (clipsOn()) for (const c of list) if (!c.locked) narration.prefetch([c.to], story.nodes, c.input ? flags : applySet(flags, c.set));
+  if (clipsOn()) for (const c of list) if (!c.locked) { narration.prefetch([c.to], story.nodes, c.input ? flags : applySet(flags, c.set)); if (c.beat) narration.prefetchBeat(c.beat); }
   if (!list.some((c) => !c.locked)) console.error('[marrow] soft-lock: no available choice at', node.id);
 }
 function choose(c) {
   if (c.locked || mode !== 'play') return;
   flags = applySet(flags, c.set);
-  goTo(c.to);
+  goTo(c.to, c.beat);
 }
 // A choice with input: "name" asks for a typed string, stored in the string flag `name` (trimmed, max 24, empty allowed).
 // Names the house knows (engine KNOWN_NAMES) are stored in their canonical spelling with `name_key` set, so the
@@ -600,15 +609,54 @@ function sayField(c, i) {
   f.addEventListener('submit', (e) => {
     e.preventDefault(); if (mode !== 'play') return;
     flags = applySet({ ...flags, ...takeName(inp.value) }, c.set);
-    goTo(c.to);
+    goTo(c.to, c.beat);
   });
   li.appendChild(f); return li;
 }
 
+// The pockets: what the player carries or has done, as small glyphs in the ribbon. The prose never has to audit
+// pockets ("the wishbone in your pocket has gone warm") because the ribbon already shows them. Story-specific by
+// nature, like the fear line; the mapping lives here and in CLAUDE.md.
+const GLYPH = {
+  sweet:  '<path d="M4.3 4.3h3.4v3.4H4.3zM4.3 4.3 2.4 3v2.6M7.7 4.3 9.6 3v2.6M4.3 7.7 2.4 9V6.4M7.7 7.7 9.6 9V6.4"/>',
+  ink:    '<path d="M2.6 9.4 8.4 3.6l1 1-5.8 5.8-1.6.6zM7.6 4.4l1 1"/>',
+  flame:  '<path d="M6 1.4c.5 1.8 2.5 2.8 2.5 5.2a2.5 2.5 0 1 1-5 0c0-1 .4-1.7 1-2.3.2.9.6 1.4 1.1 1.6C5.4 4.4 5.4 2.8 6 1.4z"/>',
+  bone:   '<path d="M3.6 1.6c.5 2.3 1.2 3.8 2.4 4.9 1.2-1.1 1.9-2.6 2.4-4.9M6 6.5v4"/>',
+  ribbon: '<path d="M6 6c-1.6-1.5-3.8-1.9-3.8-3.5C2.2 1.4 3.6 1 4.6 2 5.3 2.6 6 4 6 4s.7-1.4 1.4-2c1-1 2.4-.6 2.4.5C9.8 4.1 7.6 4.5 6 6zM6 6 4.3 10.6M6 6l1.7 4.6"/>',
+  tag:    '<path d="M1.6 6.4V2.3c0-.4.3-.7.7-.7h4.1L10.6 6 6.2 10.4 1.6 6.4z"/><circle cx="3.7" cy="3.7" r=".6"/>',
+  clock:  '<circle cx="6" cy="6" r="4.5"/><path d="M6 3.3V6l-1.5 1.5"/>',
+  mirror: '<ellipse cx="6" cy="6" rx="3.5" ry="4.6"/><path d="M4.6 8 7.4 4"/>',
+  plate:  '<circle cx="6" cy="6" r="4.5"/><circle cx="6" cy="6" r="2.1"/>',
+  knock:  '<path d="M2.2 10.4h7.6M3.6 10.4V5a2.4 2.4 0 0 1 4.8 0v5.4"/>',
+};
+const POCKETS = [
+  { key: 'candy',     glyph: 'sweet',  text: (f) => f.candy > 0 ? `${f.candy} sweet${f.candy === 1 ? '' : 's'}` : '' },
+  { key: 'debt',      glyph: 'ink',    text: (f) => f.debt > 0 ? `owing ${f.debt}` : f.stance === 'treat' ? 'page clean' : '' },
+  { key: 'candle',    glyph: 'flame',  text: (f) => f.candle ? 'candle' : '' },
+  { key: 'wishbone',  glyph: 'bone',   text: (f) => f.wishbone ? 'wishbone' : '' },
+  { key: 'ribbon',    glyph: 'ribbon', text: (f) => f.ribbon ? 'her ribbon' : '' },
+  { key: 'true_name', glyph: 'tag',    text: (f) => f.true_name ? 'his name' : '' },
+  { key: 'clock',     glyph: 'clock',  text: (f) => f.clock ? 'clock wound' : '' },
+  { key: 'mirror',    glyph: 'mirror', text: (f) => f.mirror ? 'no reflection' : '' },
+  { key: 'fed',       glyph: 'plate',  text: (f) => f.fed ? 'fed' : '' },
+  { key: 'knocks',    glyph: 'knock',  text: (f) => f.knocks > 0 ? `${f.knocks} knock${f.knocks === 1 ? '' : 's'}` : '' },
+];
 function updateRibbon() {
-  const has = 'candy' in flags || 'fear' in flags;
+  const pk = $('pockets');
+  const want = POCKETS.map((p) => ({ ...p, label: p.text(flags) || '' })).filter((p) => p.label);
+  for (const el of [...pk.children]) if (!want.some((p) => p.key === el.dataset.key)) el.remove();
+  for (const p of want) { // appendChild in POCKETS order keeps the row stable; an existing token keeps its .on
+    let el = pk.querySelector(`[data-key="${p.key}"]`);
+    if (!el) {
+      el = document.createElement('span'); el.className = 'tok'; el.dataset.key = p.key;
+      el.innerHTML = `<svg viewBox="0 0 12 12" aria-hidden="true">${GLYPH[p.glyph]}</svg><span></span>`;
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('on')));
+    }
+    el.querySelector('span').textContent = p.label;
+    pk.appendChild(el);
+  }
+  const has = want.length > 0 || 'fear' in flags;
   $('ribbon').classList.toggle('hidden', !has || mode !== 'play');
-  $('candy').textContent = 'candy' in flags ? `candy ${flags.candy ?? 0}` : '';
   $('fearLine').hidden = !('fear' in flags);
   const fear = Math.max(0, Math.min(10, Number(flags.fear) || 0));
   const i = $('fearLine').querySelector('i');

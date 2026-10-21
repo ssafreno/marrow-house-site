@@ -6,17 +6,19 @@
 //
 //   const nar = createNarration({ voice: 'onyx', engine: { parseText, pickBranch }, dev });
 //   await nar.ready;                       // nar.available is true once the manifest loaded
-//   const s = nar.speakNode(node, flags, { onRunStart(i, seconds|null, info), onRunDuration(i, seconds), onRunEnd(i), onDone() });
+//   const s = nar.speakNode(node, flags, { onRunStart(i, seconds|null, info), onRunDuration(i, seconds), onRunEnd(i), onDone() }, beat);
+//                                          // beat: the chosen choice's transition sentence, spoken first as its own run
 //   s.runs                                 // [{ text, display, hash, name, audio }] in render order
 //   s.hurry()                              // let the current clip finish, skip the rest of this node
 //   nar.cancel()                           // stop now (node change, title, Return)
 //   nar.prefetch(['a1_treat_hand'], storyNodes, flags)
+//   nar.prefetchBeat('He takes back the step he had taken toward you.')
 //
 // Runs without audio (they interpolate {{name}}, or the clip is missing or fails to load or play) still get
 // onRunStart/onRunEnd, timed at the reading speed, so the page types them at its normal pace.
 // ============================================================================
 
-import { collectRuns } from './narration-runs.js';
+import { collectRuns, normalizeRun, fnv64 } from './narration-runs.js';
 
 const SILENT_CPS = 52;        // matches the page typewriter
 const PUNCT = /[.,;:!?—]/;
@@ -155,9 +157,10 @@ export function createNarration({ voice, engine, dev = false, base = 'narration'
     if (!s.dead) { s.active = false; session = null; s.cb.onDone?.(); }
   }
 
-  api.speakNode = (node, flags, cb = {}) => {
+  api.speakNode = (node, flags, cb = {}, beat = null) => {
     api.cancel();
     const runs = runsFor(node, flags);
+    if (beat) { const text = normalizeRun(beat), hash = fnv64(text); runs.unshift({ text, display: text, hash, name: false, audio: !!(manifest && manifest.clips[hash]) }); }
     const s = { node, runs, cb, dead: false, hurried: false, active: true, timers: [], wake: null };
     s.hurry = () => {
       if (!s.active || s.hurried) return;
@@ -185,6 +188,12 @@ export function createNarration({ voice, engine, dev = false, base = 'narration'
       const first = runsFor(n, flags).find((r) => r.audio);
       if (first) { log('prefetch', id, first.hash); load(first.hash); }
     }
+  };
+
+  api.prefetchBeat = (beat) => {
+    if (!api.available || !beat) return;
+    const hash = fnv64(normalizeRun(beat));
+    if (manifest.clips[hash]) { log('prefetch beat', hash); load(hash); }
   };
 
   /** Call from a user gesture once so later play() calls are allowed on strict browsers. */
